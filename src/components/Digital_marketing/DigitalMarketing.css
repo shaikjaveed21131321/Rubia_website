@@ -1,0 +1,74 @@
+.d-main{
+    padding-top: 0;
+
+}
+.dg-bgimg {
+    background-image: url('./assets/banner.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+    width: 95%;
+    height: 400px;
+    margin: auto;
+}
+.dg-bgimg1 img{
+    
+   
+    width: 95%;
+    height: 400px;
+}
+.dg-bgtext{
+    text-align: left;
+    margin-left: 30px;
+    height: 300px;
+    width: 100%;
+   
+}
+.dg-bgtext p{
+  text-align: left;
+}
+.popup{
+    height: 100%;
+    width: 94%;
+    border: 2px solid red;
+}
+.dg-card{
+    width: 95%;
+    height: auto;
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    margin: auto;
+    /* box-shadow: 0 1px 1px 0px; */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+}
+.dg-card_title1{
+    color: #C68643;
+    font-size: small;
+    font-weight: bold;
+}
+.dg-card_title2{
+    color: #144273;
+    font-size: largey;
+}
+.btun{
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    background-color: #144273;
+    color: #fff;
+    font-size: 18px;
+}
+#digital2{
+    margin-left: 18%;
+    margin-right: 18%;
+}
+@media (max-width:786px) {
+    #digital2{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .dg-bgimg{
+        width: 100%;
+      
+    }
+}

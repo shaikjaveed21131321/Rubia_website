@@ -1,0 +1,12 @@
+.service-text{
+    border: 6px blue;
+    height: auto;
+    width: auto;
+    margin-left: 18%;
+    margin-right: 18%;
+    z-index: -1; 
+}
+.service1{
+    text-align: center;
+    height: auto;
+}

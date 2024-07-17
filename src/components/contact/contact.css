@@ -1,0 +1,144 @@
+#contact-block{
+    height: 580px;
+    width: 400px;
+   
+}
+.main-contact{
+    margin-top: 0;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+.contact1{
+    text-align: center;
+    height: auto;
+    margin: auto;
+}
+.contact-header{
+    margin: auto;
+}
+.add-header{
+    margin: auto;
+}
+
+.contact-form{
+    background: #C68643;
+    margin: auto;
+    
+}
+.form-input input{
+    margin: 30px;
+    height: 40px;
+    width: 88%;
+    margin-left: 20px;
+}
+.form-input textarea{
+    margin: 30px;
+    width: 88%;
+    height: 100px;
+    margin-left: 20px;
+}
+.btn1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 21px;
+    width: 200px;
+    height: 45px;
+    margin-left: 30px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #144273;
+    color: white;
+}
+.btn1:hover{
+    background-color: #08c708;
+    color: #144273;
+}
+
+.display-block{
+    display: flex;
+    width: 800px;
+    margin: auto;
+    margin-bottom: 14px;
+}
+.contact-header{
+    display: flex;
+}
+.add-locaton{
+    width: 398px;
+    height: 238px;
+    border: #C68643 1px solid;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    text-align: start;
+}
+.add_phone{
+    width: 398px;
+    height: 100px;
+    border: #C68643 1px solid;
+    margin-left: 10px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; 
+}
+.add-locaton img{
+    width: 45px;
+    height: 45px;
+   margin: 5px;
+   
+}
+.aadd-header{
+    display: none;
+}
+.add_phone img{
+    width: 45px;
+    height: 45px;
+    margin: 15px;
+    margin-top: 25px;
+
+}
+.add_phone h4{
+    margin-top: 30px;
+}
+
+.map iframe{
+    width: 800px;
+    height: 500px;
+    margin:auto;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    
+}
+@media (max-width: 960px){
+    .display-block{
+        display: block;
+        margin-top: 10px;
+        width: auto;
+    }
+    .contact-header .add-header{
+        display: none;
+        
+    }
+    #contact-block{
+        
+        width: 100%;
+    }
+    .aadd-header{
+        display: block;
+        margin-left: -25px;
+        
+    }
+    
+    .contact-address{
+        width:100%;
+        margin-left: -10px;
+        
+    }
+    #location-block{
+             width: 100%;
+    }
+    
+}

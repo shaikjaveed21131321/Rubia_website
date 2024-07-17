@@ -1,0 +1,54 @@
+ 
+.graphic-text{
+    border: 6px blue;
+    height: auto;
+    width: auto;
+    margin-left: 18%;
+    margin-right: 18%;
+    z-index: -1;
+    /* padding-left: 40px;
+    padding-right: 40px; */
+    
+}
+.graphic1{
+    text-align: center;
+    height: auto;
+    margin-top: 20px; 
+}
+.btn_contact{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 100%;
+    width: 10%;
+    height: 8%;
+    background-color: white;
+    margin-left: 2%;
+    margin-top: 24%;
+    background-color: #144273;
+    color: white;
+    border-radius: 10px;
+    
+    position: absolute;
+  }
+  .Banner1_graphic{
+    width: 100%;
+  }
+  .Banner2_graphic{
+    width: 100%;
+  }
+  .Banner3_graphic{
+    width: 100%;
+  }
+  @media (max-width:786px) {
+    .graphic-text{
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    .btn_contact{
+      width: 30%;
+      height: 5%;
+      margin-top: 36%;
+    }
+  }
+  

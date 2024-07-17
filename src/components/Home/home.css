@@ -1,0 +1,43 @@
+.home-text{
+    border: 6px blue;
+    height: auto;
+    width: auto;
+    margin-left: 18%;
+    margin-right: 18%;
+    z-index: -1;
+    /* padding-left: 40px;
+    padding-right: 40px; */
+    
+}
+.Home1{
+    text-align: center;
+    height: auto;
+    margin-top: 20px; 
+}
+.homebanner{
+  width: 92%;
+}
+
+
+.slider_container2{
+  width: 100%;
+}
+.img_slider1{
+  margin-left: 5%;
+  border: 2px solid;
+}
+
+  @media (max-width: 768px) {
+    .home-text{
+      margin-left: 0%;
+      margin-right: 0%;
+      width: 100%;
+    }
+    .homebanner{
+      margin-left: 3%;
+      margin-right: 5%;
+      width: 95%;
+
+    }
+    
+  }

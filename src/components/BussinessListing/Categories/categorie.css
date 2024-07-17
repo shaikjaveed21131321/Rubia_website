@@ -1,0 +1,35 @@
+.categories_container{
+    box-shadow: 1px 1px 5px 5px;
+     height:100%;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     border-radius: 8px;
+   }
+   #categories_row1{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     cursor: pointer;
+   }
+   .categories_colum1{
+     width: 100px;
+     height: 132px;
+     box-shadow: 8px 8px #C4C4C4;
+   }
+   #categories_row2{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     cursor: pointer;
+   }
+   .categories_colum2{
+     width: 100px;
+     height: 132px;
+     
+     box-shadow: 8px 8px #C4C4C4;
+   }
+  .categories_img{
+    width: 100%;
+    height: 100%;
+  }

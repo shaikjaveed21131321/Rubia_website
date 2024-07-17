@@ -1,0 +1,53 @@
+
+
+#card-title{
+    color: #144273;
+    font-size: 27px;
+    line-height: 40.5px;
+    font-weight: 600;
+    text-underline-offset: 4px;
+    text-decoration:underline #144273;
+}
+
+.css_border{
+    border:"1px solid black" !important;
+}
+
+.css_img{
+    
+    border-radius: 0px 60px;
+}
+.css_img1{
+    
+    border-radius:  60px 0px;
+}
+
+.css_Card_Sec{
+    width: 100%;
+    border-radius: 24px !important;
+    padding: 16px;
+    gap: 18px;
+    background-color: #FAFAFA !important;
+    box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.1);
+}
+
+#innerTitle{
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+    color: #08315D;
+    font-weight: 600;
+}
+
+.css_bottom_heading6{
+    color: #C68643;
+    font-weight: 400;
+}
+#services_main{
+    width: 58%;
+}
+@media (max-width:786px) {
+    #services_main{
+    width: 100%;
+    }
+}

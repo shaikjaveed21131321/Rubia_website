@@ -1,0 +1,44 @@
+.slider_container{
+    text-align: center;
+    
+}
+
+.img_slider{
+    width: 90%;
+    height: auto;
+}
+.carousel-item{
+    z-index: -1;
+    
+}
+.carousel-control-prev{
+    z-index: 1;
+}
+.carousel-control-next{
+    z-index: 1;
+}
+.carousel-indicators{
+    z-index: 1;
+}
+.carousel-inner{
+
+}
+.carousel slide{
+    width: 80%;
+
+}
+@media (max-width:786px) {
+    .slider_container{
+        display: none;
+    }
+    .img_slider{
+        width: 90%;
+        height: auto;
+    }
+}
+@media (min-width:786px) {
+    .slider_container1{
+        display: none;
+    }
+   
+}

@@ -1,0 +1,149 @@
+.taxi-text{
+    border: 6px blue;
+    height: auto;
+    width: auto;
+    margin-right: 18%;
+    z-index: -1;
+    /* padding-left: 40px;
+    padding-right: 40px; */
+    
+}
+.taxi1{
+   
+    height: auto;
+    margin-top: 20px; 
+}
+.taxi2{
+    margin-right: 22%;
+    margin-left: 22%;
+    width:78% ;
+    height: auto;
+    
+    
+}
+.text{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 21px;
+  color: #144273;  
+  display: flex;
+  /* justify-content: start;   */
+}
+.text1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 27px;
+    color: #144273;  
+    display: flex;
+    /* justify-content: start;  */
+  }
+  .buttons{
+    background-color: #C68643;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    justify-content: start;
+  }
+  /* .btn{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 21px;
+    height: 100%;
+    background-color: white;
+    margin-left: 30px;
+    color: #144273;
+    border-radius: 5px;
+  } */
+  .btn_taxi{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 21px;
+    width: 20%;
+    background-color: white;
+    margin-left: 30px;
+    color: #144273;
+   border-radius: 5px;
+  }
+ 
+  .btn_taxi:hover{
+    background-color: #144273;
+    color: white;
+  }
+  .btn:hover{
+    background-color: #144273;
+    color: white;
+  }
+  .buttons1{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .buttons2{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .buttons3{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .label_taxi{
+    text-align: start;
+  }
+  .form{
+    background-color:#FFD0A0 ;
+    height: auto;
+    font-size: 100%;
+    line-height: 27px;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  
+  .main_form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    column-gap: 20px;
+    max-width: 95%;
+    text-transform: capitalize;
+    color: #000000 ;
+  
+}
+.main_form div {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid; */
+}
+label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+}
+ 
+  .full-width {
+    grid-column: span 2;
+}
+label, input {
+  display: block;
+  width: 100%;
+}
+#btn_taxi{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 21px;
+  width: 12%;
+  height: 45px;
+  margin-left: 30px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #144273;
+  color: white;
+}
+#btn:hover{
+ 
+}

@@ -1,0 +1,51 @@
+.software-text{
+    border: 6px blue;
+    height: auto;
+    width: auto;
+    margin-left: 18%;
+    margin-right: 18%;
+    z-index: -1;
+    /* padding-left: 40px;
+    padding-right: 40px; */
+    
+}
+.software1{
+    text-align: center;
+    height: auto;
+    margin-top: 20px; 
+}
+
+.btn_contact1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 100%;
+    width: 10%;
+   
+    background-color: white;
+    margin-left: 2%;
+    margin-top: 24%;
+    background-color: #144273;
+    color: white;
+    border-radius: 10px;
+    
+    position: absolute;
+  }
+  .software_banners{
+    width: 100%;
+  }
+  .software_banners1{
+    width: 95%;
+  }
+  @media (max-width:786px) {
+    .software-text{
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    .btn_contact1{
+      width: 30%;
+      height: 5%;
+      margin-top: 30%;
+      margin-left: 60%;
+    }
+  }

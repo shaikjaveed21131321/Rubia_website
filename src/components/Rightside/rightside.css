@@ -1,0 +1,22 @@
+.ads{
+    text-align: center;
+    width: 16%;
+    height: 100vh;
+    position: fixed;
+    right: 0%;
+    z-index: -1;
+    /* background-color: #C68643; */
+    
+}
+.ads1{
+    align-content: center;
+    width: 98%;
+    height: 28%;
+    margin: 5px;
+    background-color: aliceblue;
+    padding-top: 4%;
+}
+.Adimg{
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,65 @@
+@media (max-width:1500px) {
+    .main-text{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+}
+@media (max-width:1300px) {
+    .main-text{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+}
+
+@media (max-width: 1200px) {
+    .main {
+        flex-direction: column;
+        align-items: center; /* centers the boxes horizontally */
+    }
+
+    .services {
+        height: auto;
+        position: relative;
+        width: 100%; /* each box takes full width */
+        max-width: 900px; /* maximum width to prevent too large on bigger tablets */
+    }
+    .applink2 .Applink{
+        width: 360px;
+        height: auto;
+    }
+    .main-text{
+        padding-left: 0%;
+        padding-right: 0%;
+        height: auto;
+        width: 100%; /* each box takes full width */
+        max-width: 600px; /* maximum width to prevent too large on bigger tablets */ 
+    }
+    .ads {
+        display: "none";
+    }
+    .ads1{
+        display: none;
+        
+    }
+}
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+}
