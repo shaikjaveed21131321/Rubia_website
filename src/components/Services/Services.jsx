@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, {useEffect,useState} from 'react';
 import ServiceCard from '../ServiceCard/ServiceCard';
 import "./services.css";
 
@@ -223,11 +223,22 @@ const propObj8 = {
     lastHead:"Contact today Go forward",
 }
 
+const [width, setWidth] = useState(window.innerWidth);
+    
+    useEffect(() => {
+    
+      const handleResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    
+    }, []);
+    
+
   return (
     <>
         
-    <div id='services_main' className=' h-auto mx-auto'>
-    <main className='w-100 d-flex flex-column align-items-center justify-content-start gap-4'>
+    <div style={{margin:"auto", paddingLeft:"5px" , display:"flex", justifyContent:"center"}} className=' h-auto '>
+    <main style={{width:(width <500)?"100%":"65%",margin:"auto" }} className='d-flex flex-column align-items-center justify-content-start gap-4'>
        
        <ServiceCard propObj={propObj1} />
        <ServiceCard propObj={propObj2} />
