@@ -1,7 +1,8 @@
-driver_content{
+.driver_content{
     border: 6px blue;
     height: auto;
     width: auto;
+    
     margin-left: 18%;
     margin-right: 18%;
     z-index: -1; 
@@ -10,3 +11,9 @@ driver_content{
     text-align: center;
     height: auto;
 }
+
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
+  
