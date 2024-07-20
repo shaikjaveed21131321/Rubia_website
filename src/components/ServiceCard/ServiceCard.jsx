@@ -44,7 +44,7 @@ useEffect(() => {
     {/* Section first Start Here */}
     <section style={{width:(width<450)? "1000px":"100%"}} className='rounded '>
             <section className='text-start '>
-                <h2  id="card-title">{obj.heading}</h2>
+                <h2 style={{color:"#650000"}} id="card-title">{obj.heading}</h2>
             </section>
             <section className=' d-flex flex-column flex-xl-row justify-content-center align-items-center gap-3'>
                 <div>

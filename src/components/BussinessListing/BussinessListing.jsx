@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import PrivateServices from "./PrivateServices/PrivateServices";
 import GovermentServices from "./GovermentServices/GovermentServices";
 import Categorie from "./Categories/categorie";
-import MobileNavagitor from "./assets/MobileNavagition.png"
+import MobileNavagitor from "./assets/Business card -1.png"
 
 const BussinessListing = () => {
   // const [isVisibleDoctor, setIsVisibleDoctor] = useState(false);
@@ -94,18 +94,18 @@ const BussinessListing = () => {
               <GovermentServices handleClick={handleClick} />
               <br />
     <div className="header_b1" style={{ textTransform: "uppercase" }}>
-        categories of {Allservice}{" "}
+        categories of <span style={{color:"#C68643"}}>{Allservice}</span>
       </div>
     <br />
     <Categorie/>
           <br />
-          <div className="header_b1"> Best Gynaecologist Doctors in Hyderabad :  </div>
-          <br />
+          <div className="header_b1"> Best Gynaecologist Doctors  <span style={{color:"#C68643"}}>in Hyderabad :</span>  </div>
+          
                 <div className="navagition">
                   
-                  <div className="navagition1"><img src={MobileNavagitor} alt="" /></div>
-                  <div className="navagition1"><img src={MobileNavagitor} alt="" /></div>
-                  <div className="navagition1"><img src={MobileNavagitor} alt="" /></div>
+                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
+                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
+                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
                   
                 </div>
           <div className="bussiness_banner">

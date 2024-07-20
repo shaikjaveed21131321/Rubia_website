@@ -1,0 +1,254 @@
+/* .drg{
+    border: 6px blue;
+    height: auto;
+    width: auto;
+    margin-left: 16%;
+    margin-right: 16%;
+    z-index: -1; 
+}
+.drg1{
+    text-align: center;
+    height: auto;
+}
+.drmain{
+
+    height: auto;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+.formdiv{
+    height: auto;
+    width: 56%;
+    border: 1px solid #c0c0c0;  
+    margin: 5px;
+}
+.imgupldiv{
+    height: auto;
+    width: 35%;
+    border: 1px solid #c0c0c0; 
+    margin: 5px; 
+}
+label{
+    font-size: 18px;
+    font-weight: 500;
+    color: #144273;
+}
+input placeholder{
+
+    margin-left: 15px;
+   
+}
+select{
+  border: 1px solid #c0c0c0; 
+  height: 40px;
+   width: 60%;
+   border-radius: 10px;
+   outline: none;
+}
+.drbutn{
+    width: 95%;
+    margin-left: 1px;
+    margin-left: -30px;
+    background: #c68643;
+    color: fff;
+    
+}
+  */
+
+
+  .rg{
+    border: 6px blue;
+    height: auto;
+    width: auto;
+    margin-left: 18%;
+    margin-right: 18%;
+    z-index: -1; 
+}
+.rg1{
+    text-align: center;
+    height: auto;
+}
+.brheader{
+    font-size: 27px;
+    font-weight: 700;
+    color: #144273;
+}
+.brmain{
+    border: 1px solid black;
+    height: auto;
+    border-radius: 15px;
+    margin: 15px;
+}
+input  {
+    outline: none;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+}
+select{
+    outline: none;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+}
+.option{
+    color: #c0c0c0;
+}
+.input1{
+    
+    outline: none;
+}
+.inputdiv2 {
+    
+    width: 47%;
+}
+.inputdiv1{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.inputdiv1 input[placeholder]{
+    padding-left: 10px;
+    color: #995050;  
+}
+::placeholder{
+    font-size: 18px;
+    color: #995050;
+}
+.timing_main_table{
+    border: 1px solid black;
+    height: auto;
+    border-radius: 5px;
+}
+.timing_table_header{
+    font-size: 18px;
+    font-weight: 500;
+}
+.timinginput{
+
+    width: 50px;
+    height: 20px;
+    border: none;
+    outline: none;
+}
+.timingday{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.div_tm_input{
+    margin-left: 2px;
+    border: 1px solid #c0c0c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    border-radius: 5px;
+}
+.tm_div_row1{
+    display: grid;
+    column-gap: 50px;
+    
+    
+}
+.tm_div_row2{
+    display: grid;
+    column-gap: 50px;
+    flex-direction: column;
+   
+}
+.img_main_div{
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}
+.img_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#imgIcon{
+   
+    width: 15%;
+}
+.butn {
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    background: #144273;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btnclear{
+    width: 45%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #144273;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+.btnclear:hover{
+    background-color: #055bb8;
+}
+.btnsubmit{
+    width: 45%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #C68643;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+.btnsubmit:hover{
+    background-color: #e97800;
+}
+.brg_btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.timimg_table{
+    display: flex;
+    flex-direction: row;
+}
+input[type=file]{
+height: auto;
+width: auto;
+}
+.imgHead{
+    color: #C68643;
+}
+/* .inputdiv1 span{
+    background: #C68643;
+    width: 30%;
+    border-radius: 5px;
+} */
+ .coustomfile{
+    border: 1px solid #144273;
+    border-radius: 10px;
+    padding: 2px;
+    font-size: 14px;
+    background: #fff;
+ }
+ .coustomfile::-webkit-file-upload-button{
+    background-color: #144273;
+    font-size:14px ;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px ;
+    border: none;
+ }
+ select{
+    color: #995050;
+    font-size: 18px;
+ }
+ span{
+    font-size: 20px;
+ }

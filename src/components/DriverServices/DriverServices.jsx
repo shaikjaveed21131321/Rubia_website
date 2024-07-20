@@ -2,7 +2,7 @@ import React,{ useEffect, useState } from 'react';
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from "react-icons/md";
 import DriverServiceProfile from '../../components/DriverServiceProfile/DriverServiceProfile';
 import DriverServiceTableCard from '../../components/DriverServiceTableCard/DriverServiceTableCard';
-
+import { Link } from 'react-router-dom';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -91,15 +91,15 @@ const DriverServices = () => {
     <header  className='w-100 h-auto mt-4 mb-3 d-flex flex-row justify-content-end align-items-center align-center justify-end'>
         <div className='p-3 d-flex flex-row align-items-center justify-content-center gap-3 shadow rounded-3'  
                 style={{width: "430px",font:"19px",background: "#D7C3A4"}}> 
-            <span style={{color: "#144273"}}>Driver Registration Form</span> 
-            <button style={{width:"150px", height: "50px",background: "#144273" ,border:"0px", color:"#FFFFFF",padding:"12px" ,}} 
-                    className='p-2 rounded text-center fw-bold rounded-3'>Click Here</button></div>
+            <span style={{color: "#650000"}}>Driver Registration Form</span> 
+            <Link to='/DriverRegister/' style={{width:"150px", height: "50px",background: "#650000" ,border:"0px", color:"#FFFFFF",padding:"12px" ,}} 
+                    className='p-2 rounded text-center fw-bold rounded-3'>Click Here</Link></div>
     </header>
     <section style={{textAlign: "justify"}} className='w-100 d-flex  flex-column '>
-        <h1 style={{fontSize: "27",color:"#144273" }} className='fw-bold'>1. B2C [ Business to Customer ]</h1>
+        <h1 style={{fontSize: "27",color:"#650000" }} className='fw-bold'>1. B2C [ Business to Customer ]</h1>
         <br />
         <br />
-        <h2 className='fw-semibold mt-2 mb-2' style={{fontSize: "25px",color:"#144273"}}>a&#41;<u> Hire a Temporary  / Halting Drivers:</u></h2><br/>
+        <h2 className='fw-semibold mt-2 mb-2' style={{fontSize: "25px",color:"#650000"}}>a&#41;<u> Hire a Temporary  / Halting Drivers:</u></h2><br/>
         <p style={{fontSize: "16px", marginRight: "30px"}} >Explore Our Services & Book a Driver <br />
             Rubia  offers top-notch car driver services for all your needs. Whether it’s a daily commute, an airport
             transfer, or a special occasion, we have the right driver for you.</p>
@@ -137,7 +137,7 @@ const DriverServices = () => {
             </p>
         </div>
         <div className='d-flex flex-column justify-content-center align-items-center '>
-            <button style={{ padding:"10px",width:"234px",height:"50px" ,background:"#144273" , color:"#FFF"}} className='rounded-3'>Download Rubia App</button>
+            <button style={{ padding:"10px",width:"234px",height:"50px" ,background:"#650000" , color:"#FFF"}} className='rounded-3'>Download Rubia App</button>
         </div>
     </section>
 
@@ -146,7 +146,7 @@ const DriverServices = () => {
     </section>
       <br></br>
     <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3'>
-        <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#144273"}}>b&#41; <u>Hire a Permanent / montly Drivers:</u></h2><br></br>
+        <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>b&#41; <u>Hire a Permanent / montly Drivers:</u></h2><br></br>
         <div  className='w-100 d-flex flex-wrap flex-row justify-content-start align-item-center gap-3 gap-lg-5'>
             <select className='fw-bold p-1' >
                 <option>Select Your Country</option>
@@ -192,13 +192,13 @@ const DriverServices = () => {
 
     <section style={{ textAlign: "justify",background:"#FFF9F3", }} className='w-100 h-auto d-flex  flex-column p-2 mt-5'>
         <br></br>
-        <h1 style={{font: "27",color:"#144273" }} className='fw-bold'>2. B2B [ Business to Business ]</h1>
+        <h1 style={{font: "27",color:"#650000" }} className='fw-bold'>2. B2B [ Business to Business ]</h1>
         <br /><br />
         <p style={{font: "16px", marginRight: "30px"}} >
-        <b style={{color:"#144273"}}>Introduction:</b> Explain the services offered specifically for software companies, servicing centers, and used vehicle dealerships.</p>
+        <b style={{color:"#650000"}}>Introduction:</b> Explain the services offered specifically for software companies, servicing centers, and used vehicle dealerships.</p>
         <div>
-            <h5 style={{color:"#144273"}} className='fw-bold'>Detailed Services Sections:</h5><br></br>
-            <ul style={{color:"#144273"}}>
+            <h5 style={{color:"#650000"}} className='fw-bold'>Detailed Services Sections:</h5><br></br>
+            <ul style={{color:"#650000"}}>
                 <li><b >For Software Companies:</b> <label style={{color:"#212529"}}>Emphasize driver reliability and scheduling flexibility.</label></li>
                 <li><b >For Servicing Centers:</b> <label style={{color:"#212529"}}>Highlight customer satisfaction and prompt services.</label></li>
                 <li><b >For Used Vehicle Dealerships:</b> <label style={{color:"#212529"}}>Focus on safe and timely vehicle transportation.</label></li>
@@ -207,12 +207,12 @@ const DriverServices = () => {
         <br></br>
         <div className='w-100 d-flex flex-row justify-content-between align-item-center'>
             <button className='rounded-2 fw-bold' style={{height:"49px" ,border:"none" ,background: "#C68643",color: "#FFF" ,padding:"10px 10px",fontSize:"20px"}}>BUSINESS ENTITY LOGIN</button>
-            <button className='rounded-2 fw-bold' style={{height:"47px" ,border:"none" ,background: "#144273",color: "#FFF" ,padding:"10px 10px"}}>Contact us for more details</button>
+            <button className='rounded-2 fw-bold' style={{height:"47px" ,border:"none" ,background: "#650000",color: "#FFF" ,padding:"10px 10px"}}>Contact us for more details</button>
         </div>
     </section>
 
     <section style={{ textAlign: "justify",background:"#FFF9F3"}} className='w-100 h-auto d-flex  flex-column p-2 mt-5'><br></br>
-        <h1 style={{font: "27",color:"#144273" }} className='fw-bold'>3. Valet Parking Drivers</h1>
+        <h1 style={{font: "27",color:"#650000" }} className='fw-bold'>3. Valet Parking Drivers</h1>
         <br /><br />
         <ul style={{listStyle:"none"}}>
             <li >-Pubs</li>
@@ -224,13 +224,13 @@ const DriverServices = () => {
             <li>-Businesses</li>
         </ul>
         <div  className='w-100 d-flex flex-row justify-content-end align-item-center'>
-            <button className='rounded-2 fw-bold' style={{height:"47px" ,border:"none" ,background: "#144273",color: "#FFF" ,padding:"10px 10px"}}>Contact us for more details:</button>
+            <button className='rounded-2 fw-bold' style={{height:"47px" ,border:"none" ,background: "#650000",color: "#FFF" ,padding:"10px 10px"}}>Contact us for more details:</button>
         </div>
     </section>
 
     <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
-        <h1 style={{font: "27",color:"#144273",textAlign:"left" }} className='w-100 fw-bold mt-5'>4. Commercial Vehicle Divers:</h1>
-        <h2 className='w-100 fw-semibold mt-2 mb-3' style={{fontSize:"25px",textAlign:"left",color:"#144273"}}>a&#41;<u>Bus Drivers:</u></h2>
+        <h1 style={{font: "27",color:"#650000",textAlign:"left" }} className='w-100 fw-bold mt-5'>4. Commercial Vehicle Divers:</h1>
+        <h2 className='w-100 fw-semibold mt-2 mb-3' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>a&#41;<u>Bus Drivers:</u></h2>
         <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
         <select className='fw-bold p-1' >
                 <option>Select Your Country</option>
@@ -275,144 +275,7 @@ const DriverServices = () => {
     </section>
 
     <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
-        <h2 className='w-100 fw-semibold mt-3 mb-3' style={{fontSize:"25px",textAlign:"left",color:"#144273"}}>b&#41;<u> Lorry / Truck Drivers:</u></h2>
-        <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
-        <select className='fw-bold p-1' >
-                <option>Select Your Country</option>
-            </select>
-            <select className='fw-bold p-1' >
-                <option>Select Your State</option>
-            </select>
-            <select className='fw-bold p-1' >
-                <option>Select Your City</option>
-            </select>
-            <select className='fw-bold p-1' >
-                <option>Select Your Area</option>
-            </select>
-        </div> 
-        <section style={{width:"100%", height:"100%",background:"#FFD0A0", margin: " 20px auto", padding:"10px" }} className=' container swiper rounded-4 '>
-        
-        <div style={{width:"100%",height:"100%"}} className="  swiper mx-auto">
-      <Swiper
-        slidesPerView={(width < 576)? 2 :(width < 992)?3:(width < 1200)?3:4}
-        spaceBetween={5}
-        keyboard={{
-          enabled: true,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Keyboard, Pagination, Navigation]}
-        className="mySwiper w-100 h-100">
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-      </Swiper>
-      </div>
-        </section> 
-    </section>
-    
-
-    <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
-        <h2 className='w-100 fw-semibold mt-3 mb-3' style={{fontSize:"25px",textAlign:"left",color:"#144273"}}>c&#41; <u>JCB Drivers / Operators:</u></h2>
-        <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
-        <select className='fw-bold p-1' >
-                <option>Select Your Country</option>
-            </select>
-            <select className='fw-bold p-1' >
-                <option>Select Your State</option>
-            </select>
-            <select className='fw-bold p-1' >
-                <option>Select Your City</option>
-            </select>
-            <select className='fw-bold p-1' >
-                <option>Select Your Area</option>
-            </select>
-        </div> 
-        <section style={{width:"100%", height:"100%",background:"#FFD0A0", margin: " 20px auto", padding:"10px" }} className=' container swiper rounded-4 '>
-        
-        <div style={{width:"100%",height:"100%"}} className="  swiper mx-auto">
-      <Swiper
-        slidesPerView={(width < 576)? 2 :(width < 992)?3:(width < 1200)?3:4}
-        spaceBetween={5}
-        keyboard={{
-          enabled: true,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Keyboard, Pagination, Navigation]}
-        className="mySwiper w-100 h-100">
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-      </Swiper>
-      </div>
-        </section> 
-    </section>
-
-
-    <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
-        <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#144273"}}>d&#41; <u>Crane Drivers / Operators:</u></h2>
-        <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
-        <select className='fw-bold p-1' >
-                <option>Select Your Country</option>
-            </select>
-            <select className='fw-bold p-1' >
-                <option>Select Your State</option>
-            </select>
-            <select className='fw-bold p-1' >
-                <option>Select Your City</option>
-            </select>
-            <select className='fw-bold p-1' >
-                <option>Select Your Area</option>
-            </select>
-        </div> 
-        <section style={{width:"100%", height:"100%",background:"#FFD0A0", margin: " 20px auto", padding:"10px" }} className=' container swiper rounded-4 '>
-        
-        <div style={{width:"100%",height:"100%"}} className="  swiper mx-auto">
-      <Swiper
-        slidesPerView={(width < 576)? 2 :(width < 992)?3:(width < 1200)?3:4}
-        spaceBetween={5}
-        keyboard={{
-          enabled: true,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Keyboard, Pagination, Navigation]}
-        className="mySwiper w-100 h-100">
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
-      </Swiper>
-      </div>
-        </section> 
-    </section>
-
-    <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
-        <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#144273"}}>e&#41;<u> Tractor Drivers:</u></h2>
+        <h2 className='w-100 fw-semibold mt-3 mb-3' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>b&#41;<u> Lorry / Truck Drivers:</u></h2>
         <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
         <select className='fw-bold p-1' >
                 <option>Select Your Country</option>
@@ -456,8 +319,55 @@ const DriverServices = () => {
         </section> 
     </section>
     
+
     <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
-        <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#144273"}}>f&#41;<u> Agriculture / Forming Machinery Drivers:</u></h2>
+        <h2 className='w-100 fw-semibold mt-3 mb-3' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>c&#41; <u>JCB Drivers / Operators:</u></h2>
+        <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
+        <select className='fw-bold p-1' >
+                <option>Select Your Country</option>
+            </select>
+            <select className='fw-bold p-1' >
+                <option>Select Your State</option>
+            </select>
+            <select className='fw-bold p-1' >
+                <option>Select Your City</option>
+            </select>
+            <select className='fw-bold p-1' >
+                <option>Select Your Area</option>
+            </select>
+        </div> 
+        <section style={{width:"100%", height:"100%",background:"#FFD0A0", margin: " 20px auto", padding:"10px" }} className=' container swiper rounded-4 '>
+        
+        <div style={{width:"100%",height:"100%"}} className="  swiper mx-auto">
+      <Swiper
+        slidesPerView={(width < 576)? 2 :(width < 992)?3:(width < 1200)?3:4}
+        spaceBetween={5}
+        keyboard={{
+          enabled: true,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Keyboard, Pagination, Navigation]}
+        className="mySwiper w-100 h-100">
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+      </Swiper>
+      </div>
+        </section> 
+    </section>
+
+
+    <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
+        <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>d&#41; <u>Crane Drivers / Operators:</u></h2>
         <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
         <select className='fw-bold p-1' >
                 <option>Select Your Country</option>
@@ -502,7 +412,97 @@ const DriverServices = () => {
     </section>
 
     <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
-        <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#144273"}}>g&#41;<u> Ambulance Driver:</u></h2>
+        <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>e&#41;<u> Tractor Drivers:</u></h2>
+        <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
+        <select className='fw-bold p-1' >
+                <option>Select Your Country</option>
+            </select>
+            <select className='fw-bold p-1' >
+                <option>Select Your State</option>
+            </select>
+            <select className='fw-bold p-1' >
+                <option>Select Your City</option>
+            </select>
+            <select className='fw-bold p-1' >
+                <option>Select Your Area</option>
+            </select>
+        </div> 
+        <section style={{width:"100%", height:"100%",background:"#FFD0A0", margin: " 20px auto", padding:"10px" }} className=' container swiper rounded-4 '>
+        
+        <div style={{width:"100%",height:"100%"}} className="  swiper mx-auto">
+      <Swiper
+        slidesPerView={(width < 576)? 2 :(width < 992)?3:(width < 1200)?3:4}
+        spaceBetween={5}
+        keyboard={{
+          enabled: true,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Keyboard, Pagination, Navigation]}
+        className="mySwiper w-100 h-100">
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+      </Swiper>
+      </div>
+        </section> 
+    </section>
+    
+    <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
+        <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>f&#41;<u> Agriculture / Forming Machinery Drivers:</u></h2>
+        <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
+        <select className='fw-bold p-1' >
+                <option>Select Your Country</option>
+            </select>
+            <select className='fw-bold p-1' >
+                <option>Select Your State</option>
+            </select>
+            <select className='fw-bold p-1' >
+                <option>Select Your City</option>
+            </select>
+            <select className='fw-bold p-1' >
+                <option>Select Your Area</option>
+            </select>
+        </div> 
+        <section style={{width:"100%", height:"100%",background:"#FFD0A0", margin: " 20px auto", padding:"10px" }} className=' container swiper rounded-4 '>
+        
+        <div style={{width:"100%",height:"100%"}} className="  swiper mx-auto">
+      <Swiper
+        slidesPerView={(width < 576)? 2 :(width < 992)?3:(width < 1200)?3:4}
+        spaceBetween={5}
+        keyboard={{
+          enabled: true,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Keyboard, Pagination, Navigation]}
+        className="mySwiper w-100 h-100">
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+        <SwiperSlide><DriverServiceProfile detailsObj={detailsObj} /></SwiperSlide>
+      </Swiper>
+      </div>
+        </section> 
+    </section>
+
+    <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
+        <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>g&#41;<u> Ambulance Driver:</u></h2>
         <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
         <select className='fw-bold p-1' >
                 <option>Select Your Country</option>
@@ -547,7 +547,7 @@ const DriverServices = () => {
     </section>
 
     <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5 mb-5'>
-        <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#144273"}}>h&#41; <u>Trailers Driver:</u></h2>
+        <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>h&#41; <u>Trailers Driver:</u></h2>
         <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
         <select className='fw-bold p-1' >
                 <option>Select Your Country</option>

@@ -1,33 +1,33 @@
 .app-text{
-    border: 6px blue;
     height: auto;
     width: auto;
     margin-left: 18%;
     margin-right: 18%;
     z-index: -1;
     /* padding-left: 40px;
-    padding-right: 40px; */
-    
+    padding-right: 40px; */  
 }
 .applink2{
-
     text-align: center;
-   
-    
+    /* border: 2px solid; */
+    padding: 2%;
+    padding-left: 3%;
 }
 
 .Applink{
-    width: 100%;
+    width: 20%;
     height: auto;
 }
 @media (max-width:786px) {
     .app-text{
         margin-left: 0%;
         margin-right: 0%;
-        height: 100px;
+   
     }
-    .Applink{
-        width: 100%;
+    .applink2{
+        
+       text-align: center;
     }
+    
    
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner7 from "../assets/Frame 1431.png";
-import Banner8 from "../assets/Frame ui.jpg";
-import Banner9 from "../assets/Frame ux.jpg";
+import Banner8 from "../assets/Frame 236 (1).png";
+import Banner9 from "../assets/Frame 248 (1).png";
 import { Link } from 'react-router-dom';
 
 const UiUx = () => {

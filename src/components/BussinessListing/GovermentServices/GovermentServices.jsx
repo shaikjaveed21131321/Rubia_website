@@ -46,7 +46,7 @@ const GovermentServices = ({handleClick}) => {
       };
   return (
     <>
-   <div className="header_b1"> Government Organizations :</div>
+   <div className="header_b1"> Government <span style={{color:"#C68643"}}> Organizations :</span></div>
    <br />
     <div className='goverment_services'>
         <br />
@@ -58,7 +58,7 @@ const GovermentServices = ({handleClick}) => {
             <div onClick={() => handleClick("Goverment Advocate")} ><input type="radio" name="lang" id="lang-33" className="radio" /><label htmlFor="lang-33" className='lable label-33' id='g'><img className='services_img' src={GovermentAdvocate} alt="" />Goverment Advocate</label> </div>
             <div onClick={()=>handleClick(" ")} ><input type="radio" name="lang" id="lang-35" className="radio" /><label htmlFor="lang-35" className='lable label-35' id='g'><img className='services_img' src={Mro} alt="" /> M.R.O Office</label>  </div>
         </div>
-        <br />
+        
         <div className={show1} id='govermentServices_row2'>
             
             <div onClick={() => handleClick("Goverment Park")} ><input type="radio" name="lang" id="lang-34" className="radio" /><label htmlFor="lang-34" className='lable label-34' id='g'><img className='services_img' src={ GovermentParks } alt="" />Goverment Park</label> </div>

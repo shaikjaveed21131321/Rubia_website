@@ -152,28 +152,28 @@ const HomeServicesSliders = () => {
   const date6 = [
     {
       name: "Find Targe...",
-      imageUrl: "/Home_services_slidersassets/EmailMarketing.png"
+      imageUrl: "/Home_services_slidersassets/1.png"
     },
     {
       name: `Contact Marketing`,
-      imageUrl: "/Home_services_slidersassets/ContactMarketing.png"
+      imageUrl: "/Home_services_slidersassets/2.png"
     },
     {
       name: `Social Media Mark.....`,
-      imageUrl: "/Home_services_slidersassets/SocialMediaMark.png"
+      imageUrl: "/Home_services_slidersassets/3.png"
     },
     
     {
       name: "SEO Marketing",
-      imageUrl: "/Home_services_slidersassets/SEOMarketing.png"
+      imageUrl: "/Home_services_slidersassets/4.png"
     },
     {
       name: `SMO Marketing`,
-      imageUrl: "/Home_services_slidersassets/SMOMarketing.png"
+      imageUrl: "/Home_services_slidersassets/5.png"
     },
     {
       name: `Social Media Mark.....`,
-      imageUrl: "/Home_services_slidersassets/SocialMediaMark.png"
+      imageUrl: "/Home_services_slidersassets/6.png"
     }
   ];
   const date7 = [

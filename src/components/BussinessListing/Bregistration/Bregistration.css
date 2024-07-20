@@ -21,7 +21,7 @@
     border-radius: 15px;
     margin: 15px;
 }
-input{
+input {
     outline: none;
     border: 1px solid #c0c0c0;
     border-radius: 5px;
@@ -121,7 +121,7 @@ input{
     
 }
 .btnclear:hover{
-    background-color: #328ff1;
+    background-color: #055bb8;
 }
 .btnsubmit{
     width: 45%;
@@ -136,7 +136,7 @@ input{
     
 }
 .btnsubmit:hover{
-    background-color: #fa8406;
+    background-color: #e97800;
 }
 .brg_btn{
     display: flex;
@@ -159,3 +159,21 @@ width: auto;
     width: 30%;
     border-radius: 5px;
 } */
+.coustomfile{
+    border: 1px solid #144273;
+    border-radius: 10px;
+    padding: 2px;
+    font-size: 14px;
+    background: #fff;
+ }
+ .coustomfile::-webkit-file-upload-button{
+    background-color: #144273;
+    font-size:14px ;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px ;
+    border: none;
+ }
+ select{
+ border-radius: 8px;
+ }

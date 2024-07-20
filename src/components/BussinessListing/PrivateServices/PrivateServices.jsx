@@ -51,7 +51,7 @@ const PrivateServices = ({handleClick}) => {
   return (
     <>
       <div>
-        <div className="header_b1">Private Organizations :</div>
+        <div className="header_b1">Private <span style={{color:"#C68643"}}> Organizations :</span></div>
         <br />
         <div className="public_services">
           <div className="private_list1">

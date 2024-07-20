@@ -14,7 +14,7 @@ const contact = () => {
         <div className="contact1">
             <div className='contact_info'>
                 <div className='contact-header  ' >
-                    <h1 className='add-header '>contact with us</h1>
+                    <h1 className='add-header '>contact <span style={{color:"#C68643"}}>with</span> us</h1>
                     <h1 className='add-header' >Address</h1>
                 </div>
 

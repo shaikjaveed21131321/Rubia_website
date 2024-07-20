@@ -10,6 +10,7 @@ import Logo4 from './assets/Mask group (2).png';
 import Logo5 from './assets/Mask group (3).png';
 import Logo6 from './assets/Mask group (4).png';
 import Logo7 from './assets/Mask group (5).png';
+import WhLogo from "./assets/WhatsApp_icon (1).png"
 const leftside = () => {
   return (
     <>
@@ -82,6 +83,16 @@ const leftside = () => {
           </NavLink>
           
       </div>
+
+      {/* whatsapp link here starts here */}
+      <div className='fixed-bottom right-100 pr-3 ' style={{zIndex:"6",right:"initial"}}>
+          <a style={{}} href='https://wa.me/+917893653899?text=Hello' target='blank'>
+            <img src={WhLogo} alt="" width={60} /><sub>support</sub>
+          </a>
+        </div>
+        {/* whatapp link ends here */}
+
+      
       {/* <div className='serves1'>
           <img src={serves} alt="" />
       </div> */}

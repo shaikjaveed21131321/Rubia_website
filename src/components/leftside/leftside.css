@@ -149,8 +149,11 @@ background-color: white;
     justify-content: space-between;
     width: 100%; 
     overflow-x: auto;
-    padding-top: 10%;
+    padding-top: 3%;
     position: fixed;
+  }
+  .services::-webkit-scrollbar{
+   display: none;
   }
   .label{
     display: none;
@@ -167,8 +170,8 @@ background-color: white;
   }
   .services .services-links{
     margin: auto;
-    margin-top: 2%;
-    margin-bottom: 10px;
+    margin-top: 2.9%;
+    /* margin-bottom: 10px; */
   }
   .navbar .visible .main{
     margin-top: 10%;

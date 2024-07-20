@@ -18,9 +18,11 @@
     margin-left: 8%;
 }
 .slick-arrow{
-background-color: #E8E8E8;
-color: #330000
+background-color:none;
+color: #330000;
+
 }
+
 .slick-prev:before{
     color: #330000;
     font-size: 30px;

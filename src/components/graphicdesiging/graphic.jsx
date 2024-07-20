@@ -1,6 +1,6 @@
 import React from "react";
 import Banner1 from "../assets/Card143.png";
-import Banner2 from "../assets/Frame 236.png"
+import Banner2 from "../assets/Frame 236 (1).png"
 import Banner3 from "../assets/Frame 234.png"
 import { Link } from "react-router-dom";
 const graphic = () => {

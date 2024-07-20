@@ -16,6 +16,7 @@ import DigitalMarketing from "../Digital_marketing/DigitalMarketing";
 import Realstate from '../realstate/realstate';
 import JobPortal from '../Job_portal/jobPortal';
 import Bregistration from '../BussinessListing/Bregistration/Bregistration';
+import DriverRegister from '../DriverServices/DriverRegister';
 
 const routing = () => {
   return (
@@ -39,6 +40,7 @@ const routing = () => {
     <Route path='/job portal/' element={<JobPortal/>}/>
     <Route path='/real state/' element={<Realstate/>}/>
     <Route path='/Bregistration/' element={<Bregistration/>}/>
+    <Route path='/DriverRegister/' Component={DriverRegister}/>
    </Routes>
    </BrowserRouter>
    

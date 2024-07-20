@@ -4,14 +4,18 @@
     border: 2px solid #144273;
     margin: auto;
 }
+.header_b1{
+   color: #650000;
+}
 .public_services{
-    border: #144273 3px solid;
+    border: #650000 3px solid;
     width: 100%;
     height: 100%;
     padding-top: 5%;
     padding-bottom: 5%;
     padding-left: 2%;
     padding-right: 2%;
+   
    
  }
  .private_list1{
@@ -20,6 +24,7 @@
     margin: auto;
     display: flex;
     justify-content: space-evenly;
+    
  }
  .private_list2{
     height: 132px;
@@ -27,6 +32,7 @@
     margin: auto;
     display: flex;
     justify-content: space-evenly;
+    margin-top: 2%;
     
  }
  .private_list3{
@@ -35,6 +41,7 @@
     margin: auto;
     display: flex;
     justify-content: space-evenly;
+    margin-top: 2%;
  }
  .private_list4{
     height: 132px;
@@ -42,6 +49,7 @@
     margin: auto;
     display: flex;
     justify-content: space-evenly;
+    margin-top: 2%;
  }
  .services_btn{
 
@@ -81,6 +89,9 @@ color: #144273;
     border: 2px solid seagreen;
     margin: auto ;
 }
+.view{
+    background-color: #650000;
+}
 .radio{
     display: none;
    
@@ -92,6 +103,7 @@ color: #144273;
     border-radius: 8px;
     padding-top: 3%;
     font-size: 100%;
+    color: #995050;
     
 }
 #lang-1:checked ~ .label-1,
