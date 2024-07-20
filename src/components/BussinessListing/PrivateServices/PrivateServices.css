@@ -125,3 +125,37 @@ color: #144273;
     background-color: #144273;
     color: white;
 }
+@media (max-width:786px) {
+    .services_btn{
+        width: 55px;
+        height: 80px;
+        font-size: 9px;
+    }
+    .serviceLogoBackground{
+        width: 30px;
+        height: 30px;
+        margin-top: 5%;
+        padding: 0%;
+    }
+    .private_list1{
+        height: 132px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+     }
+     #lableprivateservice{
+       margin-top: 40%;
+       border: none;
+     }
+     .public_services{
+        align-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 2%;
+        padding-bottom:0%;
+        padding-left: 0%;
+        padding-right: 0%;
+        /* border: 2px solid red;           */
+     }
+}

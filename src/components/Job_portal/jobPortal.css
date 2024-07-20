@@ -10,3 +10,10 @@
     text-align: center;
     height: auto;
 }
+@media (max-width:786px) {
+    .job-text{
+      margin-left: 0%;
+      margin-right: 0%;
+      width:110%;
+    }
+  }

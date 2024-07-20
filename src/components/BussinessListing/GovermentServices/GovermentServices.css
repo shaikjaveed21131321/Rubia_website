@@ -1,3 +1,4 @@
+
 .goverment_services{
     width: 100%;
     height: 100%;
@@ -6,6 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
     
 }
 .govermentServices_row1{
@@ -32,7 +34,7 @@
 #g{
     cursor: pointer;
     height: 100%;
-    border: #C68643 1px solid;
+    /* border: #C68643 1px solid; */
     border-radius: 8px;
     padding-top: 5%;
     font-size: 100%;
@@ -70,4 +72,28 @@
     width: 12%;
     border-radius: 8px;
     border: 2px solid goldenrod;
+}
+@media (max-width:786px) {
+    .govermentServices_row1 div{
+        cursor: pointer;
+        height: 100%;
+       border: none;
+        border-radius: 8px;
+        padding-top: 5%;
+        font-size: 9px;
+    }
+    .services_img{
+        width: 50px;
+        height: 50px;
+    }
+    #govermentServices_row2 div{
+        cursor: pointer;
+        height: 100%;
+       border: none;
+        border-radius: 8px;
+        padding-top: 5%;
+        font-size: 9px;
+    }
+   
+   
 }

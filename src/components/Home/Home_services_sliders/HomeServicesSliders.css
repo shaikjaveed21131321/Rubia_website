@@ -53,7 +53,7 @@ color: #330000
     line-height: 24px;
     display: flex;
     flex-direction: column;
-    gap: 30%;
+    
 }
 .homebussinesslising_btn{
     width: 42%;
@@ -66,4 +66,24 @@ color: #330000
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
+}
+@media (max-width:786px) {
+    .homebussinesslising_text{
+        font-size: 12px;
+        line-height: none;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly ;
+    }
+    .homebussinesslising_btn{
+        width: auto;
+        font-size: 12px;
+       
+        border: 2px solid;
+    }
+    .homebussinesslising_contaner{
+        width: 85%;
+        padding-left: 3%;
+    }
+   
 }

@@ -212,7 +212,23 @@
         text-align: center;
         align-items: center;
        position: relative;
+       
     }
-   
+   .BussinessListingText{
+    margin-left: 2%;
+    margin-right: 0%;
+    width: 102.5%;
+   }
+   .searchbar{
+    display: none;
+   }
+   .navagition1{
+    height: auto;
+    width: 10%;
+ }
+ .navagition{
+  margin-left: 0%;
+  width: 53%;
+ }
     
 }

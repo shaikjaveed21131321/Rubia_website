@@ -103,21 +103,21 @@
        display: inherit; 
     }
    
-    .burger-bar.clicked:nth-child(1){
+    .burger-bar.unclicked:nth-child(1){
         transform: rotate(45deg) translate(0.5em,1.45em);
         transition: ease-out 0.5s;
     
     }
-    .burger-bar.clicked:nth-child(2){
+    .burger-bar.unclicked:nth-child(2){
         transform: scale(0);
         transition: ease-out 0.5s;
     
-    }.burger-bar.clicked:nth-child(3){
+    }.burger-bar.unclicked:nth-child(3){
         transform: rotate(130deg) translate(-0.1em,1em);
         transition: ease-out 0.5s;
     
     }
-    .burger-bar.unclicked{
+    .burger-bar.clicked{
     transform: rotate(0) translate(0);
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }

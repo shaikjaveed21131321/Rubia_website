@@ -134,19 +134,26 @@ background-color: white;
   font-weight: 600;
   font-style: normal;
   padding-top: 4px;
+  font-size: 83%;
+  padding-left: 2%;
  
   
   
 }
-.leftlinks1{
- font-size:650%;
-}
+
 
 @media (max-width:768px) {
   .services{
     display: flex;
-    flex-direction: column;
-    width: 90%;  
+    flex-direction:row;
+    justify-content: space-between;
+    width: 100%; 
+    overflow-x: auto;
+    padding-top: 10%;
+    position: fixed;
+  }
+  .label{
+    display: none;
   }
   .serves1{
     height: 180px;
@@ -165,5 +172,27 @@ background-color: white;
   }
   .navbar .visible .main{
     margin-top: 10%;
+  }
+  .leftlinks1{
+    font-size: 10px;
+    height: 24px;
+    width: auto;
+    padding-left: 0%;
+    text-align: center;
+    /* border: 2px solid; */
+    
+    
+  }
+  .services-links{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid; */
+    padding: 18px;
+    
+    
+  }
+  .services-links img{
+   /* border: 2px solid; */
+   align-self: center;
   }
 }

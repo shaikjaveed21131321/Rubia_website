@@ -1,5 +1,5 @@
 import React from 'react'
-
+ import "../Job_portal/jobPortal.css"
 const jobPortal = () => {
   return (
     <>

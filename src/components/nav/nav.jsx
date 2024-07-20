@@ -5,17 +5,17 @@ import "../leftside/leftside.css"
 
 const Nav = () => {
   const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
-  const [Text, setText] = useState("navbar hidden");
+  const [Text, setText] = useState("navbar visible");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
 
   // Toggle burger menu change
   const updateMenu = () => {
     if (!isMenuClicked) {
       setBurgerClass("burger-bar clicked");
-      setText("navbar visible");
+      setText("navbar hidden");
     } else {
       setBurgerClass("burger-bar unclicked");
-      setText("navbar hidden");
+      setText("navbar visible");
     }
     setIsMenuClicked(!isMenuClicked);
   }

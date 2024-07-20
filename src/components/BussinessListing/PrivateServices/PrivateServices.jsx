@@ -191,7 +191,7 @@ const PrivateServices = ({handleClick}) => {
           </div>
 
           <div className={show}>
-            <br />
+           
             <div className="private_list2">
               <button
                 className="services_btn"
@@ -351,7 +351,7 @@ const PrivateServices = ({handleClick}) => {
               </button>
             </div>
 
-            <br />
+            
             <div className="private_list3">
               <button
                 className="services_btn"
@@ -507,7 +507,7 @@ const PrivateServices = ({handleClick}) => {
                 </label>
               </button>
             </div>
-            <br />
+      
             <div className="private_list4">
               <button
                 className="services_btn"

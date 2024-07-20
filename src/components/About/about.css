@@ -47,6 +47,10 @@ p{
 
 
 @media (max-width:786px){
-    margin-left: 1;
-    margin-right: 18%;
+    .about-text{ margin-left: 1%;
+    margin-right: 2%;
+width: 102.5%;}
+p{
+    margin-left:0px;
+}
 }

@@ -19,43 +19,43 @@ const leftside = () => {
           <NavLink className="services-links" to='/businesslisting/' 
           style={({isActive})=>{return {background:isActive?'#C68643':'' ,color:isActive?'white':"",}}} >
           <img  src={Logo8} alt="" className='leftslide_logo8' />
-          <img className='logo_change' src={Logo11} alt="" />
-          <div style={{fontSize:"83%",paddingLeft:"2%"}} className='leftlinks1'>BUSINESS LISTING</div>
+         
+          <div  className='leftlinks1'>BUSINESS LISTING</div>
           </NavLink>
 
              <NavLink className="services-links" to='/driver/'
           style={({isActive})=>{return {background:isActive?'#C68643':'' ,color:isActive?'white':""}}} >
 
           <img src={Logo} alt="" className='leftslide_logo1' />
-          <div style={{fontSize:"83%",paddingLeft:"2%"}} className='leftlinks1'> driver</div>
+          <div  className='leftlinks1'> driver</div>
           </NavLink>
 
           <NavLink className="services-links" to='/taxi/' 
           style={({isActive})=>{return {background:isActive?'#C68643':'' ,color:isActive?'white':""}}}>
 
           <img src={Logo1} alt="" className='leftslide_logo2' />
-          <div style={{fontSize:"83%",paddingLeft:"2%"}} className='leftlinks1'> taxi</div>
+          <div  className='leftlinks1'> taxi</div>
           </NavLink>
 
           <NavLink className="services-links" to='/graphic desiging/'
           style={({isActive})=>{return {background:isActive?'#C68643':'' ,color:isActive?'white':""}}}>
 
           <img src={Logo2} alt="" className='leftslide_logo3'style={{marginTop:"4px"}} />
-          <div style={{fontSize:"83%",paddingLeft:"2%"}} className='leftlinks1'> graphic desiging</div>
+          <div  className='leftlinks1'> graphic desiging</div>
           </NavLink>
 
           <NavLink className="services-links" to='/software/'
           style={({isActive})=>{return {background:isActive?'#C68643':'' ,color:isActive?'white':""}}}>
 
           <img src={Logo3} alt="" className='leftslide_logo4' style={{marginTop:"2px"}} />
-          <div style={{fontSize:"83%",paddingLeft:"2%"}} className='leftlinks1'> software</div>
+          <div  className='leftlinks1'> software</div>
           </NavLink>
-
+         
           <NavLink className="services-links" to='/digital marketing/'
           style={({isActive})=>{return {background:isActive?'#C68643':'' ,color:isActive?'white':""}}}>
 
           <img src={Logo4} alt="" className='leftslide_logo5' />
-          <div style={{fontSize:"83%",paddingLeft:"2%"}} className='leftlinks1'> digital marketing</div>
+          <div  className='leftlinks1'> digital marketing</div>
           </NavLink>
 
           <NavLink className="services-links" to='/ui/ux desigining/'
@@ -63,14 +63,14 @@ const leftside = () => {
 
           <img src={Logo5} alt="" className='leftslide_logo6' />
          
-          <div style={{fontSize:"83%",paddingLeft:"2%"}}  className='leftlinks1'> ui/ux desigining</div>
+          <div   className='leftlinks1'> ui/ux desigining</div>
           </NavLink>
 
           <NavLink className="services-links" to='/job portal/'
           style={({isActive})=>{return {background:isActive?'#C68643':'' ,color:isActive?'white':""}}}>
 
           <img src={Logo6} alt="" className='leftslide_logo7' />
-          <div style={{fontSize:"83%",paddingLeft:"2%"}}className='leftlinks1'> job portal</div>
+          <div className='leftlinks1'> job portal</div>
           
           </NavLink>
 
@@ -78,7 +78,7 @@ const leftside = () => {
           style={({isActive})=>{return {background:isActive?'#C68643':'' ,color:isActive?'white':""}}}>
 
           <img id='img7' src={Logo7} alt="" className='leftslide_logo8'  />
-          <div style={{fontSize:"83%",paddingLeft:"2%"}} className='leftlinks1'> real state</div>
+          <div  className='leftlinks1'> real state</div>
           </NavLink>
           
       </div>
