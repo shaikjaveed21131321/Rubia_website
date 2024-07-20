@@ -7,7 +7,7 @@ import Logo6 from '../Services/img/img6.png'
 import Logo7 from '../Services/img/img7.png'
 import Logo8 from '../Services/img/img8.png'
 import "../Services/services.css"
-import React from 'react'
+import React, {useEffect,useState} from 'react';
 
 
 const ServiceCard = (props) => {
@@ -26,17 +26,27 @@ const ServiceCard = (props) => {
 
     const obj = props.propObj;
 
+
+const [width, setWidth] = useState(window.innerWidth);
+    
+useEffect(() => {
+
+  const handleResize = () => setWidth(window.innerWidth);
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+
+}, []);
     
   return (
     <>
     {/* <div className='service_text'>
     <div className='service1'> */}
     {/* Section first Start Here */}
-    <section  className='css_Card_Sec w-100 rounded '>
+    <section style={{width:(width<450)? "1000px":"100%"}} className='rounded '>
             <section className='text-start '>
                 <h2  id="card-title">{obj.heading}</h2>
             </section>
-            <section className='w-100 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3'>
+            <section className=' d-flex flex-column flex-xl-row justify-content-center align-items-center gap-3'>
                 <div>
                     <img className={obj.classcss} style={obj.styleobj} src={logoMap[obj.id]} alt={obj.heading} />  
                 </div>

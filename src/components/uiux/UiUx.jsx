@@ -21,6 +21,9 @@ const UiUx = () => {
             <br />
          </div>
         </div>
+        <div className='w-100 d-flex flex-row justify-content-between align-item-center mt-5'>
+            <Link to="/contact/"  className='rounded-2 fw-bold' style={{height:"49px" ,border:"none" ,background: "#C68643",color: "#FFF" ,padding:"10px 10px",fontSize:"20px" , margin:"auto", textDecoration:"none"}}>Contact us for more details</Link>
+        </div>
       </div>
     </>
   )

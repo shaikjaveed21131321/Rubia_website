@@ -43,13 +43,17 @@
     color: #C68643;
     font-weight: 400;
 }
-#services_main{
+/* #services_main{
     width: 58%;
 }
 @media (max-width:786px) {
     #services_main{
     width: 102.5%;
     }
+<<<<<<< HEAD
     
 
 }
+=======
+} */
+>>>>>>> e5331e926a0ec154fc2480cfe97fe3f32082033c
