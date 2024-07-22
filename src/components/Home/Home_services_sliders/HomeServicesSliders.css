@@ -68,6 +68,7 @@ color: #330000;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
+    margin-top: 10%;
 }
 @media (max-width:786px) {
     .homebussinesslising_text{
@@ -80,7 +81,7 @@ color: #330000;
     .homebussinesslising_btn{
         width: auto;
         font-size: 12px;
-       
+        margin-top: 10%;
         border: 2px solid;
     }
     .homebussinesslising_contaner{

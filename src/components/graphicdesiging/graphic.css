@@ -44,11 +44,11 @@
     .graphic-text{
       margin-left: 0%;
       margin-right: 0%;
-     width: 102.5%;
+     width: 100%;
     }
     .btn_contact{
-      width: 30%;
-      height: 5%;
+      width: 20%;
+      height: auto;
       margin-top: 38%;
     }
   }

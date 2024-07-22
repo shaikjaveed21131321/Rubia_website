@@ -16,4 +16,22 @@
     width: 600px;
     height: 300px;
   }
-  
+  .d-btn-d{
+    background: #c68643;
+    border: none;
+    color: #fff;
+}
+@media (max-width:"786px") {
+    .driver_content{
+        width: 100%;
+        margin-right: 0%;
+        margin-left: 0%;
+        overflow: hidden;
+    }
+    .driver1{
+        width: 100%;
+        margin-right: 0%;
+        margin-left: 0%;
+        overflow: hidden;
+    }
+}

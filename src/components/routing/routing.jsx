@@ -13,8 +13,7 @@ import Software from '../software/software';
 import UiUx from '../uiux/UiUx';
 import Taxi from "../taxi/taxi";
 import DigitalMarketing from "../Digital_marketing/DigitalMarketing";
-import Realstate from '../realstate/realstate';
-import JobPortal from '../Job_portal/jobPortal';
+
 import Bregistration from '../BussinessListing/Bregistration/Bregistration';
 import DriverRegister from '../DriverServices/DriverRegister';
 
@@ -37,8 +36,8 @@ const routing = () => {
     <Route path='/graphic desiging/' element={<Graphic/>}/>
     <Route path='/software/' element={<Software/>}/>
     <Route path='ui/ux desigining/' element={<UiUx/>}/>
-    <Route path='/job portal/' element={<JobPortal/>}/>
-    <Route path='/real state/' element={<Realstate/>}/>
+    
+    
     <Route path='/Bregistration/' element={<Bregistration/>}/>
     <Route path='/DriverRegister/' Component={DriverRegister}/>
    </Routes>

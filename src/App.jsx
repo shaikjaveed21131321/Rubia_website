@@ -31,14 +31,14 @@ function App() {
   return (
    <>
   <Rightside/>
-  <div className='about_text  '>
-  <div className='about1 '>
+  {/* <div className='about_text  '>
+  <div className='about1 '> */}
    <Router/>
-   </div>
-   </div>
+   {/* </div>
+   </div> */}
    <Applink/>
    <Footer/>
-   {/* <Graphic/>  */}
+  
    
    
    </>

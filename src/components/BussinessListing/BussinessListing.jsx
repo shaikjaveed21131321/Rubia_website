@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import PrivateServices from "./PrivateServices/PrivateServices";
 import GovermentServices from "./GovermentServices/GovermentServices";
 import Categorie from "./Categories/categorie";
-import MobileNavagitor from "./assets/Business card -1.png"
+import MobileNavagitor from "./assets/Business List_5.png"
 
 const BussinessListing = () => {
   // const [isVisibleDoctor, setIsVisibleDoctor] = useState(false);
@@ -68,8 +68,6 @@ const BussinessListing = () => {
               </Link>
             </div>
           </div>
-          <br />
-          <br />
           <div className="bussiness_banner">
             <Carousel interval={1500} id="bussinessbanner">
               <Carousel.Item>
@@ -103,10 +101,24 @@ const BussinessListing = () => {
           
                 <div className="navagition">
                   
+                  <div className="navagition_1">
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
+                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
+                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
+              
+                  </div>
+                  <div className="navagition_2">
+                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
+                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
+                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
+                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
+                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
+                  </div>
+                 
                   
+                 
                 </div>
           <div className="bussiness_banner">
             <img src={Bussinessbanner2} alt="" className="Bussinessbanner2" />

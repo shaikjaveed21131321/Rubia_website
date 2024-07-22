@@ -151,6 +151,7 @@ background-color: white;
     overflow-x: auto;
     padding-top: 3%;
     position: fixed;
+    margin-right: 0%;
   }
   .services::-webkit-scrollbar{
    display: none;
@@ -170,7 +171,7 @@ background-color: white;
   }
   .services .services-links{
     margin: auto;
-    margin-top: 2.9%;
+    margin-top: 4.9%;
     /* margin-bottom: 10px; */
   }
   .navbar .visible .main{

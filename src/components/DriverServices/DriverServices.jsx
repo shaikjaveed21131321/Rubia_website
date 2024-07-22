@@ -86,7 +86,7 @@ const DriverServices = () => {
   return (
    <>
  
-   <div style={{minWidth:"510px" , width:"65%" ,margin:"auto" }} className='container h-auto px-3'>
+   <div style={{minWidth:"510px" , width:"65%" ,margin:"auto",overflowX:"hidden" }} className='container h-auto px-3'>
    <main className='w-100 h-auto  d-flex flex-column gap-3 align-items-center justify-content-start '>
     <header  className='w-100 h-auto mt-4 mb-3 d-flex flex-row justify-content-end align-items-center align-center justify-end'>
         <div className='p-3 d-flex flex-row align-items-center justify-content-center gap-3 shadow rounded-3'  
@@ -109,7 +109,7 @@ const DriverServices = () => {
                 <br></br>
                 <ul style={{listStyle:"disc"}}>
                     <li>Available on the App Store and Google Play.</li>
-                    <li><a href="#">Download for iOS</a> | <a href="#">Download for Android</a></li>
+                    <li><a href="https://apps.apple.com/in/app/rubia/id6459829353" target='blank'><button className='btn btn-primary w-auto d-btn-d'>Download for iOS</button></a>  <a href="https://play.google.com/store/apps/details?id=com.rubia.user&pcampaignid=web_share " target='blank'><button className='btn btn-primary w-auto d-btn-d'>Download for Android</button></a></li>
                 </ul>
                 <br></br>
                 <li>Sign Up & Book a Driver</li>
@@ -137,7 +137,7 @@ const DriverServices = () => {
             </p>
         </div>
         <div className='d-flex flex-column justify-content-center align-items-center '>
-            <button style={{ padding:"10px",width:"234px",height:"50px" ,background:"#650000" , color:"#FFF"}} className='rounded-3'>Download Rubia App</button>
+        <a href="https://play.google.com/store/apps/details?id=com.rubia.user&pcampaignid=web_share " target='_blank'><button style={{ padding:"10px",width:"234px",height:"50px" ,background:"#650000" , color:"#FFF"}} className='rounded-3'>Download Rubia App</button></a>
         </div>
     </section>
 
@@ -231,8 +231,8 @@ const DriverServices = () => {
     <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
         <h1 style={{font: "27",color:"#650000",textAlign:"left" }} className='w-100 fw-bold mt-5'>4. Commercial Vehicle Divers:</h1>
         <h2 className='w-100 fw-semibold mt-2 mb-3' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>a&#41;<u>Bus Drivers:</u></h2>
-        <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
-        <select className='fw-bold p-1' >
+        <div  className='w-100 d-flex flex-wrap flex-row justify-content-start align-item-center gap-3 gap-lg-5'>
+            <select className='fw-bold p-1' >
                 <option>Select Your Country</option>
             </select>
             <select className='fw-bold p-1' >
@@ -276,8 +276,8 @@ const DriverServices = () => {
 
     <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
         <h2 className='w-100 fw-semibold mt-3 mb-3' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>b&#41;<u> Lorry / Truck Drivers:</u></h2>
-        <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
-        <select className='fw-bold p-1' >
+        <div  className='w-100 d-flex flex-wrap flex-row justify-content-start align-item-center gap-3 gap-lg-5'>
+            <select className='fw-bold p-1' >
                 <option>Select Your Country</option>
             </select>
             <select className='fw-bold p-1' >
@@ -322,8 +322,8 @@ const DriverServices = () => {
 
     <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
         <h2 className='w-100 fw-semibold mt-3 mb-3' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>c&#41; <u>JCB Drivers / Operators:</u></h2>
-        <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
-        <select className='fw-bold p-1' >
+        <div  className='w-100 d-flex flex-wrap flex-row justify-content-start align-item-center gap-3 gap-lg-5'>
+            <select className='fw-bold p-1' >
                 <option>Select Your Country</option>
             </select>
             <select className='fw-bold p-1' >
@@ -368,8 +368,8 @@ const DriverServices = () => {
 
     <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
         <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>d&#41; <u>Crane Drivers / Operators:</u></h2>
-        <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
-        <select className='fw-bold p-1' >
+        <div  className='w-100 d-flex flex-wrap flex-row justify-content-start align-item-center gap-3 gap-lg-5'>
+            <select className='fw-bold p-1' >
                 <option>Select Your Country</option>
             </select>
             <select className='fw-bold p-1' >
@@ -413,8 +413,8 @@ const DriverServices = () => {
 
     <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
         <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>e&#41;<u> Tractor Drivers:</u></h2>
-        <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
-        <select className='fw-bold p-1' >
+        <div  className='w-100 d-flex flex-wrap flex-row justify-content-start align-item-center gap-3 gap-lg-5'>
+            <select className='fw-bold p-1' >
                 <option>Select Your Country</option>
             </select>
             <select className='fw-bold p-1' >
@@ -458,8 +458,8 @@ const DriverServices = () => {
     
     <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
         <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>f&#41;<u> Agriculture / Forming Machinery Drivers:</u></h2>
-        <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
-        <select className='fw-bold p-1' >
+        <div  className='w-100 d-flex flex-wrap flex-row justify-content-start align-item-center gap-3 gap-lg-5'>
+            <select className='fw-bold p-1' >
                 <option>Select Your Country</option>
             </select>
             <select className='fw-bold p-1' >
@@ -503,8 +503,8 @@ const DriverServices = () => {
 
     <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5'>
         <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>g&#41;<u> Ambulance Driver:</u></h2>
-        <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
-        <select className='fw-bold p-1' >
+        <div  className='w-100 d-flex flex-wrap flex-row justify-content-start align-item-center gap-3 gap-lg-5'>
+            <select className='fw-bold p-1' >
                 <option>Select Your Country</option>
             </select>
             <select className='fw-bold p-1' >
@@ -548,8 +548,8 @@ const DriverServices = () => {
 
     <section className='w-100 d-flex justify-content-center align-items-center flex-column gap-3 mt-5 mb-5'>
         <h2 className='w-100 fw-semibold' style={{fontSize:"25px",textAlign:"left",color:"#650000"}}>h&#41; <u>Trailers Driver:</u></h2>
-        <div className='w-100 d-flex flex-row justify-content-start align-item-center gap-5 mt-5'>
-        <select className='fw-bold p-1' >
+        <div  className='w-100 d-flex flex-wrap flex-row justify-content-start align-item-center gap-3 gap-lg-5'>
+            <select className='fw-bold p-1' >
                 <option>Select Your Country</option>
             </select>
             <select className='fw-bold p-1' >
