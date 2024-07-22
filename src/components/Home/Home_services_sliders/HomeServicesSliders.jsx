@@ -208,7 +208,7 @@ const HomeServicesSliders = () => {
   
   
   return <>
-  <p className="homeservices_header"> Business Listing : </p>
+  <p className="homeservices_header"> Business <span style={{color:"#C68643",fontWeight:"600"}}>Listing :</span> </p>
     <div className="homebussinesslising_contaner" >
     <Slider {...settings}>
       {date.map((d)=>(
@@ -234,7 +234,7 @@ const HomeServicesSliders = () => {
           </div>
           <div className="homebussinesslising_text">
             {d.name} 
-            <button className="homebussinesslising_btn">search now</button>
+            <button className="homebussinesslising_btn_drive">search now</button>
           </div>
         </div>
       ))}
@@ -256,7 +256,7 @@ const HomeServicesSliders = () => {
       ))}
       </Slider>
     </div>
-    <p className="homeservices_header"> Graphic Design : </p>
+    <p className="homeservices_header"> Graphic <span style={{color:"#C68643",fontWeight:"600"}}>Design :</span> </p>
     <div className="homebussinesslising_contaner" >
     <Slider {...settings}>
       {date3.map((d)=>(
@@ -288,7 +288,7 @@ const HomeServicesSliders = () => {
       ))}
       </Slider>
     </div>
-    <p className="homeservices_header"> Digital marketing : </p>
+    <p className="homeservices_header"> Digital <span style={{color:"#C68643",fontWeight:"600"}}> marketing :</span> </p>
     <div className="homebussinesslising_contaner" >
     <Slider {...settings}>
       {date5  .map((d)=>(
@@ -304,7 +304,7 @@ const HomeServicesSliders = () => {
       ))}
       </Slider>
     </div>
-    <p className="homeservices_header"> UX/UI Design : </p>
+    <p className="homeservices_header"> UX/UI <span style={{color:"#C68643",fontWeight:"600"}}> Design :</span>  </p>
     <div className="homebussinesslising_contaner" >
     <Slider {...settings}>
       {date6.map((d)=>(
@@ -320,7 +320,7 @@ const HomeServicesSliders = () => {
       ))}
       </Slider>
     </div>
-    <p className="homeservices_header"> Job Portal : </p>
+    <p className="homeservices_header"> Job <span style={{color:"#C68643",fontWeight:"600"}}> Portal :</span>  </p>
     <div className="homebussinesslising_contaner" >
     <Slider {...settings}>
       {date7.map((d)=>(
@@ -336,7 +336,7 @@ const HomeServicesSliders = () => {
       ))}
       </Slider>
     </div>
-    <p className="homeservices_header"> Real State : </p>
+    <p className="homeservices_header"> Real <span style={{color:"#C68643",fontWeight:"600"}}> Estate :</span>  </p>
     <div className="homebussinesslising_contaner" >
     <Slider {...settings}>
       {date8.map((d)=>(

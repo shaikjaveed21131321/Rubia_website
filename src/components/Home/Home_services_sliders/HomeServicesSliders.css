@@ -36,6 +36,7 @@ color: #330000;
 .homebussinesslising_slide{
     text-align: start;
     border-radius: 12px 12px 12px 12px;
+    box-shadow: 2px 2px 4px 2px #cbcbcb;    
 }
 .homebussinesslising_img{
     width: 100%;
@@ -44,7 +45,7 @@ color: #330000;
 }
 .homebussinesslising_text{
     padding-top: 5%;
-    padding-left: 3%;
+    padding-left: 8%;
     height: 107px;
     background-color: #FFE5E5;
     color: #650000;
@@ -55,6 +56,8 @@ color: #330000;
     line-height: 24px;
     display: flex;
     flex-direction: column;
+    border-radius: 0px 0px 12px 12px;
+    
     
 }
 .homebussinesslising_btn{
@@ -69,6 +72,20 @@ color: #330000;
     font-weight: 700;
     font-style: normal;
     margin-top: 10%;
+    /* margin-left: 4%; */
+}
+.homebussinesslising_btn_drive{
+    width: 42%;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    border: 2px solid #C68643 ;
+    background-color: white;
+    color: #C68643;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 4%;
 }
 @media (max-width:786px) {
     .homebussinesslising_text{
@@ -79,8 +96,14 @@ color: #330000;
         justify-content:space-evenly ;
     }
     .homebussinesslising_btn{
-        width: auto;
-        font-size: 12px;
+        width: 50%;
+        font-size: 8px;
+        margin-top: 10%;
+        border: 2px solid;
+    }
+    .homebussinesslising_btn_drive{
+        width: 50%;
+        font-size: 8px;
         margin-top: 10%;
         border: 2px solid;
     }

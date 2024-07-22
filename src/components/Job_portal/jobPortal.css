@@ -1,4 +1,4 @@
-.job-text{
+.job_text{
     border: 6px blue;
     height: auto;
     width: auto;
@@ -9,11 +9,28 @@
 .job1{
     text-align: center;
     height: auto;
+  width: auto;
+    
+}
+.search_job{
+  border: 2px solid;
+  width: auto;
+  height: 100px;
+  margin-top: 1%;
+  background-color: #E0EFFF;
+ 
 }
 @media (max-width:786px) {
-    .job-text{
+    .job_text{
       margin-left: 0%;
       margin-right: 0%;
-      width:110%;
+      width:100%;
     }
+    .job1{
+      text-align: center;
+      height: auto;
+      margin-top: 1%;
+      padding-right: 1%;
+      padding-left: 1%;
+  }
   }
