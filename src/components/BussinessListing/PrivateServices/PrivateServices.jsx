@@ -76,6 +76,9 @@ const PrivateServices = ({handleClick}) => {
                 Ambulance
               </label>
             </button>
+
+
+
             <button
               className="services_btn"
               onClick={() => handleClick("Doctor")}
@@ -398,6 +401,8 @@ const PrivateServices = ({handleClick}) => {
                   Fruit Shops
                 </label>
               </button>
+
+
               <button
                 className="services_btn"
                 onClick={() => handleClick("Toy Shops")}
@@ -430,14 +435,14 @@ const PrivateServices = ({handleClick}) => {
                   className="radio"
                 />
                 <label
-                  htmlFor="lang-19"
+                  htmlFor="lang-18"
                   className="lable label-18"
                   id="lableprivateservice"
                 >
                   <br />
                   <img className="serviceLogoBackground" src={Cloths} alt="" />
                   <br />
-                  Cloth Shops
+                  Cloth <br />Shops
                 </label>
               </button>
               <button
@@ -564,7 +569,7 @@ const PrivateServices = ({handleClick}) => {
                   className="radio"
                 />
                 <label
-                  htmlFor="lang-1"
+                  htmlFor="lang-24"
                   className="lable label-24"
                   id="lableprivateservice"
                 >
@@ -623,7 +628,7 @@ const PrivateServices = ({handleClick}) => {
                   className="radio"
                 />
                 <label
-                  htmlFor="lang-2"
+                  htmlFor="lang-27"
                   className="lable label-27"
                   id="lableprivateservice"
                 >
@@ -643,16 +648,18 @@ const PrivateServices = ({handleClick}) => {
                   className="radio"
                 />
                 <label
-                  htmlFor="lang-1"
+                  htmlFor="lang-28"
                   className="lable label-28"
                   id="lableprivateservice"
+                  style={{textAlign:"center"}}
                 >
                   <img
+                  style={{textAlign:"center"}}
                     className="serviceLogoBackground"
                     src={ShoppingMall}
                     alt=""
                   /> <br />
-                  Shopping Mall
+                  Shopping <br /> Mall
                 </label>
               </div>
             </div>

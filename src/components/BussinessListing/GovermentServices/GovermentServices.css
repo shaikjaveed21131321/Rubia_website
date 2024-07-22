@@ -36,6 +36,8 @@
     border-radius: 8px;
     padding-top: 5%;
     font-size: 100%;
+    text-align: center;
+    color: #995050;
 }
 #lang-29:checked ~ .label-29,
 #lang-30:checked ~ .label-30,
@@ -75,13 +77,14 @@
     .govermentServices_row1 div{
         cursor: pointer;
         height: 100%;
-       border: none;
+        width: 15%;
+        border: none;
         border-radius: 8px;
-        padding-top: 5%;
+        
         font-size: 9px;
     }
     .services_img{
-        width: 50px;
+        width: 45px;
         height: 50px;
     }
     #govermentServices_row2 div{
@@ -89,9 +92,20 @@
         height: 100%;
        border: none;
         border-radius: 8px;
-        padding-top: 5%;
+        width: 15%;
         font-size: 9px;
        
+    }
+    #g{
+        box-shadow: 2px 2px 4px 2px #cbcbcb;
+        color: #995050;
+        font-size: 9px;
+        width: 100%;
+    
+        padding-top: 0%;
+    }
+    .govermentServices_row1{
+        padding-top: 0%;
     }
    
    

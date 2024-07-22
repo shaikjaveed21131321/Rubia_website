@@ -24,6 +24,7 @@
     margin: auto;
     display: flex;
     justify-content: space-evenly;
+   
     
  }
  .private_list2{
@@ -124,6 +125,7 @@ color: #144273;
 #lang-16:checked ~ .label-16,
 #lang-17:checked ~ .label-17,
 #lang-18:checked ~ .label-18,
+#lang-19:checked ~ .label-19,
 #lang-20:checked ~ .label-20,
 #lang-21:checked ~ .label-21,
 #lang-22:checked ~ .label-22,
@@ -142,6 +144,7 @@ color: #144273;
         width: 55px;
         height: 80px;
         font-size: 9px;
+        padding-top:0% ;
     }
     .serviceLogoBackground{
         width: 30px;
@@ -150,15 +153,50 @@ color: #144273;
         padding: 0%;
     }
     .private_list1{
-        height: 132px;
+        height: 90px;
         width: 100%;
         margin: auto;
         display: flex;
         justify-content: space-evenly;
+        padding-left: 1%;
+        padding-right: 1%;
+       
+        
+     }
+     .private_list2{
+        height: 90px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        padding-left: 1%;
+        padding-right: 1%;
+     }
+     .private_list3{
+        height: 90px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        padding-left: 1%;
+        padding-right: 1%;
+     }
+     .private_list4{
+        height: 90px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        padding-left: 1%;
+        padding-right: 1%;
      }
      #lableprivateservice{
-       margin-top: 40%;
+       margin-top: 0%;
+       width: 100%;
        border: none;
+       
+       box-shadow: 2px 2px 4px 2px #cbcbcb;
+      
      }
      .public_services{
         align-content: center;
