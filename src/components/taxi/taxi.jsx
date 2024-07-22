@@ -19,12 +19,12 @@ const taxi = () => {
                   <button className="btn_taxi">Local</button>
                   <button className="btn_taxi">Out Station</button>
                 </div>
-                <br />
+               
                 <div className="buttons2">
                   <button className="btn_taxi">One-Way Trip</button>
                   <button className="btn_taxi">Round Trip</button>
                 </div>
-                <br />
+               
                 <div className="buttons3">
                   <button className="btn_taxi">Hatch back</button>
                   <button className="btn_taxi">Sedan</button>
@@ -33,7 +33,7 @@ const taxi = () => {
                 </div>
               </div>
 
-              <div className="form" style={{margin:"auto"}}>
+              <div className="form" style={{margin:"auto",marginLeft:"1%",marginRight:"1%"}}>
                 <form action="" className="main_form">
                   <div>
                     <label  className="label_taxi" for="input1">frist name</label>
