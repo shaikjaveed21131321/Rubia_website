@@ -8,6 +8,7 @@ const Contact = () => {
 
     const [formValues, setFormValues] = useState({
         cu_ser_name: '',
+        cu_name:'',
         cu_email: '',
         cu_phone: '',
         cu_msg: '',
@@ -23,13 +24,13 @@ const Contact = () => {
     }
 
     const clearForm = () => {
-        setFormValues({
-            cu_ser_name: '',
-            cu_email: '',
-            cu_phone: '',
-            cu_msg: '',
-            created_at: ''
-        });
+        
+        document.getElementsByName('cu_ser_name').value = '';
+        document.getElementsByName('cu_name').value = ''
+        document.getElementsByName('cu_email').value = ''
+        document.getElementsByName('cu_phone').value = ''
+        document.getElementsByName('cu_msg').value = ''
+        
       };
 
       const handleSubmit = (e)=>{
@@ -40,6 +41,7 @@ const Contact = () => {
 
         const raw = JSON.stringify({
             "cu_ser_name": formValues.cu_ser_name.trim(),
+            "cu_name": formValues.cu_name.trim(),
             "cu_email": formValues.cu_email.trim(),
             "cu_phone": formValues.cu_phone.trim(),
             "cu_msg": formValues.cu_msg.trim(),
@@ -49,15 +51,22 @@ const Contact = () => {
           const requestOptions = {
             method: "POST",
             headers: myHeaders,
+            redirect: "follow",
             body: raw,
-            redirect: "follow"
           };
           
-          fetch("192.168.0.114:4000/api/v1/contactus/register", requestOptions)
+          fetch("http://192.168.0.114:4000/api/v1/contactus/register", requestOptions)
             .then((response) => response.json())
-            .then((result) => console.log(result))
-            .catch((error) => console.error(error));
-            clearForm();
+            .then((result) => {
+                if(result.success === true){
+                    window.alert(result.message);
+                    clearForm()
+                }else{
+                    window.alert(result.message);
+                }
+            })
+            .catch((error) => window.alert(error.message));
+            
       }
 
     
@@ -68,8 +77,46 @@ const Contact = () => {
         <div className='main-contact'>
 
         <div className="contact1">
-            <div className='contact_info'>
-                <div className='contact-header  ' >
+            <div  style={{border: "1px solid black"}} className='contact_info'>
+                <section className='container text-center'>
+                
+                    <div class="col row-md- ">
+                        <div style={{width:"360px", background:"#FFF5EB"}} class="col row-md">
+                            <div>
+                                <h1 style={{fontSize:"18px",fontWeight:"700",textAlign:"left",padding:"8px", color:"#650000"}}>Contact <span style={{color:"#C68643"}}>With Us</span></h1>
+                            </div>
+                        <form style={{background:"#F6C390", padding:"8px 4px"}} onSubmit={handleSubmit} className='' name='formc' autoComplete="off">
+                            <div style={{gap:"8px"}} className='form-group form-input '>
+
+                                <input style={{borderRadius:"8px"}} type="text" className='form-control' required placeholder='Service Name' name='cu_ser_name' onChange={handleChange} />
+                                <span id="servicename-error" className="error-message"></span>
+
+                                <input type="text" className='form-control' required placeholder='Name' name='cu_name' onChange={handleChange}  />
+                                <span id="name-error" className="error-message"></span>
+
+                                <input type="text" className='form-control'  placeholder='Email Id' name='cu_email' onChange={handleChange}/>
+                                <span id="email-error" className="error-message"></span>
+
+                                <input type='tel' className='form-control' required placeholder='Mobile Number' name='cu_phone' min="10" max="10" minLength="10" maxLength="10"  onChange={handleChange} />
+                                <span id="mobilenumber-error" className="error-message"></span>
+
+                                <textarea name="cu_msg" id="text" className='form-control' placeholder='Note' onChange={handleChange} ></textarea>
+                                <span id="text-error" className="error-message"></span>
+
+                                <button type='submit' className='btn ms-1' >Send Message</button>
+                            </div>
+                        </form>
+                        
+                        </div>
+                        <div class="col">
+                        Column
+                        </div>
+                    </div>
+                </section>
+                
+                
+                
+                {/* <div className='contact-header  ' >
                     <h1 className='add-header '>contact <span style={{color:"#C68643"}}>with</span> us</h1>
                     <h1 className='add-header' >Address</h1>
                 </div>
@@ -77,22 +124,22 @@ const Contact = () => {
 
                 <div className='display-block'>
                     <div className='contact-form' id='contact-block'>
-                        <form  method='post' onSubmit={handleSubmit}  name='formc' action="" autoComplete="off">
+                        <form  onSubmit={handleSubmit} name='formc' autoComplete="off">
                             <div className='form-group form-input'>
 
-                                <input type="text" className='form-control' required placeholder='Service Name' id='servicename' name='servicename' value={formValues.cu_ser_name} onChange={handleChange} />
+                                <input type="text" className='form-control' required placeholder='Service Name' id='servicename' name='cu_ser_name' onChange={handleChange} />
                                 <span id="servicename-error" className="error-message"></span>
 
-                                <input type="text" className='form-control' required placeholder='Name' id='name' name='name' />
+                                <input type="text" className='form-control' required placeholder='Name' id='name' name='cu_name' onChange={handleChange}  />
                                 <span id="name-error" className="error-message"></span>
 
-                                <input type="text" className='form-control'  placeholder='Email Id' id='email' name='email' value={formValues.cu_email} onChange={handleChange}/>
+                                <input type="text" className='form-control'  placeholder='Email Id' id='email' name='cu_email' onChange={handleChange}/>
                                 <span id="email-error" className="error-message"></span>
 
-                                <input type='tel' className='form-control' required placeholder='Mobile Number' id='mobilenumber' name='mobilenumber' min="10" max="10" minLength="10" maxLength="10" value={formValues.cu_phone} onChange={handleChange} />
+                                <input type='tel' className='form-control' required placeholder='Mobile Number' id='mobilenumber' name='cu_phone' min="10" max="10" minLength="10" maxLength="10"  onChange={handleChange} />
                                 <span id="mobilenumber-error" className="error-message"></span>
 
-                                <textarea name="text" id="text" className='form-control' placeholder='Text' value={formValues.cu_msg} onChange={handleChange} ></textarea>
+                                <textarea name="cu_msg" id="text" className='form-control' placeholder='Text' onChange={handleChange} ></textarea>
                                 <span id="text-error" className="error-message"></span>
 
                                 <button type='submit' className='btn1 ms-1' >Send Message</button>
@@ -121,7 +168,7 @@ const Contact = () => {
                             <h4 className='me-3'><b>info@rubia.services</b></h4>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
             </div>
             <div className='map'>
