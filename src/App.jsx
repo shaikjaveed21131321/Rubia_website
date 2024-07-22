@@ -11,7 +11,7 @@ import "./components/footer/footer.css";
 import "./components/mediaQuerys/media.css";
 
 import "./components/AppLinks/applink.css";
-import "./components/contact/contact.css";
+import "./components/Contact/contact.css";
 import "./components/Home/Home_slider/Home_slider.css";
 import "./components/nav/nav.css";
 import "./components/software/software.css";
