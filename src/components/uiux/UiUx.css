@@ -48,7 +48,10 @@ align-items: center;
       width: 100%;
     }
     .btn_contact2{
+      width: 25%;
+      height: 35px;
+      font-size: 14px;
+      margin-left: 58%;
       margin-top: 30%;
-      margin-right: 200%;
     }
   }

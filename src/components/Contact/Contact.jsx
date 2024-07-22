@@ -109,7 +109,7 @@ const Contact = () => {
                         
                         </div>
                         <div class="col">
-                        Column
+                        
                         </div>
                     </div>
                 </section>
@@ -149,26 +149,9 @@ const Contact = () => {
     
 
                     </div>
-                    <div className='contact-address' id='contact-block ' >
-                        <h1 className='aadd-header' >Address</h1>
-
-                        <div className='add-locaton d-flex' id='location-block'>
-                            <img src={Locicon} alt="" />
-                            <div className='mt-1'>
-                                <p><b><u><b>Branch</b></u> :  Metro pillar No. 974,Flat no. 107,  Rams Enclave,Vikaspuri,Erragadda, Hyderabad - 500018.</b></p>
-                                <p><b><u><b>Registed</b></u>: 6-1-105,saifabad,khairatabad,     Hyderabad-500004.</b></p>
-                            </div>
-                        </div>
-                        <div className='add_phone ' id='location-block'>
-                            <img src={Phonicon} alt="" />
-                            <h4 className='me-5'><b>+91 7893653899</b></h4>
-                        </div>
-                        <div className='add_phone ' id='location-block'>
-                            <img src={Mailicon} alt="" />
-                            <h4 className='me-3'><b>info@rubia.services</b></h4>
-                        </div>
-                    </div>
+                   
                 </div> */}
+                
 
             </div>
             <div className='map'>

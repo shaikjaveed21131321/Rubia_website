@@ -68,6 +68,7 @@ const BussinessListing = () => {
               </Link>
             </div>
           </div>
+          <br />
           <div className="bussiness_banner">
             <Carousel interval={1500} id="bussinessbanner">
               <Carousel.Item>

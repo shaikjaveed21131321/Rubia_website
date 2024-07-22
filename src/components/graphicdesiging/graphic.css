@@ -48,9 +48,10 @@
     }
     .btn_contact{
       width: 25%;
-      height: auto;
-      margin-top: 38%;
+      height: 35px;
       font-size: 14px;
+      margin-top: 36.5%;
+     
     }
   }
   

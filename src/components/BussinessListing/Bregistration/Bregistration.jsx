@@ -208,7 +208,7 @@ const Bregistration = () => {
                 {errors.businessName && <p className="error text-danger">{errors.businessName}</p>}
               </div>
               <div className='inputdiv2 '>
-                <select id="" className='input1 w-100 h-100 p-1' name="primaryCategory" value={formValues.primaryCategory} onChange={handleChange} >
+                <select style={{color:"#8F8F8F"}} id="" className='input1 w-100 h-100 p-1' name="primaryCategory" value={formValues.primaryCategory} onChange={handleChange} >
                   <option className='option'>Primary Category</option>
                   <option value="A">A</option>
                   <option value="B">B </option>
@@ -221,8 +221,11 @@ const Bregistration = () => {
                 {errors.primaryCategory && <p className="error text-danger">{errors.primaryCategory}</p>}
               </div>
             </div>
+            <div>
+              <textarea name="" id="bg_textarea" style={{width:"100%"}} placeholder='Business description     (1000 characters)' ></textarea>
+            </div>
             {/*  */}
-            <div className='inputdiv1 mb-4'>
+            {/* <div className='inputdiv1 mb-4'>
               <div className='inputdiv2 '>
 
                 <select id="" className='input1 w-100 h-100 p-1' name="seconderyCategory" value={formValues.seconderyCategory} onChange={handleChange}>
@@ -250,7 +253,7 @@ const Bregistration = () => {
                 </select>
                 {errors.subCategory && <p className="error text-danger">{errors.subCategory}</p>}
               </div>
-            </div>
+            </div> */}
             {/*  */}
             <div className='inputdiv1 mb-4 mt-4'>
               <div className='inputdiv2'>

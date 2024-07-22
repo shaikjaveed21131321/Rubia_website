@@ -91,7 +91,7 @@ const PrivateServices = ({handleClick}) => {
                 id="lableprivateservice"
               >
                 <br />
-                <img className="serviceLogoBackground" src={Doctor} alt="" />
+                <img className="serviceLogoBackground" src={Doctor} alt="" /><br />
                 Hospitals
               </label>
             </button>
