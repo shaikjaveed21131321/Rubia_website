@@ -5,7 +5,7 @@ import Leftside from "../leftside/leftside";
 import Home from "../Home/home";
 import Service from "../middlecontent/middlecontent";
 import About from "../About/about";
-import Contact from "../contact/contact";
+import Contact from "../Contact/Contact";
 import BussinessListing from '../BussinessListing/BussinessListing';
 import Driver from "../DriverServices/DriverServices"
 import Graphic from '../graphicdesiging/graphic';

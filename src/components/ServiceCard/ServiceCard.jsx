@@ -42,7 +42,7 @@ useEffect(() => {
     {/* <div className='service_text'>
     <div className='service1'> */}
     {/* Section first Start Here */}
-    <section style={{width:(width<450)? "1000px":"100%"}} className='rounded '>
+    <section style={{width:(width<450)? "100%":"100%"}} className='rounded '>
             <section className='text-start '>
                 <h2 style={{color:"#650000"}} id="card-title">{obj.heading}</h2>
             </section>
