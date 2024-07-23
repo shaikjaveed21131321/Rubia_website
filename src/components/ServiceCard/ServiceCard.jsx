@@ -42,7 +42,7 @@ useEffect(() => {
     {/* <div className='service_text'>
     <div className='service1'> */}
     {/* Section first Start Here */}
-    <section style={{width:(width<450)? "100%":"100%"}} className='rounded '>
+    <section style={{width:(width<450)? "100%":"100%",color:"rgba(101, 0, 0, 0.7)"}} className='rounded '>
             <section className='text-start '>
                 <h2 style={{color:"#650000"}} id="card-title">{obj.heading}</h2>
             </section>
@@ -51,8 +51,8 @@ useEffect(() => {
                     <img className={obj.classcss} style={obj.styleobj} src={logoMap[obj.id]} alt={obj.heading} />  
                 </div>
                 <div className=' '>
-                    <div className='d-flex flex-column justify-content-start align-items-start text-start '>
-                        <p>
+                    <div  className='d-flex flex-column justify-content-start align-items-start text-start '>
+                        <p >
                             <span id='innerTitle'>{obj.subheading}</span>
                             <br />
                             {obj.description}

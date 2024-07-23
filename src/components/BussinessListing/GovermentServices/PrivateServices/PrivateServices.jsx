@@ -171,26 +171,7 @@ const PrivateServices = ({handleClick}) => {
                 Company Secretary
               </label>
             </button>
-            <button
-              className="services_btn"
-              onClick={() => handleClick("Software Companies")}
-            >
-              <input type="radio" name="lang" id="lang-7" className="radio" />
-              <label
-                htmlFor="lang-7"
-                className="lable label-7"
-                id="lableprivateservice"
-              >
-                <img
-                  className="serviceLogoBackground"
-                  src={SoftwareGuy}
-                  alt=""
-                  style={{ marginTop: "17px" }}
-                />
-                <br />
-                Software Companies
-              </label>
-            </button>
+
           </div>
 
           <div className={show}>
@@ -328,30 +309,7 @@ const PrivateServices = ({handleClick}) => {
                   Medical Shops
                 </label>
               </button>
-              <button
-                className="services_btn"
-                onClick={() => handleClick("Digital Market")}
-              >
-                {" "} 
-                <input
-                  type="radio"
-                  name="lang"
-                  id="lang-14"
-                  className="radio"
-                />
-                <label
-                  htmlFor="lang-14"
-                  className="lable label-14"
-                  id="lableprivateservice"
-                >
-                  <img
-                    className="serviceLogoBackground"
-                    src={DigitalMarket}
-                    alt=""
-                  /> <br />
-                  Digital Market{" "}
-                </label>
-              </button>
+             
             </div>
 
             
@@ -492,25 +450,7 @@ const PrivateServices = ({handleClick}) => {
                   Stationary Shop
                 </label>
               </button>
-              <button
-                className="services_btn"
-                onClick={() => handleClick("Liquor shops")}
-              >
-                <input
-                  type="radio"
-                  name="lang"
-                  id="lang-21"
-                  className="radio"
-                />
-                <label
-                  htmlFor="lang-21"
-                  className="lable label-21"
-                  id="lableprivateservice"
-                >
-                  <img className="serviceLogoBackground" src={Liqour} alt="" /> <br />
-                  Liquor Shops
-                </label>
-              </button>
+              
             </div>
       
             <div className="private_list4">
@@ -637,7 +577,73 @@ const PrivateServices = ({handleClick}) => {
                 </label>
               </button>
 
-              <div
+              
+            </div>
+            <div className="private_list4">
+            <button
+              className="services_btn"
+              onClick={() => handleClick("Software Companies")}
+            >
+              <input type="radio" name="lang" id="lang-7" className="radio" />
+              <label
+                htmlFor="lang-7"
+                className="lable label-7"
+                id="lableprivateservice"
+              >
+                <img
+                  className="serviceLogoBackground"
+                  src={SoftwareGuy}
+                  alt=""
+                  style={{ marginTop: "17px" }}
+                />
+                <br />
+                Software Companies
+              </label>
+            </button>
+            <button
+                className="services_btn"
+                onClick={() => handleClick("Digital Market")}
+              >
+                {" "} 
+                <input
+                  type="radio"
+                  name="lang"
+                  id="lang-14"
+                  className="radio"
+                />
+                <label
+                  htmlFor="lang-14"
+                  className="lable label-14"
+                  id="lableprivateservice"
+                >
+                  <img
+                    className="serviceLogoBackground"
+                    src={DigitalMarket}
+                    alt=""
+                  /> <br />
+                  Digital Market{" "}
+                </label>
+              </button>
+              <button
+                className="services_btn"
+                onClick={() => handleClick("Liquor shops")}
+              >
+                <input
+                  type="radio"
+                  name="lang"
+                  id="lang-21"
+                  className="radio"
+                />
+                <label
+                  htmlFor="lang-21"
+                  className="lable label-21"
+                  id="lableprivateservice"
+                >
+                  <img className="serviceLogoBackground" src={Liqour} alt="" /> <br />
+                  Liquor Shops
+                </label>
+              </button>
+              <button
                 className="services_btn"
                 onClick={() => handleClick("ShoppingMall")}
               >
@@ -661,7 +667,7 @@ const PrivateServices = ({handleClick}) => {
                   /> <br />
                   Shopping <br /> Mall
                 </label>
-              </div>
+              </button>
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ const graphic = () => {
       <div className="graphic-text">
         <div className="graphic1">
           <div className="banners" >
-            <Link className="contact_btn" to='/contact/'><button className="btn_contact">contact us</button></Link>
+            <Link className="contact_btn" to='/contact/'><button className="btn_contact">Contact Us</button></Link>
             <img  className="Banner1_graphic" src={Banner1} alt="" />
             <br />
             <br />

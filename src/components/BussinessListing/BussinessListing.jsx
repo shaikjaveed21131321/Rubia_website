@@ -102,7 +102,7 @@ const BussinessListing = () => {
           
                 <div className="navagition">
                   
-                  <div className="navagition_1">
+                  <div className="navagition_11">
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>

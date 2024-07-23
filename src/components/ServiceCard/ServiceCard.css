@@ -10,3 +10,9 @@
     text-align: center;
     height: auto;
 }
+@media (max-width:786) {
+    .service-text{
+        padding-left: 10%;
+        padding-right: 5%;
+    }
+}

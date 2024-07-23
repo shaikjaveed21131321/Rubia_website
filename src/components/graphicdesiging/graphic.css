@@ -47,11 +47,12 @@
      width: 100%;
     }
     .btn_contact{
-      width: 25%;
-      height: 35px;
-      font-size: 14px;
+      width: 76px;
+      height: 26px;
+      font-size: 12px;
+      background-color: #124F91;
       margin-top: 36.5%;
-     
+      border-radius: 4px;
     }
   }
   

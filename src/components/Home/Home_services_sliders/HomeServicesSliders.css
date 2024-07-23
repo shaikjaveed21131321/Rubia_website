@@ -88,6 +88,22 @@ color: #330000;
     margin-top: 4%;
 }
 @media (max-width:786px) {
+    .slick-arrow{
+        background-color:none;
+        color: #330000;
+        z-index: 2;
+        
+        }
+    .slick-prev:before{
+        color: #330000;
+        font-size: 30px;
+        margin-left: 25px;
+    }
+    .slick-next:before{
+        color: #330000;
+        font-size: 30px;
+        margin-left: -50px;
+    }
     .homebussinesslising_text{
         font-size: 12px;
         line-height: none;
@@ -108,8 +124,8 @@ color: #330000;
         border: 2px solid;
     }
     .homebussinesslising_contaner{
-        width: 85%;
-        padding-left: 3%;
+        width: 100%;
+        margin-left: 0%;
     }
    
 }

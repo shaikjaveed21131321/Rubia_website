@@ -77,22 +77,25 @@
     .govermentServices_row1 div{
         cursor: pointer;
         height: 100%;
-        width: 15%;
+        width: 52px;
         border: none;
         border-radius: 8px;
-        
+       align-items: center;
+       text-align: center;
+       align-content: center;
         font-size: 9px;
     }
     .services_img{
-        width: 45px;
-        height: 50px;
+        
+        width: 30px;
+        height: 30px;
     }
     #govermentServices_row2 div{
         cursor: pointer;
         height: 100%;
        border: none;
         border-radius: 8px;
-        width: 15%;
+        width: 52px;
         font-size: 9px;
        
     }
@@ -101,11 +104,15 @@
         color: #995050;
         font-size: 9px;
         width: 100%;
-    
-        padding-top: 0%;
+       
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        padding-top: 15%;
     }
     .govermentServices_row1{
-        padding-top: 0%;
+        padding: 0%;
+        height: 80px;
     }
    
    

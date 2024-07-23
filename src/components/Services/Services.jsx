@@ -5,13 +5,24 @@ import "./services.css";
 
 const Services = () => {
 
+    const [width, setWidth] = useState(window.innerWidth);
+    
+    useEffect(() => {
+    
+      const handleResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    
+    }, []);
+    
+
     const imgObj={
-        width: "387px",
+        width:(width<500)?"350px": "387px",
         height: "257.83px",
     }
     
     const imgObj1={
-        width: "387px",
+        width: (width<500)?"350px": "387px",
         height: "257.83px",
         border:"1px solid black",
     }
@@ -223,22 +234,13 @@ const propObj8 = {
     lastHead:"Contact today Go forward",
 }
 
-const [width, setWidth] = useState(window.innerWidth);
-    
-    useEffect(() => {
-    
-      const handleResize = () => setWidth(window.innerWidth);
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    
-    }, []);
-    
+
 
   return (
     <>
         
     <div style={{margin:"auto", paddingLeft:"5px" , display:"flex", justifyContent:"center"}} className=' h-auto '>
-    <main style={{width:(width <500)?"100%":"65%",margin:"auto" }} className='d-flex flex-column align-items-center justify-content-start gap-4'>
+    <main style={{width:(width <500)?"96%":"65%",margin:"auto" }} className='d-flex flex-column align-items-center justify-content-start gap-4'>
        
        <ServiceCard propObj={propObj1} />
        <ServiceCard propObj={propObj2} />
