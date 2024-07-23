@@ -185,5 +185,10 @@ width: auto;
     border: 1px solid #c0c0c0;
     height: 60px;
     border-radius: 5px;
+    /* -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box; */
+    outline: none;
+    resize: none;
  }
  

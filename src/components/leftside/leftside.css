@@ -152,6 +152,7 @@ background-color: white;
     padding-top: 3%;
     position: fixed;
     margin-right: 0%;
+    background-color: #EDBD30;
   }
   .services::-webkit-scrollbar{
    display: none;
@@ -163,11 +164,15 @@ background-color: white;
     height: 180px;
     width: 100%;
     display: flex;
+    
     flex-direction: column;
     height: 0%;
+   
   }
   .services-links{
     width: 250px;
+    background-color: #EDBD30;
+    
   }
   .services .services-links{
     margin: auto;
@@ -191,12 +196,46 @@ background-color: white;
     display: flex;
     flex-direction: column;
     /* border: 2px solid; */
-    padding: 18px;
+    padding: 15px;
+    padding-top: px;
     
     
+  }
+  .leftlinks1{
+    margin: 5%;
   }
   .services-links img{
    /* border: 2px solid; */
    align-self: center;
+  }
+  .leftslide_logo2{
+    height: 24px;
+    width: 24px;
+  }
+  .leftslide_logo3{
+    height: 24px;
+    width: 38px;
+    
+  }
+  .leftslide_logo4{
+    height: 24px;
+    width: 29px;
+    padding-left: 1%;
+  }
+  .leftslide_logo5{
+    height: 24px;
+    width: 27px;
+  }
+  .leftslide_logo6{
+    height: 24px;
+    width: 24px;
+  }
+  .leftslide_logo7{
+    height: 24px;
+    width: 24px;
+  }
+  .leftslide_logo8{
+    height: 24px;
+    width: 24px;
   }
 }

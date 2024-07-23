@@ -33,7 +33,7 @@ const taxi = () => {
                 </div>
               </div>
 
-              <div className="form" style={{margin:"auto",marginLeft:"1%",marginRight:"1%"}}>
+              <div className="form" style={{margin:"auto"}}>
                 <form action="" className="main_form">
                   <div>
                     <label  className="label_taxi" for="input1">frist name</label>
