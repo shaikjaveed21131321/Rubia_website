@@ -31,7 +31,11 @@ const Taxi = () => {
             <p className="text">1.B2C (Business to Customer)</p>
             <p className="text1">a) Hire-Car taxi </p>
             <div className="car_taxi">
-              <div className="buttons">
+              
+              <div className="form" style={{ margin: "auto" }}>
+                <form action="">
+                
+                <div className="buttons">
                 <Select
                   defaultValue={selectedOption}
                   onChange={setSelectedOption}
@@ -54,9 +58,8 @@ const Taxi = () => {
                   placeholder="Hatch back"
                 />
               </div>
+                <div  className="main_form">
 
-              <div className="form" style={{ margin: "auto" }}>
-                <form action="" className="main_form">
                   <div>
                     <label className="label_taxi" for="input1">
                       frist name
@@ -162,6 +165,8 @@ const Taxi = () => {
                   <button type="submit" className="full-width" id="btn_taxi">
                     submit
                   </button>
+                  
+                </div>
                 </form>
               </div>
             </div>
