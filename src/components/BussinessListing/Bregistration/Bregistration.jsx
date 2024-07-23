@@ -34,6 +34,9 @@ const Bregistration = () => {
     saturdayClose: '',
     sundayOpen: '',
     sundayClose: '',
+    input_img1:'',
+    input_img2:'',
+    input_img3:'',
   });
 
   const [errors, setErrors] = useState({});
@@ -83,8 +86,6 @@ const Bregistration = () => {
         setFormValues({
           businessName: '',
           primaryCategory: '',
-          seconderyCategory: '',
-          subCategory: '',
           servicesList: '',
           emailid: '',
           contactNumber: '',
@@ -113,6 +114,9 @@ const Bregistration = () => {
           saturdayClose: '',
           sundayOpen: '',
           sundayClose: '',
+          input_img1:'',
+          input_img2:'',
+          input_img3:'',
         });
         setErrors({});
       };
@@ -124,23 +128,21 @@ const Bregistration = () => {
     let data = JSON.stringify(
       {
         bsn_name: formValues.businessName.trim(),
-        bsn_prim_cat: formValues.primaryCategory.trim(),
-        bsn_sec_cat: formValues.seconderyCategory.trim(),
-        bsn_sub_cat: formValues.subCategory.trim(),
+        bsn_category: formValues.primaryCategory.trim(),
         bsn_services_list: formValues.servicesList.trim(),
+        bsn_email: formValues.emailid.trim(),
         bsn_con_num: formValues.contactNumber.trim(),
         bsn_whs_app_num: formValues.whatsappNumber.trim(),
         bsn_gst_num: formValues.gstNumber.trim(),
         bsn_cin_num: formValues.cinNumber.trim(),
-        bsn_emailid: formValues.emailid.trim(),
         bsn_bnum_bname: formValues.blockNumber.trim(),
         bsn_area: formValues.area.trim(),
         bsn_city: formValues.city.trim(),
         bsn_state: formValues.state.trim(),
         bsn_pincode: formValues.pincode.trim(),
+        bsn_website_name: formValues.websiteName.trim(),
         bsn_gmap_link: formValues.googleMapLink.trim(),
         bsn_website_link:formValues.websiteLink.trim(),
-        bsn_website_name: formValues.websiteName.trim(),
         bsn_tm_mon_op: formValues.mondayOpen.trim(),
         bsn_tm_mon_cl: formValues.mondayClose.trim(),
         bsn_tm_tue_op: formValues.tuesdayOpen.trim(),
@@ -155,8 +157,7 @@ const Bregistration = () => {
         bsn_tm_sat_cl: formValues.saturdayClose.trim(),
         bsn_tm_sun_op: formValues.sundayOpen.trim(),
         bsn_tm_sun_cl: formValues.sundayClose.trim(),
-        bsn_email: "",
-        bsn_img1: "",
+        bsn_img1:"",
         bsn_img2: "",
         bsn_img3: "",
         created_at: new Date(),
@@ -180,9 +181,10 @@ const Bregistration = () => {
     // .catch((err)=>console.log(err));
     // var url = "http://192.168.0.114:4000/api/v1/business/register";
 
-    fetch("http://192.168.0.114:4000/api/v1/business/register", config).then((response) => response.json())
+    fetch("http://192.168.0.114:4000/api/v1/business/register", config)
+      .then((response) => response.json())
       .then((result) => {
-        if (result.success == true) {
+        if (result.success === true) {
           //coustom  message Altert box 
           swal("successful Registred", result.message, "success");
           // alert(result.message)
@@ -286,6 +288,10 @@ const Bregistration = () => {
                   name="contactNumber"
                   placeholder='Contact Number'
                   className='input1'
+                  min="10"
+                  minLength="10"
+                  max="10"
+                  maxLength="10"
                   value={formValues.contactNumber}
                   onChange={handleChange}
                 />
@@ -297,6 +303,10 @@ const Bregistration = () => {
                   name="whatsappNumber"
                   placeholder='WhatsApp Number'
                   className='input1'
+                  min="10"
+                  minLength="10"
+                  max="10"
+                  maxLength="10"
                   value={formValues.whatsappNumber}
                   onChange={handleChange}
                 /> 
@@ -590,15 +600,15 @@ const Bregistration = () => {
               <h3 className='text-start ms-3 imgHead'>Add Images:</h3>
               <div className='img_div mt-3 mb-3 me-2 ms-3 inputdiv1'>
                 <span>Upload First Image&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;:</span>
-                <input type="file" className='w-50 ms-2 coustomfile' id='input_img1' />
+                <input type="file" className='w-50 ms-2 coustomfile' id='input_img1' name='input_img1' />
               </div>
               <div className='img_div mt-3 mb-3 ms-3 me-2 inputdiv1'>
                 <span>Upload Second Image&#160;&#160;:</span>
-                <input type="file" className='w-50 ms-2 coustomfile' id='input_img2' />
+                <input type="file" className='w-50 ms-2 coustomfile' id='input_img2' name='input_img2'/>
               </div>
               <div className='img_div mt-3 mb-3 ms-3 me-2 inputdiv1'>
                 <span>Upload Third Image&#160;&#160;&#160;&#160;&#160;&#160;&#160;:</span>
-                <input type="file" className='w-50 ms-2 coustomfile' id='input_img3' />
+                <input type="file" className='w-50 ms-2 coustomfile' id='input_img3' name='input_img3'/>
               </div>
             </div>
             <div className='mt-4 brg_btn mb-4'>
