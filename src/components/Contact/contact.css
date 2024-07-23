@@ -35,6 +35,8 @@
     margin: 30px;
     width: 88%;
     height: 100px;
+    outline: none;
+    resize: none;
     
 }
 .btn1{
@@ -126,6 +128,7 @@
         margin-top: 0%;
         margin-left: 0%;
         margin-right: 0%;
+        
     }
     #contact-block{
         
@@ -145,5 +148,6 @@
     #location-block{
              width: 100%;
     }
+   
     
 }

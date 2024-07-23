@@ -253,5 +253,8 @@
   display: flex;
   flex-direction: column;
 }
+.navagition_img{
+  width: 100%;
+}
     
 }
