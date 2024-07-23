@@ -331,7 +331,8 @@ const Contact = () => {
         <br />
         <div
           style={{
-            width: (width<500)?"528px":"90%",
+            width: (width<500)?"454px":"90%",
+            minWidth:"454px",
             height:"500px",
             margin: "auto",
             padding: "3px",
