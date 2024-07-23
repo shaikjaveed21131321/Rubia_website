@@ -164,7 +164,7 @@ const Bregistration = () => {
       }
     )
 
-    console.log(data);
+   
     let config = {
       method: "POST",
       maxBodyLength: Infinity,
