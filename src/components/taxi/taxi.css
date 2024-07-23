@@ -43,7 +43,7 @@
     color: #650000;
   }
   .buttons{
-    background-color: #C68643;
+    background-color: #FFE5E5;
     padding-top: 10px;
     padding-left: 10px;
     padding-bottom: 10px;
@@ -97,12 +97,12 @@
     color: #650000;
   }
   .form{
-    background-color:#FFD0A0 ;
+    background-color:#FFE5E5 ;
     height: auto;
     font-size: 100%;
     line-height: 27px;
     padding-left: 5%;
-    padding-top: 5%;
+    padding-top: 1%;
     padding-bottom: 5%;
   }
   
@@ -148,10 +148,31 @@ label, input {
   background-color: #144273;
   color: white;
 }
+.buttons{
+  display: flex;
+  flex-wrap: wrap;
+ 
+  justify-content: space-evenly;
+}
+.dropdown_taxi{
+  width: 30%;
+  border-radius: 4px;
+  padding-left: 2%;
+  padding-right: 2%;
+  color: #650000;
+  
+}
+/* .buttons select{
+  border:2px solid #650000;
+}
+.css-13cymwt-control{
+  border: 4px solid #650000 ;
+} */
 @media (max-width:786px) {
   .taxi-text{
     margin-right: 0%;
-    padding-left: 0%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
   .taxi2{
     margin-left: 0%;
@@ -165,17 +186,36 @@ label, input {
     font-size: 14px;
     margin: 10px;
   }
-  .buttons{
+  .form{
     padding-left: 1%;
     padding-right: 1%;
-    margin-left: 1%;
-    margin-right: 1%;
-   
   }
- .form{
+  .main_form{}
+  .buttons{
+    padding-left: 0%;
+    padding-right: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
     
- }
+  }
+  .label_taxi{
+    font-size: 18px;
+  }
+
   #btn_taxi{
     width: 30%;
+  }
+  .dropdown_taxi{
+    width: 47%;
+    border-radius: 4px;
+    padding-top: 2%;
+    font-weight: 600;
+    padding-left: 0%;
+    padding-right: 0%;
+    
+    
+  }
+  #react-select-3-placeholder{
+    color: #650000;
   }
 }
