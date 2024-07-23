@@ -194,7 +194,7 @@ const Bregistration = () => {
           swal("Error", result.message, "error")
           // alert(result.message)
         }
-      }).catch((error) => alert(error));
+      }).catch((error) => swal("Error", error, "error"));
 
   }
   return (
