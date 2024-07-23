@@ -51,8 +51,21 @@
       height: 26px;
       font-size: 12px;
       background-color: #124F91;
-      margin-top: 36.5%;
+      margin-top: 35%;
+      margin-left: 3.5%;
       border-radius: 4px;
+    }
+    .Banner1_graphic{
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    .Banner2_graphic{
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    .Banner3_graphic{
+      padding-left: 2%;
+      padding-right: 2%;
     }
   }
   
