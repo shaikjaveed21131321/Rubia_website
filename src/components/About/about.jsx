@@ -30,11 +30,11 @@ const About = () => {
     <>
     <div className='about-text'>
       <div className='about1'>
-    <h1 className=' text-start'><u>About <span style={{color:"#C68643",fontWeight:"400"}}>us</span></u></h1>
+    <h1 className=' text-start'><u>About <span style={{color:"#C68643",fontWeight:"600"}}>us</span></u></h1>
     <p className='text-start ml-3'>Welcome to RUBIA SERVICES your premier destination for comprehensive business solutions. We specialize in delivering a wide array of services to save your time, money, and energy while enhancing your business standards and expanding your market reach.</p>
-    <h1 className='text-start'><u>Who <span style={{color:"#C68643",fontWeight:"400"}}>We Are</span> </u></h1>
+    <h1 className='text-start'><u>Who <span style={{color:"#C68643",fontWeight:"600"}}>We Are</span> </u></h1>
     <p className='text-start ml-4'>At Rubia Services we believe in integrating multiple services into a single, efficient platform. Our expert team is dedicated to providing top-quality, innovative solutions tailored to meet the diverse needs of modern businesses.</p>
-    <h1 className='text-start'><u>Our <span style={{color:"#C68643",fontWeight:"400"}}>Services</span> </u></h1>
+    <h1 className='text-start'><u>Our <span style={{color:"#C68643",fontWeight:"600"}}>Services</span> </u></h1>
     <h5 className='text-start ' ><u>We offer a diverse range of services designed to help your business thrive:</u></h5>
     <ul className='text-start'>
         <li><p><span>Rented Car Driver Services:</span>Our professional and reliable drivers are available to meet all your transportation needs, ensuring safe and comfortable journeys.</p></li>
