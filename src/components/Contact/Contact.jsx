@@ -114,7 +114,7 @@ const Contact = () => {
                   </h1>
                 </div>
                 <form
-                  style={{minWidth:"400px", background: "#F6C390", padding: "8px 4px" }}
+                  style={{minWidth:"350px", background: "#F6C390", paddingTop:"8px" }}
                   onSubmit={handleSubmit}
                   className=""
                   name="formc"
@@ -123,6 +123,7 @@ const Contact = () => {
                   <div
                     style={{ gap: "8px" }}
                     className="form-group form-input "
+                    
                   >
                     <input
                       style={{ borderRadius: "8px" }}
@@ -132,6 +133,7 @@ const Contact = () => {
                       placeholder="Service Name"
                       name="cu_ser_name"
                       onChange={handleChange}
+                      
                     />
                     <span
                       id="servicename-error"
@@ -335,8 +337,8 @@ const Contact = () => {
         <br />
         <div
           style={{
-            width: (width<500)?"454px":"90%",
-            minWidth:"454px",
+            width: (width<500)?"350px":"90%",
+            minWidth:"350px",
             height:"500px",
             margin: "auto",
             padding: "3px",

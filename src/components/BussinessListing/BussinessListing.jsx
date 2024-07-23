@@ -12,20 +12,13 @@ import PrivateServices from "./PrivateServices/PrivateServices";
 import GovermentServices from "./GovermentServices/GovermentServices";
 import Categorie from "./Categories/categorie";
 import MobileNavagitor from "./assets/Business List_5.png"
+import BussinessLIstingCard from "./BussinessListingCard/BussinessLIstingCard";
 
 const BussinessListing = () => {
   // const [isVisibleDoctor, setIsVisibleDoctor] = useState(false);
   // const [Doctor,setDoctor]= useState("d-none");
   const [Allservice, setAllService] = useState("All Service ");
-  // const doctor = ()=>{
-  //   if(isVisibleDoctor){
-  //     setDoctor("d-none")
-  //   }
-  //   else{
-  //     setDoctor("d-flex")
-  //   }
-  //   setIsVisibleDoctor(!isVisibleDoctor)
-  // }
+ 
   let handleClick = (newserviceName) => { 
       setAllService(newserviceName);
     };
@@ -119,6 +112,7 @@ const BussinessListing = () => {
                  
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
                   
+                 <BussinessLIstingCard/>
                  
                 </div>
           <div className="bussiness_banner">
