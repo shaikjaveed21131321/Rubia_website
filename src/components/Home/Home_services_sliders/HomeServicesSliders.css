@@ -88,13 +88,11 @@ color: #330000;
     margin-top: 4%;
 }
 @media (max-width:786px) {
-    .homebussinesslising_contaner{
-        /* border: 2px solid; */
-        padding-left: 2%;
-        padding-right: 0%;
-    }
+    
     .homebussinesslising_slide{
-        z-index: -50;
+        z-index: 50;
+        margin-left: 5%;
+       
     }
     .slick-arrow{
         background-color:none;
@@ -104,7 +102,8 @@ color: #330000;
     .slick-prev:before{
         color: #330000;
         font-size: 30px;
-        padding-left: 28px;
+        margin-left: 35px;
+        
         
     }
     
@@ -112,7 +111,7 @@ color: #330000;
         color: #330000;
         font-size: 30px;
         /* border: 2px solid; */
-        margin-left: -45px;
+        margin-left: -40px;
     
     }
    

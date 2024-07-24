@@ -127,7 +127,7 @@ const BussinessListing = () => {
           </div>
 
           <div className="navagition">
-            {/* <div className="navagition_11">
+            <div className="navagition_11">
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
@@ -140,11 +140,11 @@ const BussinessListing = () => {
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
-                  </div> */}
+                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
+                  </div>
 
-            {/* <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div> */}
 
-            <BussinessLIstingCard />
+            {/* <BussinessLIstingCard /> */}
           </div>
           <div className="bussiness_banner">
             <img src={Bussinessbanner2} alt="" className="Bussinessbanner2" />

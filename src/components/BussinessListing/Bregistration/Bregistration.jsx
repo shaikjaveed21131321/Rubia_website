@@ -212,13 +212,13 @@ const Bregistration = () => {
               <div className='inputdiv2 '>
                 <select style={{color:"#8F8F8F"}} id="" className='input1 w-100 h-100 p-1' name="primaryCategory" value={formValues.primaryCategory} onChange={handleChange} >
                   <option className='option'>Primary Category</option>
-                  <option value="A">A</option>
-                  <option value="B">B </option>
-                  <option value="C">C</option>
-                  <option value="D">D</option>
-                  <option value="E">E</option>
-                  <option value="F">F</option>
-                  <option value="G">G</option>
+                  <option value="A">Hospital</option>
+                  <option value="B">Lawyers </option>
+                  <option value="C">Charted Accountent</option>
+                  <option value="D">Temples</option>
+                  <option value="E">Super Market</option>
+                  <option value="F">Software Companies</option>
+                  <option value="G">Medical shops</option>
                 </select>
                 {errors.primaryCategory && <p className="error text-danger">{errors.primaryCategory}</p>}
               </div>
@@ -434,10 +434,10 @@ const Bregistration = () => {
             <div className='timing_main_table'>
               <h3 className='text-start ms-3 imgHead'>Timings:</h3>
               <div className='timimg_table'>
-                <div className='tm_div_row1'>
+                <div className='tm_div_row1 ms-1' >
                   <div className='timingday'>
                     <p>Monday  &nbsp; &nbsp; &nbsp; &nbsp;&#160; :</p>
-                    <div className='div_tm_input'>
+                    <div className='div_tm_input' id='div_tm_input1'>
                       <input
                         type="text"
                         className='timinginput'
@@ -459,7 +459,7 @@ const Bregistration = () => {
                   </div>
                   <div className='timingday'>
                     <p>Tuesday &nbsp; &nbsp; &nbsp;&#160;&#160; :</p>
-                    <div className='div_tm_input'>
+                    <div className='div_tm_input' id='div_tm_input2'>
                       <input
                         type="text"
                         className='timinginput'
@@ -480,8 +480,9 @@ const Bregistration = () => {
                     </div>
                   </div>
                   <div className='timingday'>
-                    <p>Wednesday  :</p>
-                    <div className='div_tm_input'>
+                    <p>Wednesday :</p>
+                    <div className='div_tm_input' id='div_tm_input3'>
+                    
                       <input
                         type="text"
                         className='timinginput'
@@ -502,10 +503,12 @@ const Bregistration = () => {
                     </div>
                   </div>
                 </div>
-                <div className='tm_div_row2 ms-5'>
+
+
+                <div className='tm_div_row2 '>
                   <div className='timingday'>
                     <p className=''>Thursday    :</p>
-                    <div className='div_tm_input'>
+                    <div className='div_tm_input' id='div_tm_input4'>
                       <input
                         type="text"
                         className='timinginput'
@@ -527,7 +530,7 @@ const Bregistration = () => {
                   </div>
                   <div className='timingday'>
                     <p className=''>Friday   &nbsp;  &#160;  &nbsp;     :</p>
-                    <div className='div_tm_input'>
+                    <div className='div_tm_input' id='div_tm_input5'>
                       <input
                         type="text"
                         className='timinginput'
@@ -549,7 +552,7 @@ const Bregistration = () => {
                   </div>
                   <div className='timingday'>
                     <p>Saturday    :</p>
-                    <div className='div_tm_input'>
+                    <div className='div_tm_input' id='div_tm_input6'>
                       <input
                         type="text"
                         className='timinginput'
@@ -570,10 +573,10 @@ const Bregistration = () => {
                     </div>
                   </div>
                 </div>
-                <div className='ms-5 d-flex justify-content-center'>
+                <div className='ms-1 d-flex justify-content-center'>
                   <div className='timingday'>
                     <p>Sunday    :</p>
-                    <div className='div_tm_input'>
+                    <div className='div_tm_input' id='div_tm_input7'>
                       <input
                         type="text"
                         className='timinginput'

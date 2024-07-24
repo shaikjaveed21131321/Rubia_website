@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route,Routes} from 'react-router-dom';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import Nav from '../nav/nav'
 import Leftside from "../leftside/leftside";
 import Home from "../Home/home";
@@ -25,6 +26,7 @@ const routing = () => {
    <Leftside/>
   
    <Nav/>
+   <ScrollToTop />
    <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/service/' element={<Service/>}  />
@@ -39,7 +41,6 @@ const routing = () => {
     <Route path='ui/ux desigining/' element={<UiUx/>}/>
     <Route path='/job portal/' element={<JobPortal/>}/>
     <Route path='/real state/' element={<Realstate/>}/>
-    
     <Route path='/Bregistration/' element={<Bregistration/>}/>
     <Route path='/DriverRegister/' Component={DriverRegister}/>
    </Routes>
