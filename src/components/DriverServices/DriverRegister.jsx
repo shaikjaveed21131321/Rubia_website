@@ -130,7 +130,7 @@ const DriverRegister = () => {
     background:"white",
     border: "1px solid #FF6666",
     color: "#995050",
-    fontWeight: "semibold",
+    fontWeight: "bold",
   };
 
   const divDoc = "d-flex flex-column justify-content-between align-item-center flex-lg-row "
@@ -146,13 +146,13 @@ const DriverRegister = () => {
         }}
         className="container h-auto px-1"
       >
-        <div style={{ border: "1px solid black" }} className=" my-4  ">
+        <div style={{border: "1px solid #CC0000", borderRadius:"16px", padding:"10px"}} className=" my-4  ">
           <h3 style={{ color: "#650000" }} className="text-start mx-4 my-4">
             B2B&#x7b;Business to Business&#x7d;{" "}
             <span style={{ color: "#C68643" }}>Driver Registration Form</span>
           </h3>
           <form
-            style={{ border: "1px solid black" }}
+            
             className="mx-2 mx-lg-4"
             onSubmit={handelSubmit}
           >
@@ -318,7 +318,6 @@ const DriverRegister = () => {
               />
             </div>
             <div className="mt-4 img_main_div">
-              <h4 className="text-start ms-3 mt-3">Add Images:</h4>
               <div className="p-3 d-flex gap-2">
 
               <div className={divDoc}>

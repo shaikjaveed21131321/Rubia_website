@@ -212,14 +212,13 @@ const Bregistration = () => {
               <div className='inputdiv2 '>
                 <select style={{color:"#8F8F8F"}} id="" className='input1 w-100 h-100 p-1' name="primaryCategory" value={formValues.primaryCategory} onChange={handleChange} >
                   <option className='option'>Primary Category</option>
-                  <option value="Hospital">Hospital</option>
-                  <option value="Lawyers">Lawyers </option>
-                  <option value="Charted Accountent">Charted Accountent</option>
-                  <option value="Temples">Temples</option>
-                  <option value="Super Market">Super Market</option>
-                  <option value="Software Companies">Software Companies</option>
-                  <option value="Medical shops">Medical shops</option>
-                
+                  <option value="A">Hospital</option>
+                  <option value="B">Lawyers </option>
+                  <option value="C">Charted Accountent</option>
+                  <option value="D">Temples</option>
+                  <option value="E">Super Market</option>
+                  <option value="F">Software Companies</option>
+                  <option value="G">Medical shops</option>
                 </select>
                 {errors.primaryCategory && <p className="error text-danger">{errors.primaryCategory}</p>}
               </div>
