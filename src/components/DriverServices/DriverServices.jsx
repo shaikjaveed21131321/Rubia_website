@@ -85,7 +85,7 @@ console.log(width);
   return (
    <>
  
-   <div style={{minWidth:(width<700)?"390px":"510px", width:"65%" ,margin:"auto",overflowX:"hidden" }} className='container h-auto px-3'>
+   <div style={{minWidth:(width<700)?"390px":"510px", width:"65%" ,margin:"auto",overflowX:"hidden" }} className='container h-auto px-1'>
    <main className='w-100 h-auto  d-flex flex-column gap-3 align-items-center justify-content-start '>
     <header  className='w-100 h-auto mt-4 mb-3 d-flex flex-row justify-content-end align-items-center align-center justify-end'>
         <div className='p-3 d-flex flex-row align-items-center justify-content-center gap-3 shadow rounded-3'  
@@ -138,11 +138,11 @@ console.log(width);
             </p>
         </div>
         <div className='d-flex flex-column justify-content-center align-items-center '>
-        <a href="https://play.google.com/store/apps/details?id=com.rubia.user&pcampaignid=web_share " target='_blank' style={{ padding:"10px",width:"234px",height:"50px" ,background:"#650000" , color:"#FFF"}} className='btn rounded-3'>Download Rubia App</a>
+        <a href="https://play.google.com/store/apps/details?id=com.rubia.user&pcampaignid=web_share " target='_blank' style={{ padding:"10px",width:"234px",height:"50px" ,background:"#650000" , color:"#FFF"}} className='btn rounded-3' rel="noreferrer">Download Rubia App</a>
         </div>
     </section>
 
-    <section style={{width:"100%"}} className=' d-flex justify-content-center align-items-center'>
+    <section style={{width:"100%"}} className='mx-auto d-flex justify-content-center align-items-center'>
         <DriverServiceTableCard amtTableObj={amtTableObj} />
     </section>
       <br></br>
@@ -209,7 +209,7 @@ console.log(width);
             </ul>
         </div>
      
-        <div className='w-100 d-flex flex-row justify-content-between align-item-center my-3'>
+        <div className='w-100 d-flex flex-column flex-lg-row justify-content-between align-item-center my-3 gap-3'>
             <button className='rounded-2 fw-bold' style={{height:"49px" ,border:"none" ,background: "#C68643",color: "#FFF" ,padding:"10px 10px",fontSize:"20px"}}>BUSINESS ENTITY LOGIN</button>
             <button className='rounded-2 fw-bold' style={{height:"47px" ,border:"none" ,background: "#650000",color: "#FFF" ,padding:"10px 10px"}}>Contact us for more details</button>
         </div>
