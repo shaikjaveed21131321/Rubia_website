@@ -4,10 +4,10 @@ import Logo from './img/logo.png'
 const DriverServiceTableCard = (props) => {
 
     const td1 ={
-        padding:"7px", border:"1px solid white", font:"30px",background: "#C68643", color:"#144273" 
+        padding:"2px", border:"1px solid white", font:"5px",background: "#C68643", color:"#144273" 
     }
     const td2 ={
-        padding:"7px", border:"1px solid white", font:"40px", background: "#144273", color:"#FFFF"
+        padding:"2px", border:"1px solid white", font:"10px", background: "#144273", color:"#FFFF"
     }
 
     const amtTableObj = props.amtTableObj;
@@ -15,10 +15,32 @@ const DriverServiceTableCard = (props) => {
     
   return (
     <>
-        <table style={{margin: " 15px 0px", width:"80px"}} className='fw-bold d-table  h-50'>
+
+    <table style={{margin:"auto" , border:"1px solid black"}}>
+        <thead>
+            
+        </thead>
+        <tbody>
+            <tr>
+            <th></th>
+                    <th style={{border:"1px solid black"}} className='fw-bold'>Booking Type</th>
+                    <th style={{border:"1px solid black"}} className='fw-bold'>Base Time</th>
+                    <th style={{border:"1px solid black"}} className='fw-bold'>Base Fare</th>
+                    <th style={{border:"1px solid black"}} className='fw-bold'>Extra Min</th>
+                    <th style={{border:"1px solid black"}} className='fw-bold'>Night Charges <br /> &#40;9:00pm - 6:00am&#41;</th>
+                    <th style={{border:"1px solid black"}} className='fw-bold'>Return Charges</th>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style={{display:"flex", flexWrap:"wrap"}}>
+        <table style={{width:"340px"}} className='  fw-bold d-table '>
             <thead>
+                <caption style={{width:"",border:"1px solid black"}}>
+                    <label>Rubia services:Rate Card</label>
+                </caption>
                 <tr>
-                    <th style={td2}><img src={Logo} alt="" /></th>
+                    <th style={td2}></th>
                     <th style={td2} className='fw-bold'>Booking Type</th>
                     <th style={td2} className='fw-bold'>Base Time</th>
                     <th style={td2} className='fw-bold'>Base Fare</th>
@@ -90,7 +112,7 @@ const DriverServiceTableCard = (props) => {
         </tr>
         </tbody>
         </table>
-
+        </div>
     </>
   )
 }
