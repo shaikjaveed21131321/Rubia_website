@@ -16,7 +16,15 @@ import { Keyboard, Pagination, Navigation } from 'swiper/modules';
 
 
 const DriverServices = () => {
-
+    const [width, setWidth] = useState(window.innerWidth);
+    
+    useEffect(() => {
+    
+      const handleResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    
+    }, []);
 
     const amtTableObj = {
         id:1,
@@ -70,23 +78,15 @@ const DriverServices = () => {
         vehtyp:"Hatchback, SUV"
     } 
     
-    const [width, setWidth] = useState(window.innerWidth);
     
-    useEffect(() => {
     
-      const handleResize = () => setWidth(window.innerWidth);
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    
-    }, []);
-    
-console.log(width);
+
    
   return (
    <>
  
-   <div style={{minWidth:(width<700)?"390px":"510px", width:"65%" ,margin:"auto",overflowX:"hidden" }} className='container h-auto px-1'>
-   <main className='w-100 h-auto  d-flex flex-column gap-3 align-items-center justify-content-start '>
+   <div style={{minWidth:(width<700)?"400px":"510px", width:"65%" ,margin:"auto",overflowX:"hidden" }} className='container h-auto px-1'>
+   <main className='w-100 h-auto d-flex flex-column gap-3 align-items-center justify-content-start '>
     <header  className='w-100 h-auto mt-4 mb-3 d-flex flex-row justify-content-end align-items-center align-center justify-end'>
         <div className='p-3 d-flex flex-row align-items-center justify-content-center gap-3 shadow rounded-3'  
                 style={{width: "430px",font:"19px",background: "#D7C3A4"}}> 
@@ -95,7 +95,7 @@ console.log(width);
                     className='p-2 rounded text-center fw-bold rounded-3'>Click Here</Link></div>
     </header>
     <section style={{textAlign: "justify"}} className='w-100 d-flex  flex-column '>
-        <h1 style={{fontSize: "18",color:"#650000",textAlign:"left", marginBottom:"20px"}} className='fw-bold'>1.B2<span style={{color:"#C68643"}}>C</span> &#91;Business to <span style={{color:"#C68643"}}>Customer</span>&#93;</h1>
+        <h1 style={{fontSize: "18",color:"#650000",textAlign:"left", marginBottom:"20px"}} className='fw-bold'>1.B2<span style={{color:"#C68643"}}>C</span> &#x7b;Business to <span style={{color:"#C68643"}}>Customer</span>&#x7d;</h1>
       
         <h2 className='fw-bold mt-2 mb-2' style={{fontSize: "14",color:"#650000",textAlign:"left", margin:"40px , 0px"}}>a&#41; Hire a Temporary<span style={{color:"#C68643"}}>/Halting Drivers:</span></h2><br/>
         <p style={{fontSize: "16px", marginRight: "30px",color:"#995050",marginTop:"20px"}} >Explore Our Services & Book a Driver <br />
