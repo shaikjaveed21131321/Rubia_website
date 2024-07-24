@@ -11,17 +11,17 @@ import { Link } from "react-router-dom";
 import PrivateServices from "./PrivateServices/PrivateServices";
 import GovermentServices from "./GovermentServices/GovermentServices";
 import Categorie from "./Categories/categorie";
-import MobileNavagitor from "./assets/Business List_5.png"
+import MobileNavagitor from "./assets/Business List_5.png";
 import BussinessLIstingCard from "./BussinessListingCard/BussinessLIstingCard";
 
 const BussinessListing = () => {
   // const [isVisibleDoctor, setIsVisibleDoctor] = useState(false);
   // const [Doctor,setDoctor]= useState("d-none");
   const [Allservice, setAllService] = useState("All Service ");
- 
-  let handleClick = (newserviceName) => { 
-      setAllService(newserviceName);
-    };
+
+  let handleClick = (newserviceName) => {
+    setAllService(newserviceName);
+  };
   return (
     <>
       <div className="BussinessListingText">
@@ -53,15 +53,44 @@ const BussinessListing = () => {
                 </span>
               </button> */}
 
-              <Link style={{ color: "#144273" ,borderRadius:"8px",border:"#144273",alignContent:"center"}} className="btn_main3" to="/Bregistration/">
+              <Link
+                style={{
+                  color: "#144273",
+                  borderRadius: "8px",
+                  border: "#144273",
+                  alignContent: "center",
+                }}
+                className="btn_main3"
+                to="/Bregistration/"
+              >
                 <img src={Profileicon} alt="" className="profileicon" />
-                <span className="bussiness_btn" style={{ color: "#144273" ,borderRadius:"8px",border:"#144273"}}>
+                <span
+                  className="bussiness_btn"
+                  style={{
+                    color: "#144273",
+                    borderRadius: "8px",
+                    border: "#144273",
+                  }}
+                >
                   Make Your Bussiness List
                 </span>
               </Link>
             </div>
           </div>
-          <br />
+{/* searchbtn_mobile */}
+          <div className="searchbar_mobile">
+            <div className="searchbar_mobile1">
+              <input type="search" placeholder="Search Location"   />
+            
+              <input type="search" placeholder="Search for Service" />
+            </div>
+
+            <div className="searchbar_mobile2">
+              <Link to="/Bregistration/"><button>Make Your Bussiness List</button></Link>
+            </div>
+          </div>
+{/* searchbtn_mobile */}
+          
           <div className="bussiness_banner">
             <Carousel interval={1500} id="bussinessbanner">
               <Carousel.Item>
@@ -81,21 +110,24 @@ const BussinessListing = () => {
             </Carousel>
           </div>
           <br />
-              < PrivateServices handleClick={handleClick} />
-              <br />
-              <GovermentServices handleClick={handleClick} />
-              <br />
-    <div className="header_b1" style={{ textTransform: "uppercase" }}>
-        categories of <span style={{color:"#C68643"}}>{Allservice}</span>
-      </div>
-    <br />
-    <Categorie/>
+          <PrivateServices handleClick={handleClick} />
           <br />
-          <div className="header_b1"> Best Gynaecologist Doctors  <span style={{color:"#C68643"}}>in Hyderabad :</span>  </div>
-          
-                <div className="navagition">
-                  
-                  {/* <div className="navagition_11">
+          <GovermentServices handleClick={handleClick} />
+          <br />
+          <div className="header_b1" style={{ textTransform: "uppercase" }}>
+            categories of <span style={{ color: "#C68643" }}>{Allservice}</span>
+          </div>
+          <br />
+          <Categorie />
+          <br />
+          <div className="header_b1">
+            {" "}
+            Best Gynaecologist Doctors{" "}
+            <span style={{ color: "#C68643" }}>in Hyderabad :</span>{" "}
+          </div>
+
+          <div className="navagition">
+            {/* <div className="navagition_11">
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
@@ -109,12 +141,11 @@ const BussinessListing = () => {
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
                   </div> */}
-                 
-                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
-                  
-                 <BussinessLIstingCard/>
-                 
-                </div>
+
+            {/* <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div> */}
+
+            <BussinessLIstingCard />
+          </div>
           <div className="bussiness_banner">
             <img src={Bussinessbanner2} alt="" className="Bussinessbanner2" />
           </div>

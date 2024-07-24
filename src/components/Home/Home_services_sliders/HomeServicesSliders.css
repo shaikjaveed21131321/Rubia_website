@@ -72,7 +72,7 @@ color: #330000;
     font-weight: 700;
     font-style: normal;
     margin-top: 10%;
-    /* margin-left: 4%; */
+    margin-left: 4%;
 }
 .homebussinesslising_btn_drive{
     width: 42%;
@@ -88,22 +88,34 @@ color: #330000;
     margin-top: 4%;
 }
 @media (max-width:786px) {
+    .homebussinesslising_contaner{
+        /* border: 2px solid; */
+        padding-left: 2%;
+        padding-right: 0%;
+    }
+    .homebussinesslising_slide{
+        z-index: -50;
+    }
     .slick-arrow{
         background-color:none;
         color: #330000;
         z-index: 2;
-        
         }
     .slick-prev:before{
         color: #330000;
         font-size: 30px;
-        margin-left: 25px;
+        padding-left: 28px;
+        
     }
+    
     .slick-next:before{
         color: #330000;
         font-size: 30px;
-        margin-left: -50px;
+        /* border: 2px solid; */
+        margin-left: -45px;
+    
     }
+   
     .homebussinesslising_text{
         font-size: 12px;
         line-height: none;

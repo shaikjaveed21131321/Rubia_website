@@ -75,6 +75,9 @@
 
 
 @media (max-width: 768px) {
+    .navbar1{
+        z-index: 50;
+    }
     .burger_menu{
         height: 40px;
         display: flex;

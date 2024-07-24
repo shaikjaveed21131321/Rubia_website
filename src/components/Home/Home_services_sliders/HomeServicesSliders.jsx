@@ -82,7 +82,7 @@ const HomeServicesSliders = () => {
   ];
   const date3 = [
     {
-      name: "Logo Design",
+      name: "Logo  Design",
       imageUrl: "/Home_services_slidersassets/LogoMarker.png"
     },
     {

@@ -33,12 +33,13 @@
       margin-right: 0%;
       padding-left: 2%;
       padding-right: 2%;
-      width: 100%;
+      width: 97%;
     }
     .homebanner{
       margin-left: 1%;
       margin-right: 1%;
-      width: 95%;
+      width: 94%;
+      border: 2px solid;
 
     }
     
