@@ -8,6 +8,7 @@ import Img8 from "./assets/pan.jpg"
 import Img1 from "./assets/startup.jpg"
 import Img6 from "./assets/udyam1.jpg"
 import Img7 from "./assets/udyam2.jpg"
+import Img9 from "./assets/pgst.jpg"
 
 const About = () => {
     
@@ -73,6 +74,8 @@ const About = () => {
           <img  src={Img6} alt="" />
           <img  src={Img2} alt="" />
           <img  src={Img7} alt="" />
+          <img style={{border:"2px solid"}} src={Img9} alt="" />
+          
         </div>
     </div>
     </div>
