@@ -29,12 +29,11 @@ const Taxi = () => {
     });
   };
 
-  const handelSubmit = (e) => {
-    e.preventDefault();
-    // if (!validate()) return;
+  const handelSubmit = (event) => {
+    event.preventDefault();
+    
 
-    let data = JSON.stringify(
-      {
+    let data = JSON.stringify({
         tx_type:formValues.tx_type.trim(),
         tx_trip_type:formValues.tx_trip_typetrim(),
         tx_return_type:formValues.tx_return_typetrim(),
@@ -50,11 +49,9 @@ const Taxi = () => {
         tx_email:formValues.tx_emailtrim(),
         tx_comm:formValues.tx_commtrim(),
         created_at:new Date(),
-       
-      }
-    )
+       })
 
-    console.log(data);
+   
     let config = {
       method: "POST",
       maxBodyLength: Infinity,
@@ -63,21 +60,21 @@ const Taxi = () => {
       headers: {
         'content-Type': 'application/json'
       },
-
     };
 
-    fetch("http://192.168.0.114:4000/api/v1/taxi/register/", config)
+    const route = "http://192.168.0.114:4000/api/v1/taxi/register/"
+    fetch(route, config)
       .then((response) => response.json())
       .then((result) => {
         if (result.success === true) {
           //coustom  message Altert box 
           swal("successful Registred", result.message, "success");
-          // alert(result.message)
+         
         }
         else {
 
           swal("Error", result.message, "error")
-          // alert(result.message)
+       
         }
       }).catch((error) => swal("Error", error, "error"));
 
@@ -96,7 +93,7 @@ const Taxi = () => {
             <div className="car_taxi">
               
               <div className="form" style={{ margin: "auto" }}>
-                <form action="" onSubmit={{handelSubmit}}>
+                <form action="" onSubmit={{handelSubmit}} autoComplete="off">
                 
                 <div className="buttons">
                 {/* <Select
@@ -231,6 +228,10 @@ const Taxi = () => {
                     <input
                       type="text"
                       onChange={handleChange}
+                      min="10"
+                      minLength="10"
+                      max="10"
+                      maxLength="10"
                       style={{background:"#FFF",padding:"5px", fontWeight:"600" , border:"1px solid #FFA3A3"}}
                       id="input9"
                       name="tx_mob_num"

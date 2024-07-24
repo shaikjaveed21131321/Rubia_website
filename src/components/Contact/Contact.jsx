@@ -14,6 +14,8 @@ const Contact = () => {
     created_at: "",
   });
 
+
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({
@@ -54,7 +56,9 @@ const Contact = () => {
       body: raw,
     };
 
-    fetch("http://192.168.0.114:4000/api/v1/contactus/register", requestOptions)
+    const route = "http://192.168.0.114:4000/api/v1/contactus/register";
+
+    fetch(route, requestOptions)
       .then((response) => response.json())
       .then((result) => {
 
