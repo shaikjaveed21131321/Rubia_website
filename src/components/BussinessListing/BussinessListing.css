@@ -13,11 +13,12 @@
     flex-direction: row;
     text-align: center;
     align-items: center;
-    height: 10%;
+    height: 70px;
     position: fixed;
     top: 80px;
     width: 60%;
     background-color: white;
+    /* border: 2px solid; */
     
    
    
@@ -35,15 +36,14 @@
     border-radius: 8px;
     color: #144273;
     width: 18%;
-    height: 5%;
-    
+    height: 48px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }   
 .searchbars1{
    width: 16.5%;
-    height: 5%;
+    height: 46px;
     border-radius: 6px;
     padding-left: 2.5%;
     position: fixed;
@@ -55,7 +55,7 @@
     border-radius: 6px;
     position: fixed;
     padding-left: 1%;
-    height: 5%;
+    height: 46px;
     
 }
 .locationicon{
@@ -109,17 +109,21 @@
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
-    border: white 1px solid;
-    border: none; 
+
+    
     width: 100%;
-    height: 100%;
+    height: 45px;
     padding: auto;
     text-decoration: none;
  }
  .bussiness_banner{
     width: 100%;
-    margin-top: 3%;
+    margin-top: 10%;
+   
     
+ }
+ .bussiness_banner1{
+  width: 100%;
  }
  .header_b1{
     font-family: "Poppins", sans-serif;
@@ -153,31 +157,11 @@
  #bussinessbanner .carousel-control-next{
    display: none;
  }
- #bussinessbanner1 .carousel-control-prev{
-   display: none;
-   
- }
- #bussinessbanner1 .carousel-control-next {  
-   width: 3%;
-   z-index: none;
-   display: none;
-   
- }
- #bussinessbanner1 .carousel-control-next .carousel-control-next-icon{
-   background-color: #144273;
-      color: #144273;
-      border-radius: 50%;
- }
- #bussinessbanner1 .carousel-item{
-   width: 95%;
-   transform: none;
+ #bussinessbanner{
+  z-index: -2;
  
-   height: 450px;
-   display: flex;
-   flex-direction: row;
-   position: relative;
-   
  }
+
  .Bussinessbanner2{
    width: 100%;
    height: 100%;

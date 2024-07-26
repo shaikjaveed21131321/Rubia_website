@@ -26,6 +26,7 @@ const BussinessListing = () => {
     <>
       <div className="BussinessListingText">
         <div className="BussinessListing1">
+
           <div className="searchbar">
             <img src={Locationicon} alt="" className="locationicon" />
             <input
@@ -46,34 +47,22 @@ const BussinessListing = () => {
               <img src={Searchicon} alt="" />
             </button>
             <div className="BussinessListing_btn">
-              {/* <button className="btn_main2" type="submit">
-                <img src={Registationicon} alt="" />
-                <span className="btn_id" style={{ color: "#144273" }}>
-                  register
-                </span>
-              </button> */}
+            
 
               <Link
                 style={{
                   color: "#144273",
                   borderRadius: "8px",
-                  border: "#144273",
+                  
                   alignContent: "center",
                 }}
                 className="btn_main3"
                 to="/Bregistration/"
               >
                 <img src={Profileicon} alt="" className="profileicon" />
-                <span
-                  className="bussiness_btn"
-                  style={{
-                    color: "#144273",
-                    borderRadius: "8px",
-                    border: "#144273",
-                  }}
-                >
+                
                   Make Your Bussiness List
-                </span>
+                
               </Link>
             </div>
           </div>
@@ -97,14 +86,14 @@ const BussinessListing = () => {
                 <img
                   src={BussinessBanner}
                   alt=""
-                  className="bussiness_banner"
+                  className="bussiness_banner1"
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   src={BussinessBanner1}
                   alt=""
-                  className="bussiness_banner"
+                  className="bussiness_banner1"
                 />
               </Carousel.Item>
             </Carousel>
