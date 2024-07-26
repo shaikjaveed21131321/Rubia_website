@@ -2,7 +2,6 @@ import React from 'react'
 import {  NavLink} from 'react-router-dom';
 import Logo8 from '../leftside/assets/bussineslisting.svg'
 import Logo from './assets/Drivericon.png';
-import Logo11 from "./assets/driver.png";
 import Logo1 from  './assets/Taxi.png';
 import Logo2 from './assets/Mask group (1).png';
 import Logo3 from "./assets/sofware.png"

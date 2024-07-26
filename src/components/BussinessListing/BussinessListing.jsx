@@ -15,8 +15,7 @@ import MobileNavagitor from "./assets/Business List_5.png";
 import BussinessLIstingCard from "./BussinessListingCard/BussinessLIstingCard";
 
 const BussinessListing = () => {
-  // const [isVisibleDoctor, setIsVisibleDoctor] = useState(false);
-  // const [Doctor,setDoctor]= useState("d-none");
+  
   const [Allservice, setAllService] = useState("All Service ");
 
   let handleClick = (newserviceName) => {
@@ -114,27 +113,7 @@ const BussinessListing = () => {
             Best Gynaecologist Doctors{" "}
             <span style={{ color: "#C68643" }}>in Hyderabad :</span>{" "}
           </div>
-
-          <div className="navagition">
-            <div className="navagition_11">
-                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
-                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
-                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
-                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
-                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
-              
-                  </div>
-                  <div className="navagition_2">
-                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
-                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
-                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
-                  <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
-                   <div className="navagition1"><img className="navagition_img" src={MobileNavagitor} alt="" /></div>
-                  </div>
-
-
-            {/* <BussinessLIstingCard /> */}
-          </div>
+            <BussinessLIstingCard />
           <div className="bussiness_banner">
             <img src={Bussinessbanner2} alt="" className="Bussinessbanner2" />
           </div>
