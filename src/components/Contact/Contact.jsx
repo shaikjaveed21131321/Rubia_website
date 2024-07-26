@@ -14,8 +14,8 @@ const Contact = () => {
     created_at: "",
   });
 
+  const [isLoading,setIsLoading] = useState(false);
 
-  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({
@@ -37,6 +37,9 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    console.log(isLoading);
+    setIsLoading(true);
+      console.log(isLoading);
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -56,23 +59,29 @@ const Contact = () => {
       body: raw,
     };
 
-    const route = "http://192.168.0.114:4000/api/v1/contactus/register";
+    const route = `${process.env.REACT_APP_BASE_URL}/contactus/register`;
 
+   setTimeout(()=>{
     fetch(route, requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-
+    .then((response) => response.json())
+    .then((result) => {
+      if (result.success === true) {
         
-        if (result.success === true) {
-          
-          swal("successful Registred", result.message, "success");
-          console.log(clearForm);
-        } else {
-          swal("Error", result.message, "error")
-        }
-      })
-      .catch((error) => swal("Error", error, "error"));
+        swal("successful Registred", result.message, "success");
+        console.log(clearForm);
+      } else {
+        swal("Error", result.message, "error")
+      }
+    })
+    .catch((error) => swal("Error", error, "error"))
+    .finally(()=>{
+      
+      setIsLoading(false);
+      
+    });
+   },4000)
   };
+
 
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -120,12 +129,16 @@ const Contact = () => {
                   name="formc"
                   autoComplete="off"
                 >
+           
+
+
                   <div
                     style={{ gap: "8px" }}
                     className="form-group form-input "
                     
                   >
                     <input
+                     disabled={isLoading}
                       style={{ borderRadius: "8px" }}
                       type="text"
                       className="form-control"
@@ -141,6 +154,7 @@ const Contact = () => {
                     ></span>
 
                     <input
+                     disabled={isLoading}
                       type="text"
                       className="form-control"
                       required
@@ -151,6 +165,7 @@ const Contact = () => {
                     <span id="name-error" className="error-message"></span>
 
                     <input
+                     disabled={isLoading}
                       type="text"
                       className="form-control"
                       placeholder="Email Id"
@@ -160,6 +175,7 @@ const Contact = () => {
                     <span id="email-error" className="error-message"></span>
 
                     <input
+                     disabled={isLoading}
                       type="tel"
                       className="form-control"
                       required
@@ -178,16 +194,17 @@ const Contact = () => {
 
                     <textarea
                       name="cu_msg"
-                      
+                      disabled={isLoading}
                       className="form-control"
                       placeholder="Note"
                       onChange={handleChange}
                     ></textarea>
                     <span id="text-error" className="error-message"></span>
 
-                    <div style={{ display:"flex",justifyContent:"center",alignItems:"center",margin:"5px"}}>
+                    <div className="px-4" style={{gap:"7px",display:"flex",justifyContent:"center",alignItems:"center",margin:"5px"}}>
                     <button
-                      className="form-control btn"
+                    disabled={isLoading}
+                      className="form-control btn my-4 mx-auto"
                       style={{
                         padding:"10px 16px",
                         width: "90%",
@@ -195,11 +212,23 @@ const Contact = () => {
                         color: "#fff",
                         fontWeight: "600",
                         height: "44px",
-                        margin: "auto",
-                        
+                      
                       }}
-                      type="submit"
-                    >Send Message
+                      type="reset"
+                    >Clear
+                    </button>
+          
+                    <button id="sub-btn" disabled={isLoading} style={{
+                        padding:"10px 16px",
+                        width: "90%",
+                        background: "#144273",
+                        color: "#fff",
+                        fontWeight: "600",
+                        height: "44px",  
+                      }} 
+                      class="btn " type="submit" >
+                      {(isLoading)?<><span style={{color:"white"}} class="spinner-border spinner-border-sm mx-2" aria-hidden="true"></span>
+                      <span className="mx-2" style={{color:"white"}} role="status">Loading...</span></>:<span  style={{color:"white"}} role="status">Send Message</span>}
                     </button>
                     </div>
                     

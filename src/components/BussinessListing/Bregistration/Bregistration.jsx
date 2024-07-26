@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import swal from "sweetalert";
 const Bregistration = () => {
+
+  const [isLoading,setIsLoading] = useState(false);
+
   const [formValues, setFormValues] = useState({
     businessName: '',
     primaryCategory: '',
@@ -39,7 +42,13 @@ const Bregistration = () => {
     input_img3:'',
   });
 
-  const [errors, setErrors] = useState({});
+  const [formImgInp, setFormImgInp] = useState({
+   
+    input_img1:'',
+    input_img2:'',
+    input_img3:'',
+  });
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -49,6 +58,18 @@ const Bregistration = () => {
     });
   };
 
+  const handleImgInpChange = (e) => {
+    const { name, value } = e.target.files[0];
+    setFormImgInp({
+      ...formImgInp,
+      [name]: value,
+    });
+  };
+
+  console.log(formImgInp);
+
+
+  const [errors, setErrors] = useState({});
 
   const validate = () => {
         let tempErrors = {};
@@ -123,6 +144,7 @@ const Bregistration = () => {
 
   const handelSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     // if (!validate()) return;
 
     let data = JSON.stringify(
@@ -157,9 +179,9 @@ const Bregistration = () => {
         bsn_tm_sat_cl: formValues.saturdayClose.trim(),
         bsn_tm_sun_op: formValues.sundayOpen.trim(),
         bsn_tm_sun_cl: formValues.sundayClose.trim(),
-        bsn_img1:"",
-        bsn_img2: "",
-        bsn_img3: "",
+        bsn_img1:formImgInp.input_img1,
+        bsn_img2: formImgInp.input_img2,
+        bsn_img3: formImgInp.input_img3,
         created_at: new Date(),
       }
     )
@@ -181,7 +203,8 @@ const Bregistration = () => {
     // .catch((err)=>console.log(err));
     // var url = "http://192.168.0.114:4000/api/v1/business/register";
 
-    fetch("http://192.168.0.114:4000/api/v1/business/register", config)
+    setTimeout(()=>{
+      fetch(`${process.env.REACT_APP_BASE_URL}/business/register`, config)
       .then((response) => response.json())
       .then((result) => {
         if (result.success === true) {
@@ -194,8 +217,12 @@ const Bregistration = () => {
           swal("Error", result.message, "error")
           // alert(result.message)
         }
-      }).catch((error) => swal("Error", error, "error"));
+      }).catch((error) => swal("Error", error, "error"))
+      .finally(()=>{
+        setIsLoading(false);
+      });
 
+    },4000);
   }
   return (
     <>
@@ -206,11 +233,11 @@ const Bregistration = () => {
           <form action="" id="myform" className='m-2 ms-4 me-4 mt-4' onSubmit={handelSubmit}>
             <div className='inputdiv1 mb-4'>
               <div className='inputdiv2 '>
-                <input type="text" name="businessName" placeholder='Business Name' className='input1' value={formValues.businessName} onChange={handleChange} />
+                <input  disabled={isLoading} type="text" name="businessName" placeholder='Business Name' className='input1' value={formValues.businessName} onChange={handleChange} />
                 {errors.businessName && <p className="error text-danger">{errors.businessName}</p>}
               </div>
               <div className='inputdiv2 '>
-                <select style={{color:"#8F8F8F"}} id="" className='input1 w-100 h-100 p-1' name="primaryCategory" value={formValues.primaryCategory} onChange={handleChange} >
+                <select  disabled={isLoading} style={{color:"#8F8F8F"}} id="" className='input1 w-100 h-100 p-1' name="primaryCategory" value={formValues.primaryCategory} onChange={handleChange} >
                   <option className='option'>Primary Category</option>
                   <option value="A">Hospital</option>
                   <option value="B">Lawyers </option>
@@ -224,42 +251,13 @@ const Bregistration = () => {
               </div>
             </div>
             <div>
-              <textarea name="" id="bg_textarea" style={{width:"100%"}} placeholder='Business description     (1000 characters)' ></textarea>
+              <textarea  disabled={isLoading} name="" id="bg_textarea" style={{width:"100%"}} placeholder='Business description     (1000 characters)' ></textarea>
             </div>
-            {/*  */}
-            {/* <div className='inputdiv1 mb-4'>
-              <div className='inputdiv2 '>
-
-                <select id="" className='input1 w-100 h-100 p-1' name="seconderyCategory" value={formValues.seconderyCategory} onChange={handleChange}>
-                  <option className='option'>Secondary Category</option>
-                  <option value="A">A</option>
-                  <option value="B">B </option>
-                  <option value="C">C</option>
-                  <option value="D">D</option>
-                  <option value="E">E</option>
-                  <option value="F">F</option>
-                  <option value="G">G</option>
-                </select>
-                {errors.seconderyCategory && <p className="error text-danger">{errors.seconderyCategory}</p>}
-              </div>
-              <div className='inputdiv2 '>
-                <select id="" className='input1 w-100 h-100' name="subCategory" value={formValues.subCategory} onChange={handleChange}>
-                  <option className='option'>Sub Category</option>
-                  <option value="A">A</option>
-                  <option value="B">B </option>
-                  <option value="C">C</option>
-                  <option value="D">D</option>
-                  <option value="E">E</option>
-                  <option value="F">F</option>
-                  <option value="G">G</option>
-                </select>
-                {errors.subCategory && <p className="error text-danger">{errors.subCategory}</p>}
-              </div>
-            </div> */}
-            {/*  */}
+            
             <div className='inputdiv1 mb-4 mt-4'>
               <div className='inputdiv2'>
                 <input
+                 disabled={isLoading}
                   type="text"
                   name="servicesList"
                   placeholder='Service List'
@@ -270,6 +268,7 @@ const Bregistration = () => {
               </div>
               <div className='inputdiv2'>
                 <input
+                 disabled={isLoading}
                   type="email"
                   name="emailid"
                   placeholder='Email ID'
@@ -284,6 +283,7 @@ const Bregistration = () => {
             <div className='inputdiv1 mb-4 mt-4'>
               <div className='inputdiv2'>
                 <input
+                 disabled={isLoading}
                   type="text"
                   name="contactNumber"
                   placeholder='Contact Number'
@@ -299,6 +299,7 @@ const Bregistration = () => {
               </div>
               <div className='inputdiv2'>
                 <input
+                 disabled={isLoading}
                   type="text"
                   name="whatsappNumber"
                   placeholder='WhatsApp Number'
@@ -318,6 +319,7 @@ const Bregistration = () => {
             <div className='inputdiv1 mb-4 mt-4'>
               <div className='inputdiv2'>
                 <input
+                 disabled={isLoading}
                   type="text"
                   name="gstNumber"
                   placeholder='GST Number'
@@ -329,6 +331,7 @@ const Bregistration = () => {
               </div>
               <div className='inputdiv2'>
                 <input
+                 disabled={isLoading}
                   type="text"
                   name="cinNumber"
                   placeholder='C.I.N Number'
@@ -344,6 +347,7 @@ const Bregistration = () => {
             <div className='inputdiv1 mb-4 mt-4'>
               <div className='inputdiv2'>
                 <input
+                 disabled={isLoading}
                   type="text"
                   name="blockNumber"
                   placeholder='Block Number / Building Name'
@@ -354,6 +358,7 @@ const Bregistration = () => {
               </div>
               <div className='inputdiv2'>
                 <input
+                 disabled={isLoading}
                   type="text"
                   name="area"
                   placeholder='Area'
@@ -365,6 +370,7 @@ const Bregistration = () => {
             <div className='inputdiv1 mb-4 mt-4'>
               <div className='inputdiv2'>
                 <input
+                 disabled={isLoading}
                   type="text"
                   name="city"
                   placeholder='City'
@@ -375,6 +381,7 @@ const Bregistration = () => {
               </div>
               <div className='inputdiv2'>
                 <input
+                 disabled={isLoading}
                   type="text"
                   name="state"
                   placeholder='State '
@@ -389,6 +396,7 @@ const Bregistration = () => {
             <div className='inputdiv1 mb-4 mt-4'>
               <div className='inputdiv2'>
                 <input
+                 disabled={isLoading}
                   type="text"
                   name="pincode"
                   placeholder='Pincode'
@@ -398,6 +406,7 @@ const Bregistration = () => {
               </div>
               <div className='inputdiv2'>
                 <input
+                 disabled={isLoading}
                   type="text"
                   name="websiteName"
                   placeholder='Website Name'
@@ -410,6 +419,7 @@ const Bregistration = () => {
             <div className='inputdiv1 mb-4 mt-4'>
               <div className='inputdiv2'>
                 <input
+                 disabled={isLoading}
                   type="text"
                   name="googleMapLink"
                   placeholder='Google Map link'
@@ -421,6 +431,7 @@ const Bregistration = () => {
               </div>
               <div className='inputdiv2'>
                 <input
+                 disabled={isLoading}
                   type="text"
                   name="websiteLink"
                   placeholder='Website Link'
@@ -439,6 +450,7 @@ const Bregistration = () => {
                     <p>Monday  &nbsp; &nbsp; &nbsp; &nbsp;&#160; :</p>
                     <div className='div_tm_input' id='div_tm_input1'>
                       <input
+                       disabled={isLoading}
                         type="text"
                         className='timinginput'
                         placeholder='Open'
@@ -448,6 +460,7 @@ const Bregistration = () => {
                       />
                       <span>/</span>
                       <input
+                       disabled={isLoading}
                         type="text"
                         className='timinginput'
                         placeholder='Close'
@@ -461,6 +474,7 @@ const Bregistration = () => {
                     <p>Tuesday &nbsp; &nbsp; &nbsp;&#160;&#160; :</p>
                     <div className='div_tm_input' id='div_tm_input2'>
                       <input
+                       disabled={isLoading}
                         type="text"
                         className='timinginput'
                         placeholder='Open'
@@ -470,6 +484,7 @@ const Bregistration = () => {
                       />
                       <span>/</span>
                       <input
+                       disabled={isLoading}
                         type="text"
                         className='timinginput'
                         placeholder='Close'
@@ -484,6 +499,7 @@ const Bregistration = () => {
                     <div className='div_tm_input' id='div_tm_input3'>
                     
                       <input
+                       disabled={isLoading}
                         type="text"
                         className='timinginput'
                         placeholder='Open'
@@ -493,6 +509,7 @@ const Bregistration = () => {
                       />
                       <span>/</span>
                       <input
+                       disabled={isLoading}
                         type="text"
                         className='timinginput'
                         placeholder='Close'
@@ -510,6 +527,7 @@ const Bregistration = () => {
                     <p className=''>Thursday    :</p>
                     <div className='div_tm_input' id='div_tm_input4'>
                       <input
+                       disabled={isLoading}
                         type="text"
                         className='timinginput'
                         placeholder='Open'
@@ -519,6 +537,7 @@ const Bregistration = () => {
                       />
                       <span>/</span>
                       <input
+                       disabled={isLoading}
                         type="text"
                         className='timinginput'
                         placeholder='Close'
@@ -532,6 +551,7 @@ const Bregistration = () => {
                     <p className=''>Friday   &nbsp;  &#160;  &nbsp;     :</p>
                     <div className='div_tm_input' id='div_tm_input5'>
                       <input
+                       disabled={isLoading}
                         type="text"
                         className='timinginput'
                         placeholder='Open'
@@ -541,6 +561,7 @@ const Bregistration = () => {
                       />
                       <span>/</span>
                       <input
+                       disabled={isLoading}
                         type="text"
                         className='timinginput'
                         placeholder='Close'
@@ -554,6 +575,7 @@ const Bregistration = () => {
                     <p>Saturday    :</p>
                     <div className='div_tm_input' id='div_tm_input6'>
                       <input
+                       disabled={isLoading}
                         type="text"
                         className='timinginput'
                         placeholder='Open'
@@ -563,6 +585,7 @@ const Bregistration = () => {
                       />
                       <span>/</span>
                       <input
+                       disabled={isLoading}
                         type="text"
                         className='timinginput'
                         placeholder='Close'
@@ -578,6 +601,7 @@ const Bregistration = () => {
                     <p>Sunday    :</p>
                     <div className='div_tm_input' id='div_tm_input7'>
                       <input
+                       disabled={isLoading}
                         type="text"
                         className='timinginput'
                         placeholder='Open'
@@ -587,6 +611,7 @@ const Bregistration = () => {
                       />
                       <span>/</span>
                       <input
+                       disabled={isLoading}
                         type="text"
                         className='timinginput'
                         placeholder='Close'
@@ -603,20 +628,25 @@ const Bregistration = () => {
               <h3 className='text-start ms-3 imgHead'>Add Images:</h3>
               <div className='img_div mt-3 mb-3 me-2 ms-3 inputdiv1'>
                 <span>Upload First Image&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;:</span>
-                <input type="file" className='w-50 ms-2 coustomfile' id='input_img1' name='input_img1' />
+                <input  disabled={isLoading} type="file" onChange={handleImgInpChange} className='w-50 ms-2 coustomfile' id='input_img1' name='input_img1' />
               </div>
               <div className='img_div mt-3 mb-3 ms-3 me-2 inputdiv1'>
                 <span>Upload Second Image&#160;&#160;:</span>
-                <input type="file" className='w-50 ms-2 coustomfile' id='input_img2' name='input_img2'/>
+                <input  disabled={isLoading} type="file" onChange={handleImgInpChange} className='w-50 ms-2 coustomfile' id='input_img2' name='input_img2'/>
               </div>
               <div className='img_div mt-3 mb-3 ms-3 me-2 inputdiv1'>
                 <span>Upload Third Image&#160;&#160;&#160;&#160;&#160;&#160;&#160;:</span>
-                <input type="file" className='w-50 ms-2 coustomfile' id='input_img3' name='input_img3'/>
+                <input  disabled={isLoading} type="file" onChange={handleImgInpChange} className='w-50 ms-2 coustomfile' id='input_img3' name='input_img3'/>
               </div>
             </div>
             <div className='mt-4 brg_btn mb-4'>
-              <button type='reset' className='btnclear cursor-pointer' onClick={clearForm}>Clear</button>
-              <button type="submit" className='btnsubmit' >Submit</button>
+              <button  disabled={isLoading} type='reset' className='btnclear cursor-pointer' onClick={clearForm}>Clear</button>
+              <button id="sub-btn" disabled={isLoading} 
+                      className='btnsubmit' type="submit" >
+                      {(isLoading)?<><span style={{color:"white"}} class="spinner-border spinner-border-sm mx-2" aria-hidden="true"></span>
+                      <span className="mx-2" style={{color:"white"}} role="status">Loading...</span></>:<span  style={{color:"white"}} role="status">Submit</span>}
+                    </button>
+              {/* <button  disabled={isLoading} type="submit" className='btnsubmit' >Submit</button> */}
             </div>
           </form>
         </div>

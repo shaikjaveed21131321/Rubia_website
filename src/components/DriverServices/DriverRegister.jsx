@@ -86,10 +86,10 @@ const DriverRegister = () => {
     // .then(response=>console.log(response,data))
     // .catch((err)=>console.log(err));
 
-    fetch("http://192.168.0.114:4000/api/v1/drivers/register", config)
+    fetch( `${process.env.REACT_APP_BASE_URL}/api/v1/drivers/register`, config)
       .then((response) => response.json())
       .then((result) => {
-        if (result.success == true) {
+        if (result.success === true) {
           //coustom  message Altert box
           swal("successful Registred", result.message, "success");
           // alert(result.message)

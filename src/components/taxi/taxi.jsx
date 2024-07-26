@@ -62,7 +62,7 @@ const Taxi = () => {
       },
     };
 
-    const route = "http://192.168.0.114:4000/api/v1/taxi/register/"
+    const route = `${process.env.REACT_APP_BASE_URL}/api/v1/taxi/register/`
     fetch(route, config)
       .then((response) => response.json())
       .then((result) => {
