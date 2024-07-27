@@ -37,49 +37,55 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(isLoading);
-    setIsLoading(true);
-      console.log(isLoading);
-    const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
+    if (!formValues.cu_ser_name || !formValues.cu_name || !formValues.cu_email || !formValues.cu_phone || !formValues.cu_msg) {
+      swal("Error", "Please fill your all details", "error");
+    }else{
 
-    const raw = JSON.stringify({
-      cu_ser_name: formValues.cu_ser_name.trim(),
-      cu_name: formValues.cu_name.trim(),
-      cu_email: formValues.cu_email.trim(),
-      cu_phone: formValues.cu_phone.trim(),
-      cu_msg: formValues.cu_msg.trim(),
-      created_at: new Date().toLocaleDateString(),
-    });
+      setIsLoading(true);
 
-    const requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      redirect: "follow",
-      body: raw,
-    };
-
-    const route = `${process.env.REACT_APP_BASE_URL}/contactus/register`;
-
-   setTimeout(()=>{
-    fetch(route, requestOptions)
-    .then((response) => response.json())
-    .then((result) => {
-      if (result.success === true) {
+      const myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+  
+      const raw = JSON.stringify({
+        cu_ser_name: formValues.cu_ser_name.trim(),
+        cu_name: formValues.cu_name.trim(),
+        cu_email: formValues.cu_email.trim(),
+        cu_phone: formValues.cu_phone.trim(),
+        cu_msg: formValues.cu_msg.trim(),
+        created_at: new Date().toLocaleDateString(),
+      });
+  
+      const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        redirect: "follow",
+        body: raw,
+      };
+  
+      const route = `${process.env.REACT_APP_BASE_URL}/contactus/register`;
+  
+     setTimeout(()=>{
+      fetch(route, requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.success === true) {
+          
+          swal("successful Registred", result.message, "success");
+          console.log(clearForm);
+        } else {
+          swal("Error", result.message, "error")
+        }
+      })
+      .catch((error) => swal("Error", error, "error"))
+      .finally(()=>{
         
-        swal("successful Registred", result.message, "success");
-        console.log(clearForm);
-      } else {
-        swal("Error", result.message, "error")
-      }
-    })
-    .catch((error) => swal("Error", error, "error"))
-    .finally(()=>{
-      
-      setIsLoading(false);
-      
-    });
-   },4000)
+        setIsLoading(false);
+        
+      });
+     },4000)
+
+    }
+ 
   };
 
 
