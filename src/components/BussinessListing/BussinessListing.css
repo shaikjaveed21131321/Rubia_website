@@ -201,25 +201,53 @@
   display: flex;
   justify-content: space-between;
 }
-.bsn_pvt_btn{
-  height: 44px;
-  width: 180px;
-  background-color: #fff5eb;
+#bsn_pvt_btn{
+  
   /* margin-right: 2%; */
   font-size: 18px;
   font-weight: 700;
-  color: #650000;
   border-radius: 8px;
+
 }
-.bsn_govt_btn{
-  height: 44px;
-  width: 190px;
-  background-color: #fff5eb;
+#bsn_govt_btn{
+ 
+ 
   /* margin-left: 2%; */
   font-size: 18px;
   font-weight: 700;
-  color: #650000;
+  
   border-radius: 8px;
+}
+.bsn_pvt_btn:hover{
+  background-color: #fff5eb;
+  color: #650000;
+}
+.bsn_govt_btn:hover{
+  background-color: #fff5eb;
+  color: #650000;
+}
+.bsn_btn_container {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+.radio-buttons {
+  margin-bottom: 20px;
+ 
+}
+
+.radio-label {
+  margin-right: 20px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.radio-label.selected {
+  background-color:  #650000;
+  color:#fff5eb ;
 }
 
 @media (max-width:768px) {
@@ -290,13 +318,19 @@
 .navagition_img{
   width: 100%;
 }
-.bsn_pvt_btn{
-  height: 32px;
+#bsn_pvt_btn{
+  font-size: 12px;
+  height: auto;
   width: auto;
+  width: 140px;
 }
-.bsn_govt_btn{
-  height: 32px;
-  width: auto;
+#bsn_govt_btn{
+  font-size: 12px;
+  height: auto;
+  width: 140px;
+  text-align: center;
+  padding: 0px;
+  padding-top: 10px;
 }
     
 }

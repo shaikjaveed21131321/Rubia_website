@@ -7,7 +7,7 @@ import Profileicon from "./assets/profileicon.png";
 import BussinessBanner from "./assets/bussiness_banner.png";
 import Bussinessbanner2 from "./assets/bussinessnbanner.png";
 import BussinessBanner1 from "./assets/bussiness_banner1.png";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PrivateServices from "./PrivateServices/PrivateServices";
 import GovermentServices from "./GovermentServices/GovermentServices";
 import Categorie from "./Categories/categorie";
@@ -15,20 +15,24 @@ import BussinessLIstingCard from "./BussinessListingCard/BussinessLIstingCard";
 
 const BussinessListing = () => {
   
-  const [Allservice, setAllService] = useState("All Service ");
-  const [CurrentPage, setCurrentPage]=useState('PrivateServices');
+  // const [Allservice, setAllService] = useState("All Service ");
+  // const [CurrentPage, setCurrentPage]=useState('PrivateServices');
  
-  const renderpage = () =>{
-    switch(CurrentPage){
-      case 'PrivateServices':  
-        return <PrivateServices/>;
-      case 'GovermentServices':
-        return <GovermentServices/>;
-    }
-  }
+  // const renderpage = () =>{
+  //   switch(CurrentPage){
+  //     case 'PrivateServices':  
+  //       return <PrivateServices/>;
+  //     case 'GovermentServices':
+  //       return <GovermentServices/>;
+  //   }
+  // }
+  // let handleClick = (newserviceName) => {
+  //   setAllService(newserviceName);
+  // };
+  const [selected, setSelected] = useState('PrivateServices');
 
-  let handleClick = (newserviceName) => {
-    setAllService(newserviceName);
+  const handleRadioChange = (event) => {
+    setSelected(event.target.value);
   };
   return (
     <>
@@ -107,9 +111,9 @@ const BussinessListing = () => {
             </Carousel>
           </div>
           <br />
-          <div>
+          {/* <div>
             <div className="bsn_btn_container">
-           <button className="bsn_pvt_btn" onClick={()=> setCurrentPage('PrivateServices')}>PrivateServices</button>
+           <button className="bsn_pvt_btn" onClick={()=> setCurrentPage('PrivateServices')}>For <br /> PrivateServices <br /> Click Here</button>
            <button className="bsn_govt_btn" onClick={()=> setCurrentPage('GovermentServices')}> GovermentServices</button>
            </div>
            <br />
@@ -117,11 +121,38 @@ const BussinessListing = () => {
            <div>
             {renderpage()}
            </div>
-          </div>
-          
+          </div> */}
+          <div className="bsn-main-container">
+      <div  className="bsn_btn_container">
+        <label id="bsn_pvt_btn" className={`radio-label ${selected === 'PrivateServices' ? 'selected' : ''}`}>
+          <input
+            type="radio"
+            name="content"
+            value="PrivateServices"
+            checked={selected === 'PrivateServices'}
+            onChange={handleRadioChange}
+          />
+          PrivateServices
+        </label>
+        <label id="bsn_govt_btn" className={`radio-label ${selected === 'GovermentServices' ? 'selected' : ''}`}>
+          <input
+            type="radio"
+            name="content"
+            value="GovermentServices"
+            checked={selected === 'GovermentServices'}
+            onChange={handleRadioChange}
+            
+          />
+          GovermentServices
+        </label>
+      </div><div className="content">
+        {selected === 'PrivateServices' && <PrivateServices />}
+        {selected === 'GovermentServices' && <GovermentServices />}
+      </div>
+    </div>
           <br />
-          <div className="header_b1" style={{ textTransform: "uppercase" }}>
-            categories of <span style={{ color: "#C68643" }}>{Allservice}</span>
+          {/* <div className="header_b1" style={{ textTransform: "uppercase" }}>
+            categories of <span style={{ color: "#C68643" }}></span>
           </div>
           <br />
           <Categorie />
@@ -130,7 +161,7 @@ const BussinessListing = () => {
             {" "}
             Best Gynaecologist Doctors{" "}
             <span style={{ color: "#C68643" }}>in Hyderabad :</span>{" "}
-          </div>
+          </div> */}
             <BussinessLIstingCard />
           <div className="bussiness_banner">
             <img src={Bussinessbanner2} alt="" className="Bussinessbanner2" />

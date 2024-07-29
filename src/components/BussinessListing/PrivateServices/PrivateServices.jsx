@@ -118,7 +118,12 @@ const PrivateServices = ({ handleClick }) => {
       </button>
       </div>
      
-    
+      <br />
+      <div className="header_b1">
+            {" "}
+            Best Gynaecologist Doctors{" "}
+            <span style={{ color: "#C68643" }}>in Hyderabad :</span>{" "}
+          </div>
       
     </>
   );

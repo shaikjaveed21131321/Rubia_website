@@ -18,9 +18,10 @@ const leftside = () => {
           <label className="label">our services</label>
           <NavLink className="services-links" to='/businesslisting/' 
           style={({isActive})=>{return {background:isActive?'#C68643':'' ,color:isActive?'white':"",}}} >
-          <img  src={Logo8} alt="" className='leftslide_logo8' />
-         
-          <div  className='leftlinks1'>BUSINESS LISTING</div>
+          <div style={{textAlign:"center"}}>
+          <img  src={Logo8} alt="" className='leftslide_logo8'  />
+          </div>
+          <div  className='leftlinks1' style={{textAlign:"center"}}>BUSINESS LISTING</div>
           </NavLink>
 
              <NavLink className="services-links" to='/driver/'

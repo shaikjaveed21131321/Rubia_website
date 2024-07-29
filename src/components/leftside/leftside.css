@@ -1,6 +1,6 @@
 .main{
     /* border: 2px solid yellow; */
-    width: auto;
+    width: 100%;
     height: auto;
     margin-top: 80px;
     display: flex;
@@ -10,7 +10,7 @@
 .services{
     /* border: 2px solid salmon; */
     width: 16%;
-    height:100vh;
+    height:100%;
     position: fixed;
     text-transform: uppercase;
     background-color:#E0EFFF    ;
@@ -20,10 +20,15 @@
     text-align: center;
     /* padding-top: 5px;  */
     padding: 5px 10px;
+    overflow-y:auto ;
+    padding-bottom: 10%;
     
     
     /* border: 2px solid; */
 }
+.services::-webkit-scrollbar{
+  display: none;
+ }
 .label{
     border-radius: 5px;
     font-family: "Poppins", sans-serif;
@@ -45,11 +50,11 @@
   font-weight: 600;
   font-style: normal;
   text-decoration: none;
- 
- 
+  padding: auto;
   text-align: center;
-  height: auto;
+  height: 35px;
   display: flex;
+  flex-direction: row;
   margin-top: 10%;
   background-color: #E0EFFF;
   color: #144273;
@@ -133,7 +138,8 @@ background-color: white;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
-  padding-top: 4px;
+  
+align-content: center;
   font-size: 83%;
   padding-left: 2%;
  
@@ -171,6 +177,7 @@ background-color: white;
   }
   .services-links{
     width: 250px;
+    height: 80px;
     background-color: #EDBD30;
     
   }
