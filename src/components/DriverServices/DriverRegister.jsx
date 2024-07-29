@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import swal from "sweetalert";
 import Upload from './img/upload.svg'
 
-import ImgUploadForm from "./ImgUploadForm/ImgUploadForm";
-
 import axios from 'axios';
 import ModalImage from "react-modal-image";
+
 
 
 const DriverRegister = () => {
@@ -44,6 +43,12 @@ const DriverRegister = () => {
       [name]: value,
     });
   };
+
+  const regex = /^[0-9]+$/;
+  if(formValues.contactNumber != "" && !formValues.contactNumber.match(regex) || formValues.emergencyNumber != "" && !formValues.emergencyNumber.match(regex) || formValues.pincode != "" && !formValues.pincode.match(regex) )
+  {
+   swal("Error" , "Enter Only Digits");
+  }
 //----------------------------------------------------------------------------------------------------------\\
 
 //-----------------------------------------------------------------------------------\\
@@ -401,30 +406,51 @@ const [errors, setErrors] = useState({});
   // form clear
 
   const clearForm = () => {
-    document.getElementById("dr_form_sub").reset();
+    setIsImg1Disable(false)
+    setIsImg2Disable(false)
+    setIsImg3Disable(false)
+    setIsImg4Disable(false)
+    setIsImg5Disable(false)
+    setIsImg6Disable(false)
+    setFormValues({
+      fullName: "",
+    emailid: "",
+    contactNumber: "",
+    emergencyNumber: "",
+    street: "",
+    area: "",
+    pincode: "",
+    city: "",
+    state: "",
+    dob: "",
+    licenceType: "",
+    carType: "",
+    exp: "",
+    salexp: "",
+    })
   };
 
-  const formValidation = () => {
-    const newErrors = {};
-    if (!formValues.businessName)
-      newErrors.businessName = "Business Name is required";
-    if (!formValues.businessCategory)
-      newErrors.businessCategory = "Business Category is required";
-    if (!formValues.contactNumber)
-      newErrors.contactNumber = "Contact Number is required";
-    if (!formValues.city) newErrors.city = "City is required";
-    if (!formValues.state) newErrors.state = "State is required";
-    if (!formValues.pincode) newErrors.pincode = "Pincode is required";
+  // const formValidation = () => {
+  //   const newErrors = {};
+  //   if (!formValues.businessName)
+  //     newErrors.businessName = "Business Name is required";
+  //   if (!formValues.businessCategory)
+  //     newErrors.businessCategory = "Business Category is required";
+  //   if (!formValues.contactNumber)
+  //     newErrors.contactNumber = "Contact Number is required";
+  //   if (!formValues.city) newErrors.city = "City is required";
+  //   if (!formValues.state) newErrors.state = "State is required";
+  //   if (!formValues.pincode) newErrors.pincode = "Pincode is required";
 
-    setErrors(newErrors);
+  //   setErrors(newErrors);
 
-    if (Object.keys(newErrors).length === 0) {
-      // Form is valid, you can proceed with form submission
-      console.log("Form is valid, submitting...");
-    } else {
-      console.log("Form has errors");
-    }
-  };
+  //   if (Object.keys(newErrors).length === 0) {
+  //     // Form is valid, you can proceed with form submission
+  //     console.log("Form is valid, submitting...");
+  //   } else {
+  //     console.log("Form has errors");
+  //   }
+  // };
 
   const handelSubmit = (e) => {
     e.preventDefault();
@@ -456,7 +482,7 @@ const [errors, setErrors] = useState({});
         dr_ph_hist: img4Values,
         dr_pol_ver: img5Values,
         dr_med_cer: img6Values,
-        created_at: new Date().toLocaleDateString(),
+        created_at: new Date().toLocaleString(),
       });
   
       
@@ -474,19 +500,23 @@ const [errors, setErrors] = useState({});
       // .then(response=>console.log(response,data))
       // .catch((err)=>console.log(err));
   
+      setTimeout(()=>{
+
       fetch( `${process.env.REACT_APP_BASE_URL}/drivers/register`, config)
-        .then((response) => response.json())
-        .then((result) => {
-          if (result.success) {
-            //coustom  message Altert box
-            swal("successful Registred", result.message, "success");
-            // alert(result.message)
-          } else {
-            swal("Error", result.message, "error");
-            // alert(result.message)
-          }
-        })
-        .catch((error) => swal(error));
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.success) {
+          //coustom  message Altert box
+          swal("successful Registred", result.message, "success");
+          // alert(result.message)
+        } else {
+          swal("Error", result.message, "error");
+          // alert(result.message)
+        }
+      })
+      .catch((error) => swal(error));
+      },2000)
+
     }
   };
 
@@ -731,7 +761,7 @@ const [errors, setErrors] = useState({});
               <div className="p-3 d-flex gap-2">
 
               <div className={divDoc}>
-                {/* <ImgUploadForm nameprop="dr_ph" plhoprop="Driver Photo"  /> */}
+                
 
                 <form className="d-flex flex-column justify-content-between align-item-center flex-lg-row gap-3 my-3 my-lg-1"  onSubmit={handleImg1Submit}>
                     <span className="w-100 my-auto">
@@ -949,6 +979,6 @@ const [errors, setErrors] = useState({});
       </div>
     </>
   );
-};
+}
 
-export default DriverRegister;
+export default DriverRegister

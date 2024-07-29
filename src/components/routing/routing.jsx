@@ -17,7 +17,7 @@ import DigitalMarketing from "../Digital_marketing/DigitalMarketing";
 import Realstate from '../realstate/realstate';
 import JobPortal from '../Job_portal/jobPortal';
 import Bregistration from '../BussinessListing/Bregistration/Bregistration';
-import DriverRegister from '../DriverServices/DriverRegister';
+import DriverRegister from '../DriverServices/DriverRegister'
 import PrivateServices from '../BussinessListing/PrivateServices/PrivateServices';
 import GovermentServices from '../BussinessListing/GovermentServices/GovermentServices';
 
@@ -44,7 +44,7 @@ const routing = () => {
     <Route path='/job portal/' element={<JobPortal/>}/>
     <Route path='/real state/' element={<Realstate/>}/>
     <Route path='/Bregistration/' element={<Bregistration/>}/>
-    <Route path='/DriverRegister/' Component={<DriverRegister/>}/>
+    <Route path='/driverregister/' element={<DriverRegister/>}/>
     <Route path='/privateservices/' element={<PrivateServices/> }/>
     <Route path='/govermentservices/' element={<GovermentServices/>}/>
    </Routes>

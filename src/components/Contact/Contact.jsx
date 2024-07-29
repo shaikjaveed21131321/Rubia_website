@@ -52,7 +52,7 @@ const Contact = () => {
         cu_email: formValues.cu_email.trim(),
         cu_phone: formValues.cu_phone.trim(),
         cu_msg: formValues.cu_msg.trim(),
-        created_at:new Date().toLocaleDateString(),
+        created_at:new Date().toLocaleString(),
       });
   
       const requestOptions = {
@@ -97,7 +97,7 @@ const Contact = () => {
 
 
   return (
-    <div style={{ height: "100%" }} className="main-contact">
+    <div style={{ height: "100%",marginTop:"10px" }} className="main-contact">
       <div className="contact1">
         <div className="contact_info">
           <section className="container text-center">
@@ -111,7 +111,7 @@ const Contact = () => {
                   background: "#FFF5EB",
                   margin: "auto",
                 }}
-                class="col"
+                className="col p-3"
               >
                 <div>
                   <h1

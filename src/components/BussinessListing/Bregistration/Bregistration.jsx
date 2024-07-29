@@ -44,6 +44,11 @@ const Bregistration = () => {
 
   });
 
+  const regex = /^[0-9]+$/;
+  if(formValues.contactNumber != "" && !formValues.contactNumber.match(regex) || formValues.whatsappNumber != "" && !formValues.whatsappNumber.match(regex) || formValues.pincode != "" && !formValues.pincode.match(regex) )
+    {
+     swal("Error" , "Enter Only Digits");
+    }
  
 
 
@@ -362,7 +367,7 @@ let data = JSON.stringify(
         bsn_img1:img1Values,
         bsn_img2: img2Values,
         bsn_img3: img3Values,
-        created_at: new Date(),
+        created_at: new Date().toLocaleString(),
       }
     )
     console.log(data);
