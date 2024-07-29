@@ -456,7 +456,7 @@ const [errors, setErrors] = useState({});
         dr_ph_hist: img4Values,
         dr_pol_ver: img5Values,
         dr_med_cer: img6Values,
-        created_at: new Date(),
+        created_at: new Date().toLocaleDateString(),
       });
   
       

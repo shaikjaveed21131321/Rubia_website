@@ -52,7 +52,7 @@ const Contact = () => {
         cu_email: formValues.cu_email.trim(),
         cu_phone: formValues.cu_phone.trim(),
         cu_msg: formValues.cu_msg.trim(),
-        created_at: new Date().toLocaleDateString(),
+        created_at:new Date().toLocaleDateString(),
       });
   
       const requestOptions = {
@@ -78,11 +78,9 @@ const Contact = () => {
       })
       .catch((error) => swal("Error", error, "error"))
       .finally(()=>{
-        
         setIsLoading(false);
-        
       });
-     },4000)
+     },2000)
 
     }
  
@@ -97,7 +95,7 @@ const Contact = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  console.log(width);
+
   return (
     <div style={{ height: "100%" }} className="main-contact">
       <div className="contact1">

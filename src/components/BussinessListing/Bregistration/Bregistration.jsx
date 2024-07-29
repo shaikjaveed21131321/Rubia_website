@@ -123,7 +123,7 @@ try {
 //-----------------------------------------------------------------------------------\\
   
 const [formImg2Values, setFormImg2Values] = useState(null);
-const [img2Values, setImg2Values] = useState();
+const [img2Values, setImg2Values] = useState("");
 const [isImg2Loading,setIsImg2Loading] = useState(false);
 const [isImg2Disable,setIsImg2Disable] = useState(false);
 
@@ -147,6 +147,7 @@ const handleImg2Change = (event) => {
 
       if(response.data.success){
         setImg2Values(response.data.path)
+        console.log(response);
         console.log(img2Values);
         setTimeout(() => {
         swal("Successful Uploaded", response.data.msg, "success");
@@ -181,7 +182,7 @@ const handleImg2Change = (event) => {
 
 
 const [formImg3Values, setFormImg3Values] = useState(null);
-const [img3Values, setImg3Values] = useState();
+const [img3Values, setImg3Values] = useState("");
 const [isImg3Loading,setIsImg3Loading] = useState(false);
 const [isImg3Disable,setIsImg3Disable] = useState(false);
 
@@ -271,6 +272,13 @@ const handleImg3Change = (event) => {
   // form clear 
 
   const clearForm = () => {
+        setImg1Values(null);
+        setImg2Values(null); 
+        setImg3Values(null);
+        setIsImg1Disable(false);
+        setIsImg2Disable(false);
+        setIsImg3Disable(false);
+        
         setFormValues({
           businessName: '',
           primaryCategory: '',
@@ -302,24 +310,22 @@ const handleImg3Change = (event) => {
           saturdayClose: '',
           sundayOpen: '',
           sundayClose: '',
-          input_img1:'',
-          input_img2:'',
-          input_img3:'',
         });
         setErrors({});
       };
 
-  const handelSubmit = (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-   if (!validate()) return;
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  
+  //  if (!validate()) return;
 
    if (!formValues.businessName || !formValues.emailid || !formValues.contactNumber || !formValues.whatsappNumber || !formValues.gstNumber || !formValues.cinNumber || !formValues.websiteName || !img1Values || !img2Values || !img3Values) {
-    
     swal("Error", "Please Fill Details" ,"Error")
-    setIsLoading(false);
     
    }else{
+    setIsLoading(true);
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
 
 let data = JSON.stringify(
       {
@@ -353,21 +359,20 @@ let data = JSON.stringify(
         bsn_tm_sat_cl: formValues.saturdayClose.trim(),
         bsn_tm_sun_op: formValues.sundayOpen.trim(),
         bsn_tm_sun_cl: formValues.sundayClose.trim(),
-        bsn_img1:formImg1Values,
-        bsn_img2: formImg2Values,
-        bsn_img3: formImg3Values,
+        bsn_img1:img1Values,
+        bsn_img2: img2Values,
+        bsn_img3: img3Values,
         created_at: new Date(),
       }
     )
+    console.log(data);
 
     let config = {
       method: "POST",
       maxBodyLength: Infinity,
       body: data,
       redirect: "follow",
-      headers: {
-        'content-Type': 'application/json'
-      },
+      headers: myHeaders,
 
     };
 
@@ -377,7 +382,7 @@ let data = JSON.stringify(
     // var url = "http://192.168.0.114:4000/api/v1/business/register";
 
     setTimeout(()=>{
-      fetch(`${process.env.REACT_APP_BASE_URL}/business/register`, config)
+      fetch(`${process.env.REACT_APP_BASE_URL}/business/register/`, config)
       .then((response) => response.json())
       .then((result) => {
         if (result.success) {
@@ -406,7 +411,7 @@ let data = JSON.stringify(
   const inputStyleTag = {
     width: "380px",
     background:"white",
-    border: "1px solid #FF6666",
+    border: "1px solid black", // #FF6666
     color: "#995050",
     fontWeight: "bold",
   };
@@ -435,25 +440,25 @@ let data = JSON.stringify(
           <form action="" id="myform" className='m-2 ms-4 me-4 mt-4' >
             <div className='inputdiv1 mb-4'>
               <div className='inputdiv2 '>
-                <input  disabled={isLoading} type="text" name="businessName" placeholder='Business Name' className='input1' value={formValues.businessName} onChange={handleChange} />
+                <input   disabled={isLoading} type="text" name="businessName" placeholder='Business Name' className='input1 p-2' value={formValues.businessName} onChange={handleChange} />
                 {errors.businessName && <p className="error text-danger">{errors.businessName}</p>}
               </div>
               <div className='inputdiv2 '>
                 <select  disabled={isLoading} style={{color:"#8F8F8F"}} id="" className='input1 w-100 h-100 p-1' name="primaryCategory" value={formValues.primaryCategory} onChange={handleChange} >
                   <option className='option'>Primary Category</option>
-                  <option value="A">Hospital</option>
-                  <option value="B">Lawyers </option>
-                  <option value="C">Charted Accountent</option>
-                  <option value="D">Temples</option>
-                  <option value="E">Super Market</option>
-                  <option value="F">Software Companies</option>
-                  <option value="G">Medical shops</option>
+                  <option value="Hospital">Hospital</option>
+                  <option value="Lawyers">Lawyers </option>
+                  <option value="Charted Accountent">Charted Accountent</option>
+                  <option value="Temples">Temples</option>
+                  <option value="Super Market">Super Market</option>
+                  <option value="Software Companies">Software Companies</option>
+                  <option value="Medical shops">Medical shops</option>
                 </select>
                 {errors.primaryCategory && <p className="error text-danger">{errors.primaryCategory}</p>}
               </div>
             </div>
             <div>
-              <textarea  disabled={isLoading} name="" id="bg_textarea" style={{width:"100%"}} placeholder='Business description     (1000 characters)' ></textarea>
+              <textarea disabled={isLoading} name="" id="bg_textarea" style={{width:"100%"}} placeholder='Business description     (1000 characters)' ></textarea>
             </div>
             
             <div className='inputdiv1 mb-4 mt-4'>
@@ -463,7 +468,7 @@ let data = JSON.stringify(
                   type="text"
                   name="servicesList"
                   placeholder='Service List'
-                  className='input1'
+                 className='input1 p-2'
                   value={formValues.servicesList}
                   onChange={handleChange} />
                   {errors.servicesList && <p className="error text-danger">{errors.servicesList}</p>}
@@ -474,7 +479,7 @@ let data = JSON.stringify(
                   type="email"
                   name="emailid"
                   placeholder='Email ID'
-                  className='input1'
+                  className='input1 p-2'
                   value={formValues.emailid}
                   onChange={handleChange}
                 />
@@ -489,7 +494,7 @@ let data = JSON.stringify(
                   type="text"
                   name="contactNumber"
                   placeholder='Contact Number'
-                  className='input1'
+                  className='input1 p-2'
                   min="10"
                   minLength="10"
                   max="10"
@@ -505,7 +510,7 @@ let data = JSON.stringify(
                   type="text"
                   name="whatsappNumber"
                   placeholder='WhatsApp Number'
-                  className='input1'
+                  className='input1 p-2'
                   min="10"
                   minLength="10"
                   max="10"
@@ -525,7 +530,11 @@ let data = JSON.stringify(
                   type="text"
                   name="gstNumber"
                   placeholder='GST Number'
-                  className='input1'
+                  className='input1 p-2'
+                  min="15"
+                  minLength="15"
+                  max="15"
+                  maxLength="15"
                   value={formValues.gstNumber}
                   onChange={handleChange}
                 />
@@ -536,8 +545,12 @@ let data = JSON.stringify(
                  disabled={isLoading}
                   type="text"
                   name="cinNumber"
+                  min="21"
+                  minLength="21"
+                  max="21"
+                  maxLength="21"
                   placeholder='C.I.N Number'
-                  className='input1'
+                  className='input1 p-2'
                   value={formValues.cinNumber}
                   onChange={handleChange}
                 />
@@ -553,7 +566,7 @@ let data = JSON.stringify(
                   type="text"
                   name="blockNumber"
                   placeholder='Block Number / Building Name'
-                  className='input1'
+                  className='input1 p-2'
                   value={formValues.blockNumber}
                   onChange={handleChange}
                 />
@@ -564,7 +577,7 @@ let data = JSON.stringify(
                   type="text"
                   name="area"
                   placeholder='Area'
-                  className='input1'
+                  className='input1 p-2'
                   value={formValues.area}
                   onChange={handleChange} /></div>
             </div>
@@ -576,7 +589,7 @@ let data = JSON.stringify(
                   type="text"
                   name="city"
                   placeholder='City'
-                  className='input1'
+                  className='input1 p-2'
                   value={formValues.city}
                   onChange={handleChange}
                 />
@@ -587,7 +600,7 @@ let data = JSON.stringify(
                   type="text"
                   name="state"
                   placeholder='State '
-                  className='input1'
+                  className='input1 p-2'
                   value={formValues.state}
                   onChange={handleChange}
                 />
@@ -601,8 +614,12 @@ let data = JSON.stringify(
                  disabled={isLoading}
                   type="text"
                   name="pincode"
+                  min="6"
+                  minLength="6"
+                  max="6"
+                  maxLength="6"
                   placeholder='Pincode'
-                  className='input1'
+                  className='input1 p-2'
                   value={formValues.pincode}
                   onChange={handleChange} />
               </div>
@@ -612,7 +629,7 @@ let data = JSON.stringify(
                   type="text"
                   name="websiteName"
                   placeholder='Website Name'
-                  className='input1'
+                  className='input1 p-2'
                   value={formValues.websiteName}
                   onChange={handleChange}
                 />
@@ -625,7 +642,7 @@ let data = JSON.stringify(
                   type="text"
                   name="googleMapLink"
                   placeholder='Google Map link'
-                  className='input1'
+                  className='input1 p-2'
                   value={formValues.googleMapLink}
                   onChange={handleChange}
                 />
@@ -637,7 +654,7 @@ let data = JSON.stringify(
                   type="text"
                   name="websiteLink"
                   placeholder='Website Link'
-                  className='input1'
+                  className='input1 p-2'
                   value={formValues.websiteLink}
                   onChange={handleChange}
                 />
@@ -654,6 +671,7 @@ let data = JSON.stringify(
                       <input
                        disabled={isLoading}
                         type="text"
+                        style={{textAlign:"center"}}
                         className='timinginput'
                         placeholder='Open'
                         name="mondayOpen"
@@ -664,6 +682,7 @@ let data = JSON.stringify(
                       <input
                        disabled={isLoading}
                         type="text"
+                        style={{textAlign:"center"}}
                         className='timinginput'
                         placeholder='Close'
                         name="mondayClose"
@@ -678,6 +697,7 @@ let data = JSON.stringify(
                       <input
                        disabled={isLoading}
                         type="text"
+                        style={{textAlign:"center"}}
                         className='timinginput'
                         placeholder='Open'
                         name="tuesdayOpen"
@@ -688,6 +708,7 @@ let data = JSON.stringify(
                       <input
                        disabled={isLoading}
                         type="text"
+                        style={{textAlign:"center"}}
                         className='timinginput'
                         placeholder='Close'
                         name="tuesdayClose"
@@ -703,6 +724,7 @@ let data = JSON.stringify(
                       <input
                        disabled={isLoading}
                         type="text"
+                        style={{textAlign:"center"}}
                         className='timinginput'
                         placeholder='Open'
                         name="wednesdayOpen"
@@ -713,6 +735,7 @@ let data = JSON.stringify(
                       <input
                        disabled={isLoading}
                         type="text"
+                        style={{textAlign:"center"}}
                         className='timinginput'
                         placeholder='Close'
                         name="wednesdayClose"
@@ -731,6 +754,7 @@ let data = JSON.stringify(
                       <input
                        disabled={isLoading}
                         type="text"
+                        style={{textAlign:"center"}}
                         className='timinginput'
                         placeholder='Open'
                         name="thursdayOpen"
@@ -741,6 +765,7 @@ let data = JSON.stringify(
                       <input
                        disabled={isLoading}
                         type="text"
+                        style={{textAlign:"center"}}
                         className='timinginput'
                         placeholder='Close'
                         name="thursdayClose"
@@ -755,6 +780,7 @@ let data = JSON.stringify(
                       <input
                        disabled={isLoading}
                         type="text"
+                        style={{textAlign:"center"}}
                         className='timinginput'
                         placeholder='Open'
                         name="fridayOpen"
@@ -765,6 +791,7 @@ let data = JSON.stringify(
                       <input
                        disabled={isLoading}
                         type="text"
+                        style={{textAlign:"center"}}
                         className='timinginput'
                         placeholder='Close'
                         name="fridayClose"
@@ -779,6 +806,7 @@ let data = JSON.stringify(
                       <input
                        disabled={isLoading}
                         type="text"
+                        style={{textAlign:"center"}}
                         className='timinginput'
                         placeholder='Open'
                         name="saturdayOpen"
@@ -789,6 +817,7 @@ let data = JSON.stringify(
                       <input
                        disabled={isLoading}
                         type="text"
+                        style={{textAlign:"center"}}
                         className='timinginput'
                         placeholder='Close'
                         name="saturdayClose"
@@ -805,6 +834,7 @@ let data = JSON.stringify(
                       <input
                        disabled={isLoading}
                         type="text"
+                        style={{textAlign:"center"}}
                         className='timinginput'
                         placeholder='Open'
                         name="sundayOpen"
@@ -815,6 +845,7 @@ let data = JSON.stringify(
                       <input
                        disabled={isLoading}
                         type="text"
+                        style={{textAlign:"center"}}
                         className='timinginput'
                         placeholder='Close'
                         name="sundayClose"
@@ -953,7 +984,7 @@ let data = JSON.stringify(
                         fontWeight: "600",
                         height: "44px",  
                       }} 
-                      class="btn " type="button" onClick={handelSubmit}  >
+                      class="btn " type="button" onClick={handleSubmit}  >
                       {(isLoading)?<><span style={{color:"white"}} class="spinner-border spinner-border-sm mx-2" aria-hidden="true"></span>
                       <span className="mx-2" style={{color:"white"}} role="status">Loading...</span></>:<span  style={{color:"white"}} role="status">Send Message</span>}
                     </button>
