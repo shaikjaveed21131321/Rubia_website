@@ -127,7 +127,7 @@ const Contact = () => {
                   </h1>
                 </div>
                 <form
-                  style={{minWidth:"350px", background: "#F6C390", paddingTop:"8px" }}
+                  style={{minWidth:"350px", background: "#F6C390", paddingTop:"8px", paddingLeft:"0px" }}
                   onSubmit={handleSubmit}
                   className=""
                   name="formc"
@@ -137,7 +137,7 @@ const Contact = () => {
 
 
                   <div
-                    style={{ gap: "8px" }}
+                    style={{ gap: "8px", textAlign:"center",paddingRight:"8px" }}
                     className="form-group form-input "
                     
                   >
@@ -228,11 +228,12 @@ const Contact = () => {
                         background: "#144273",
                         color: "#fff",
                         fontWeight: "600",
-                        height: "44px",  
+                        height: "44px", 
+                        textAlign:"center" 
                       }} 
                       class="btn " type="submit" >
                       {(isLoading)?<><span style={{color:"white"}} class="spinner-border spinner-border-sm mx-2" aria-hidden="true"></span>
-                      <span className="mx-2" style={{color:"white"}} role="status">Loading...</span></>:<span  style={{color:"white"}} role="status">Send Message</span>}
+                      <span className="mx-2" style={{color:"white"}} role="status">Loading...</span></>:<span style={{color:"white"}} role="status">Send</span>}
                     </button>
                     </div>
                     

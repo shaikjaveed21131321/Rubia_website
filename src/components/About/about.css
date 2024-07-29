@@ -42,11 +42,15 @@ p {
   margin-left: 15px;
 }
 .btn_documents {
-  width: 110%;
-  height: 60%;
+  width: 60px;
+  height: 70%;
   border-radius: 8px;
   background-color: #c68643;
   color: white;
+  text-align: center;
+}
+.header{
+  font-size: 24px;
 }
 
 
