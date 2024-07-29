@@ -14,13 +14,13 @@ import Registration from "./assets/registration.png";
 import Panchayati from "./assets/panchayati.png";
 
 const GovermentServices = () => {
-  const [title1, setTitle1] = useState("Uploading More Services");  
+  const [title1, setTitle1] = useState("Uploading More Services Soon");  
   const [activeButton, setActiveButton] = useState(null);
   const [noOfElements, setElements] = useState(12);
 
   const toggle = () => {
     if (noOfElements >= govtLabels.length) {
-      setTitle1("Uploading More Services");
+      setTitle1("Uploading More Services Soon");
       setElements(12);
     } else {
       setElements(noOfElements + 12);
@@ -50,6 +50,9 @@ const GovermentServices = () => {
     
   return (
     <>
+    <div className='header_govt'>
+    Government  <span style={{color:"#C68643",fontWeight:"700"}}>Organizations :</span>
+    </div>
       <div className='govt_container'>
           <div className='govt_sub_container'>
             {govtLabels.map((e,index)=>(
@@ -62,8 +65,8 @@ const GovermentServices = () => {
                    activeButton === index ? "#144273" : "#FAF2EB",
                }}
               >
-                    <div className='govt_img'>
-                      <img src={e.image} alt="" />
+                    <div >
+                      <img src={e.image} alt="" id='govt_img' />
                     </div>
                     <div className='govt_text'
                     key={index}
@@ -77,11 +80,12 @@ const GovermentServices = () => {
               </form>
               ))}
           </div>
-      </div>
-   
-    <button type="button" className="view" onClick={toggle}>
+          <button type="button" className="view" onClick={toggle}>
       {title1}
     </button>
+      </div>
+   
+   
     <br />
    
     </>

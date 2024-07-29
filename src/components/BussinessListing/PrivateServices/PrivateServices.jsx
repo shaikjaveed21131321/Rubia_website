@@ -81,7 +81,10 @@ const PrivateServices = ({ handleClick }) => {
   const slice = pvtlabels.slice(0, noOfElements);
   return (
     <>
-      <div className="pvt_container">
+    <div className="header_pvt">
+    Private <span style={{color:"#C68643",fontWeight:"700"}}>Organizations :</span>
+    </div>
+      <div id="pvt_container">
         <div className="pvt_sub_container">
           {slice.map((e, index) => (
             <form action="" key={index}>
@@ -94,8 +97,8 @@ const PrivateServices = ({ handleClick }) => {
                     activeButton === index ? "#144273" : "#FAF2EB",
                 }}
               >
-                <div className="pvt_img">
-                  <img src={e.image} alt="" />
+                <div id="pvt_img">
+                  <img className="pvt_img" src={e.image} alt="" />
                 </div>
                 <div
                   className="pvt_text"

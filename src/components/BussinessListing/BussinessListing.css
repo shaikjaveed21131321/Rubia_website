@@ -238,8 +238,8 @@
     margin-left: 0%;
     margin-right: 0%;
     width: 98%;
-    padding-right: 3%;
-    padding-left: 3%;
+   padding: 3%;
+   padding-right: 2%;
    }
    .searchbar{
     display: none;
@@ -266,5 +266,6 @@
 .navagition_img{
   width: 100%;
 }
+
     
 }

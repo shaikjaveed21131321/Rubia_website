@@ -1,7 +1,13 @@
+.header_govt{
+    color: #650000;
+    font-weight: 700;
+    font-size: 24px;
+}
 .govt_container{
-    border: 3px solid #650000;
+    border: 2px solid #6500005f;
     height: auto;
     width: auto;
+    border-radius: 16px;
     margin-top: 10px;
 }
 .govt_sub_container{
@@ -14,20 +20,19 @@
    padding-right: 2%;
 }
 .govt_lables{
-    height: 138PX;
-    width: 138px;
-    margin: 5%;
+    height: 130PX;
+    width: 130px;
+    margin: 10px 5px 10px 5px;
     background-color: #FAF2EB;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
     border: 1px solid #AFAAA5;
-    box-shadow:  1px 1px 2px #000000,inset -1px -1px 2px #AFAAA5;
+    /* box-shadow:  1px 1px 2px #000000,inset -1px -1px 2px #AFAAA5; */
     cursor: pointer;
-    
 }
-.govt_img{
+#govt_img{
     margin-top: 14px;
     /* border: 2px solid; */
     width: 60px;
@@ -52,10 +57,26 @@
         ;
         
     }
-    /* .govt_img{
-        margin-top: 7px;
-        border: 2px solid;
-        width: 45px;
-        height: 55px;
-    } */
+    .govt_lables{
+        border: 1px solid #AFAAA5;
+        height: 110px;
+        width: 100px;
+        background-color: #FAF2EB
+        ;
+    }
+    .govt_text{
+    
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        color: #650000;
+        margin-top: 10px;
+    }
+    #govt_img{
+        margin-top: 8px;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+    }
 }

@@ -7,7 +7,7 @@ import Profileicon from "./assets/profileicon.png";
 import BussinessBanner from "./assets/bussiness_banner.png";
 import Bussinessbanner2 from "./assets/bussinessnbanner.png";
 import BussinessBanner1 from "./assets/bussiness_banner1.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import PrivateServices from "./PrivateServices/PrivateServices";
 import GovermentServices from "./GovermentServices/GovermentServices";
 import Categorie from "./Categories/categorie";
@@ -96,6 +96,11 @@ const BussinessListing = () => {
                 />
               </Carousel.Item>
             </Carousel>
+          </div>
+          <br />
+          <div>
+            <NavLink className="pvt_link" to="/privateservices/"> PrivateServices</NavLink>
+            <NavLink className="govt" to="/govermentservices/">GovermentServices</NavLink>
           </div>
           <br />
           <PrivateServices handleClick={handleClick} />

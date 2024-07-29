@@ -1,15 +1,265 @@
-.Bsn_list_card_container{
-    background-color: #FFF5EB;
-    width: 50%;
-    height: 100%;
-    border: 2px solid;
-    margin-top: 3%;
+.bussinesslisting_card_container {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid; */
+  margin-top: 3%;
 }
+.bussinesslisting_card_sub_container {
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 2px solid magenta; */
+  margin: 0%;
+}
+.bussinesslistingCard {
+  /* border: 2px solid; */
+  width: 100%;
+  height: 250px;
+  /* margin-right: 2.4%; */
+  margin-bottom: 1%;
+  background-color: #fff5eb;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #afaaa5;
+  /* box-shadow:  1px 1px 2px #000000,inset -1px -1px 2px #AFAAA5; */
+  border-radius: 8px;
+}
+.card_content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-content: space-between;
+}
+#thumbup_icon {
+  height: 24px;
+  width: 24px;
+  border: none;
+}
+.thumbup_icon {
+  height: 24px;
+  width: 24px;
+  border: none;
+}
+.card_img {
+  width: 230px;
+  height: 100%;
+  border-radius: 8px;
+  /* border: 2px solid;    */
+}
+.card_heading {
+  display: flex;
+  flex-direction: row;
+  padding: 1%;
 
-@media (max-width:786px) {
-    .Bsn_list_card_container{
-        width: 100%;
-        height: 100%;
-        padding: 1%;
-    }
+  /* border: 2px solid salmon; */
+}
+.card_header {
+  font-weight: 600;
+  color: #144273;
+  font-size: 24px;
+  line-height: 24px;
+  padding-left: 5px;
+  margin-left: 1%;
+  /* border: 2px solid; */
+  width: 500px;
+  height: auto;
+}
+#card_rating {
+    width: "46px";
+    height: "24px";
+    margin-left: 80px;
+  }
+  .card_rating {
+    width: "46px";
+    height: "24px";
+   
+    
+  }
+.location_icon {
+  margin-left: 1%;
+  font-size: 16px;
+  font-weight: 400;
+}
+.card_address {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+}
+.card_fulladdress {
+  margin-left: 1%;
+}
+.card_DayTime {
+  display: flex;
+  flex-direction: row;
+}
+.Timer_icon {
+  margin-left: 1%;
+}
+.card_day {
+  margin-left: 1%;
+}
+.card_contact {
+  width: 100%;
+  height: auto;
+  /* border: 2px solid; */
+  margin-bottom: 2%;
+  margin-left: 1%;
+  display: flex;
+  flex-direction: row;
+}
+.card_sub_contact {
+  width: 60px;
+  height: 60px;
+  /* border: 2px solid; */
+  margin: 1%;
+  padding-left: 3.8px;
+  align-content: center;
+  text-decoration: none;
+}
+.card_contact_logo {
+  width: 48px;
+  height: 48px;
+  /* border: 2px solid; */
+}
+.card_contact_text {
+  height: 15px;
+  width: auto;
+  /* border: 2px solid; */
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: #144273;
+}
+#card_contact_text {
+    height: 15px;
+    width: auto;
+    /* border: 2px solid; */
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    color: #144273;
+  }
+.dropdown button {
+  background-color: none;
+}
+.btn-success {
+  background-color: none;
+}
+.dropdown-toggle {
+  background-color: none;
+}
+@media (max-width: 786px) {
+  .Bsn_list_card_container {
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+  }
+  .bussinesslistingCard {
+    width: 100%;
+    height: 134px;
+  }
+
+  .card_img {
+    width: 101px;
+    height: 134px;
+    border-radius: 8px;
+    /* border: 2px solid; */
+  }
+  #thumbup_icon {
+    height: 16px;
+    width: 16px;
+    border: none;
+  }
+  .thumbup_icon {
+    height: 16px;
+    width: 16px;
+    border: none;
+  }
+  .location_icon {
+    width: 16px;
+    height: 16px;
+  }
+  .card_header {
+    font-weight: 600;
+    color: #144273;
+    font-size: 12px;
+    line-height: 14px;
+    padding-left: 5px;
+    width: auto;
+  }
+  #card_rating {
+    width: "13px";
+    height: "12px";
+    margin-left: 5px;
+    border: 4px;
+  }
+  .card_rating {
+    width: "13px";
+    height: "12px";
+    margin-left: 5px;
+    border: 4px;
+  }
+
+  .Timer_icon {
+    margin-left: 1%;
+    width: 14px;
+    height: 14px;
+  }
+  .card_day {
+    font-size: 10px;
+   padding-top: 5.5px;
+  }
+  .card_fulladdress {
+    padding-top: 1%;
+    margin-left: 1%;
+    font-size: 10px;
+    align-items: center;
+  }
+  .card_contact {
+    width: 100%;
+    height: auto;
+    /* border: 2px solid; */
+    margin-bottom: 2%;
+    margin-left: 1%;
+    display: flex;
+    flex-direction: row;
+  }
+  .card_sub_contact {
+    width: 33px;
+    height: 30px;
+    /* border: 2px solid; */
+    padding-left: 0px;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+  }
+  .card_contact_logo {
+    width: 18px;
+    height: 18px;
+    /* border: 2px solid; */
+  }
+  .card_contact_text {
+    height: auto;
+    width: auto;
+    /* border: 2px solid; */
+    text-align: center;
+    font-size: 8px;
+    font-weight: 600;
+    color: #144273;
+    text-decoration: none;
+    
+    
+   
+  }
+ 
+  #card_contact_text {
+    height: 15px;
+    width: auto;
+    /* border: 2px solid; */
+    text-align: center;
+    font-size: 8px;
+    font-weight: 600;
+    color: #144273;
+    margin-left: -6px;
+  }
 }

@@ -217,7 +217,7 @@ const HomeServicesSliders = () => {
             <img style={{width:"100%"}}  src={d.imageUrl} alt="" />
           </div>
           <div className="homebussinesslising_text">
-            {d.name} 
+            {d.name}
             <button className="homebussinesslising_btn">search now</button>
           </div>
         </div>
@@ -234,7 +234,7 @@ const HomeServicesSliders = () => {
           </div>
           <div className="homebussinesslising_text">
             {d.name} 
-            <button className="homebussinesslising_btn_drive">search now</button>
+            <button className="homebussinesslising_btn">search now</button>
           </div>
         </div>
       ))}

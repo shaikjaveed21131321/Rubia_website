@@ -44,8 +44,9 @@ color: #330000;
     border-radius: 0px 0px 12px 12px;
 }
 .homebussinesslising_text{
-    padding-top: 5%;
-    padding-left: 8%;
+    padding-left: 4%;
+    padding-top: 4%;
+    padding-bottom: 4%;
     height: 107px;
     background-color: #FFE5E5;
     color: #650000;
@@ -54,11 +55,19 @@ color: #330000;
     font-style: normal;
     font-size: 22px;
     line-height: 24px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    align-content: space-between;
     border-radius: 0px 0px 12px 12px;
     
     
+}
+.homebussinesslising_text_name{
+    color: #650000;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 24px;
 }
 .homebussinesslising_btn{
     width: 42%;
@@ -71,22 +80,9 @@ color: #330000;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
-    margin-top: 10%;
-    margin-left: 4%;
+    
 }
-.homebussinesslising_btn_drive{
-    width: 42%;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 14px;
-    border: 2px solid #C68643 ;
-    background-color: white;
-    color: #C68643;
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    margin-top: 4%;
-}
+
 @media (max-width:786px) {
     
     .homebussinesslising_slide{
@@ -97,12 +93,15 @@ color: #330000;
     .slick-arrow{
         background-color:none;
         color: #330000;
-        z-index: 2;
+       
+        }
+        .slick-prev{
+            z-index: 1;
         }
     .slick-prev:before{
         color: #330000;
         font-size: 30px;
-        margin-left: 35px;
+        margin-left: 25px;
         
         
     }
@@ -116,24 +115,22 @@ color: #330000;
     }
    
     .homebussinesslising_text{
+        padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
         font-size: 12px;
         line-height: none;
-        display: flex;
-        flex-direction: column;
-        justify-content:space-evenly ;
+        display: grid;
+        align-content: space-between;
+        
     }
     .homebussinesslising_btn{
         width: 70%;
         font-size: 8px;
         border: 2px solid;
-        text-align: center;
+        
     }
-    .homebussinesslising_btn_drive{
-        width: 70%;
-        font-size: 8px;
-        margin-top: 10%;
-        border: 2px solid;
-    }
+  
     .homebussinesslising_contaner{
         width: 100%;
         margin-left: 0%;

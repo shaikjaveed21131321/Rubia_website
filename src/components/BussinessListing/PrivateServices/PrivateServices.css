@@ -1,12 +1,18 @@
-
+.header_pvt{
+    color: #650000;
+    font-weight: 700;
+    font-size: 24px;
+}
 .view{
     background-color: #650000;
+    border-radius: 0px 0px 14px 14px;
 }
 
-.pvt_container{
-    border: 3px solid #650000;
+#pvt_container{
+    border: 2px solid #6500005f;
     height: auto;
     width: auto;
+    border-radius: 16px;
     margin-top: 10px;
 }
 .pvt_sub_container{
@@ -20,16 +26,16 @@
 }
 .pvt_labels{
     
-    height: 138PX;
-    width: 138px;
-    margin: 5%;
+    height: 130PX;
+    width: 130px;
+    margin: 10px 5px 10px 5px;
     background-color: #FAF2EB;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
     border: 1px solid #AFAAA5;
-    box-shadow:  1px 1px 2px #000000,inset -1px -1px 2px #AFAAA5;
+    /* box-shadow:  1px 1px 2px #000000,inset -1px -1px 2px #AFAAA5; */
     cursor: pointer;
     
 }
@@ -38,6 +44,7 @@
     /* border: 2px solid; */
     width: 60px;
     height: 60px;
+    /* border: 2px solid; */
 }
 .pvt_text{
     /* border: 2px solid; */
@@ -54,11 +61,26 @@
         font-size: 18px;   
      }
      .pvt_labels{
-        border: 2PX solid;
-        height: 100px;
+        border: 1px solid #AFAAA5;
+        height: 110px;
         width: 100px;
         background-color: #FAF2EB
         ;
+    }
+    .pvt_img{
+        margin-top: 8px;
+        /* border: 2px solid; */
+        width: 50px;
+        height: 50px;
+    }
+    .pvt_text{
+        /* border: 2px solid; */
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        color: #650000;
+        margin-top: 10px;
     }
      /* br{
         display: none;

@@ -148,6 +148,9 @@
     #location-block{
              width: 100%;
     }
-   
+    #sub-btn{
+        text-align: start;
+       font-size: 15px;
+       }
     
 }

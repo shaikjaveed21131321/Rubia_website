@@ -67,14 +67,18 @@ const About = () => {
        <div className='imgs'>
           
           <img  src={Img1} alt="" />
-          <img  src={Img8} alt="" />
+          <img  src={Img8} alt=""  />
           <img  src={Img3} alt="" />
           <img  src={Img4} alt="" />
           <img  src={Img5} alt="" />
           <img  src={Img6} alt="" />
           <img  src={Img2} alt="" />
           <img  src={Img7} alt="" />
-          <img style={{border:"2px solid"}} src={Img9} alt="" />
+          <img style={{border:"0.5px solid black" }} src={Img9} alt="" />
+          {/* <img src="" alt=""  style={{width:"482px", height:"200px"}}/> */}
+          <div >
+
+          </div>
           
         </div>
     </div>
