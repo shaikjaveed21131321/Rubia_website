@@ -24,6 +24,14 @@ const Contact = () => {
     });
   };
 
+
+
+  const regex = /^[0-9]+$/;
+  if(formValues.cu_phone != "" && !formValues.cu_phone.match(regex))
+    {
+     swal("Error" , "Enter Only Digits");
+    }
+
   const clearForm = () => {
     setFormValues({
       cu_ser_name: '',

@@ -29,6 +29,12 @@ const Taxi = () => {
     });
   };
 
+  const regex = /^[0-9]+$/;
+  if(formValues.tx_mob_num != "" && !formValues.tx_mob_num.match(regex))
+    {
+     swal("Error" , "Enter Only Digits");
+    }
+
   const handelSubmit = (event) => {
     event.preventDefault();
     
