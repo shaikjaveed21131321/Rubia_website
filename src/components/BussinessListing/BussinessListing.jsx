@@ -11,12 +11,21 @@ import { Link, NavLink } from "react-router-dom";
 import PrivateServices from "./PrivateServices/PrivateServices";
 import GovermentServices from "./GovermentServices/GovermentServices";
 import Categorie from "./Categories/categorie";
-import MobileNavagitor from "./assets/Business List_5.png";
 import BussinessLIstingCard from "./BussinessListingCard/BussinessLIstingCard";
 
 const BussinessListing = () => {
   
   const [Allservice, setAllService] = useState("All Service ");
+  const [CurrentPage, setCurrentPage]=useState('PrivateServices');
+ 
+  const renderpage = () =>{
+    switch(CurrentPage){
+      case 'PrivateServices':  
+        return <PrivateServices/>;
+      case 'GovermentServices':
+        return <GovermentServices/>;
+    }
+  }
 
   let handleClick = (newserviceName) => {
     setAllService(newserviceName);
@@ -99,13 +108,17 @@ const BussinessListing = () => {
           </div>
           <br />
           <div>
-            <NavLink className="pvt_link" to="/privateservices/"> PrivateServices</NavLink>
-            <NavLink className="govt" to="/govermentservices/">GovermentServices</NavLink>
+            <div className="bsn_btn_container">
+           <button className="bsn_pvt_btn" onClick={()=> setCurrentPage('PrivateServices')}>PrivateServices</button>
+           <button className="bsn_govt_btn" onClick={()=> setCurrentPage('GovermentServices')}> GovermentServices</button>
+           </div>
+           <br />
+           <br />
+           <div>
+            {renderpage()}
+           </div>
           </div>
-          <br />
-          <PrivateServices handleClick={handleClick} />
-          <br />
-          <GovermentServices handleClick={handleClick} />
+          
           <br />
           <div className="header_b1" style={{ textTransform: "uppercase" }}>
             categories of <span style={{ color: "#C68643" }}>{Allservice}</span>

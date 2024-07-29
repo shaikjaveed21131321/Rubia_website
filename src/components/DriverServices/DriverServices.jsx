@@ -72,10 +72,10 @@ const DriverServices = () => {
     <>
       <div
         style={{
-          minWidth: width < 700 ? "400px" : "510px",
+          minWidth: width < 700 ? "360px" : "510px",
           width: "65%",
           margin: "auto",
-          marginLeft:"2%",
+          
           overflowX: "hidden",
         }}
         className="container h-auto px-1"
@@ -307,7 +307,7 @@ const DriverServices = () => {
                 background: "#FFD0A0",
                 margin: " 20px auto",
                 padding: "10px",
-                marginLeft: "2%",
+                
               }}
               className=" container swiper rounded-4 "
             >
@@ -1464,7 +1464,7 @@ const DriverServices = () => {
                   }}
                   navigation={true}
                   modules={[Keyboard, Pagination, Navigation]}
-                  className="mySwiper w-99 h-100"
+                  className="mySwiper w-100 h-100"
                 >
                   <SwiperSlide>
                     <DriverServiceProfile detailsObj={detailsObj} />

@@ -197,6 +197,30 @@
 .searchbar_mobile{
   display: none;
 }
+.bsn_btn_container{
+  display: flex;
+  justify-content: space-between;
+}
+.bsn_pvt_btn{
+  height: 44px;
+  width: 180px;
+  background-color: #fff5eb;
+  /* margin-right: 2%; */
+  font-size: 18px;
+  font-weight: 700;
+  color: #650000;
+  border-radius: 8px;
+}
+.bsn_govt_btn{
+  height: 44px;
+  width: 190px;
+  background-color: #fff5eb;
+  /* margin-left: 2%; */
+  font-size: 18px;
+  font-weight: 700;
+  color: #650000;
+  border-radius: 8px;
+}
 
 @media (max-width:768px) {
     .searchbar_mobile{
@@ -266,6 +290,13 @@
 .navagition_img{
   width: 100%;
 }
-
+.bsn_pvt_btn{
+  height: 32px;
+  width: auto;
+}
+.bsn_govt_btn{
+  height: 32px;
+  width: auto;
+}
     
 }

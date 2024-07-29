@@ -59,7 +59,7 @@
     color: #144273;
     border-radius: 5px;
   } */
-  .btn_taxi{
+  /* .btn_taxi{
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -70,7 +70,7 @@
     color: #144273;
    border-radius: 5px;
   }
- 
+  */
   .btn_taxi:hover{
     background-color: #144273;
     color: white;

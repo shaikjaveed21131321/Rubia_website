@@ -51,16 +51,21 @@
     font-size: largey;
 }
 .btun{
-    width: auto;
-    height: auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    width: 130px;
+    height: 44px;
     border-radius: 8px;
     background-color: #144273;
     color: #fff;
-    font-size: 18px;
+    
     z-index: 2;
     position: absolute;
     margin-left: 3%;
-    top: 65%;
+    margin-top: 350px;
 }
 #digital2{
     margin-left: 18%;
@@ -89,13 +94,15 @@
       
     }
     .btun{
-        top: 38%;
-        font-size: 12px;
-        border-radius: 4px;
-        width: auto;
-        height: 26px;
+        width: 100px;
+       height: 26px;
+       font-size: 12px;
+       font-weight: 500;
+       background-color: #124F91;
+       border-radius: 4px;
         margin-left: 5%;
+        margin-top: 130px;
         text-align: center;
-        padding: 1%;
+        line-height: 0%;
     }
 }
