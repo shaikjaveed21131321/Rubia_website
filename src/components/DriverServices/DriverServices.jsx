@@ -88,7 +88,7 @@ const DriverServices = () => {
             >
               <span style={{ color: "#650000" }}>Driver Registration Form</span>
               <Link
-                to="/DriverRegister/"
+                to="/driverregister/"
                 style={{
                   width: "150px",
                   height: "50px",
