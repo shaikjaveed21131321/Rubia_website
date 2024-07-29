@@ -30,7 +30,7 @@ const DriverServiceTableCard = (props) => {
     
   return (
     <>
-<div style={{width:"100%",display:"flex", flexWrap:"wrap",border:"1px solid black"}}>
+<div style={{width:"100%",display:"flex", flexWrap:"wrap"}}>
     <table style={{margin:"auto" , border:"1px solid black"}}>
     <caption style={{fontSize:"14px",background:"#F7C38B",color:"#144273",captionSide:"top",textAlign:"center",fontWeight:"bold"}}>Rubia services : Rate Card</caption>
         <tbody>

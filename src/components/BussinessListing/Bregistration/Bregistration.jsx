@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import swal from "sweetalert";
+import ModalImage from "react-modal-image";
+import axios from 'axios';
+import Upload from './assets/upload.svg'
+
 const Bregistration = () => {
 
   const [isLoading,setIsLoading] = useState(false);
@@ -37,17 +41,10 @@ const Bregistration = () => {
     saturdayClose: '',
     sundayOpen: '',
     sundayClose: '',
-    input_img1:'',
-    input_img2:'',
-    input_img3:'',
+
   });
 
-  const [formImgInp, setFormImgInp] = useState({
-   
-    input_img1:'',
-    input_img2:'',
-    input_img3:'',
-  });
+ 
 
 
   const handleChange = (e) => {
@@ -58,15 +55,182 @@ const Bregistration = () => {
     });
   };
 
-  const handleImgInpChange = (e) => {
-    const { name, value } = e.target.files[0];
-    setFormImgInp({
-      ...formImgInp,
-      [name]: value,
+ 
+
+  //-----------------------------------------------------------------------------------\\
+//                          Doc IMG 1
+//-----------------------------------------------------------------------------------\\
+
+const [formImg1Values, setFormImg1Values] = useState(null);
+const [img1Values, setImg1Values] = useState("");
+const [isImg1Loading,setIsImg1Loading] = useState(false);
+const [isImg1Disable,setIsImg1Disable] = useState(false);
+
+const handleImg1Change = (event) => {
+  setFormImg1Values(event.target.files[0]);
+};
+  const handleImg1Submit = async (event) => {
+  event.preventDefault();
+
+  if (!formImg1Values) {
+    swal("Error", "Please select an image to upload", "error");
+    return; // Early return if no file selected
+  }
+
+try {
+
+  setIsImg1Loading(true);
+      const formData = new FormData();
+      formData.append('image', formImg1Values);
+
+      const response = await axios.post(`http://localhost:4000/uploads/`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      if(response.data.success === true){
+        setImg1Values(response.data.path)
+        console.log(img1Values);
+        setTimeout(() => {
+        swal("Successful Uploaded", response.data.msg, "success");
+        setIsImg1Loading(false);
+        setIsImg1Disable(true);
+      }, 2000);
+      }else{
+        setTimeout(() => {
+        swal("Error", response.data.msg, "error");
+        setIsImg1Loading(false);
+        setIsImg1Disable(false);
+      }, 2000);
+      } 
+  
+} catch (error) {
+  if(formImg1Values === null || !formImg1Values || error){
+    swal("Error", "Please Select Image First "+error, "error"); 
+    setIsImg1Loading(false);
+        setIsImg1Disable(false);
+  }
+}
+
+  
+  };
+//-----------------------------------------------------------------------------------\\
+//-----------------------------------------------------------------------------------\\
+
+//-----------------------------------------------------------------------------------\\
+//                          Doc IMG 2
+//-----------------------------------------------------------------------------------\\
+  
+const [formImg2Values, setFormImg2Values] = useState(null);
+const [img2Values, setImg2Values] = useState();
+const [isImg2Loading,setIsImg2Loading] = useState(false);
+const [isImg2Disable,setIsImg2Disable] = useState(false);
+
+const handleImg2Change = (event) => {
+  setFormImg2Values(event.target.files[0]);
+};
+  const handleImg2Submit = async (event) => {
+  event.preventDefault();
+
+  try {
+    
+    setIsImg2Loading(true);
+      const formData = new FormData();
+      formData.append('image', formImg2Values);
+
+      const response = await axios.post(`http://localhost:4000/uploads/`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      if(response.data.success){
+        setImg2Values(response.data.path)
+        console.log(img2Values);
+        setTimeout(() => {
+        swal("Successful Uploaded", response.data.msg, "success");
+        setIsImg2Loading(false);
+        setIsImg2Disable(true);
+      }, 2000);
+      }else{
+        setTimeout(() => {
+        swal("Error", response.data.msg, "error");
+        setIsImg2Loading(false);
+        setIsImg2Disable(false);
+      }, 2000);
+      } 
+   
+} catch (error) {
+  if(formImg1Values === null || !formImg1Values || error){
+    swal("Error", "Please Select Image First "+error, "error");
+    setIsImg2Loading(false);
+        setIsImg2Disable(false);
+  }
+}
+
+  };
+//-----------------------------------------------------------------------------------\\
+//-----------------------------------------------------------------------------------\\
+
+
+//-----------------------------------------------------------------------------------\\
+//                          Doc IMG 3
+//-----------------------------------------------------------------------------------\\
+
+
+
+const [formImg3Values, setFormImg3Values] = useState(null);
+const [img3Values, setImg3Values] = useState();
+const [isImg3Loading,setIsImg3Loading] = useState(false);
+const [isImg3Disable,setIsImg3Disable] = useState(false);
+
+const handleImg3Change = (event) => {
+  setFormImg3Values(event.target.files[0]);
+};
+  const handleImg3Submit = async (event) => {
+  event.preventDefault();
+
+  try {
+
+
+    setIsImg3Loading(true);
+    const formData = new FormData();
+    formData.append('image', formImg3Values);
+
+    const response = await axios.post(`http://localhost:4000/uploads/`, formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
     });
+
+    if(response.data.success){
+      setImg3Values(response.data.path)
+        console.log(img3Values);
+      setTimeout(() => {
+      swal("Successful Uploaded", response.data.msg, "success");
+      setIsImg3Loading(false);
+      setIsImg3Disable(true);
+    }, 2000);
+    }else{
+      setTimeout(() => {
+      swal("Error", response.data.msg, "error");
+      setIsImg3Loading(false);
+      setIsImg3Disable(false);
+    }, 2000);
+    } 
+    
+  } catch (error) {
+    if(formImg1Values === null || !formImg1Values || error){
+      swal("Error", "Please Select Image First "+error, "error"); 
+      setIsImg3Loading(false);
+      setIsImg3Disable(false);
+    }
+  }
   };
 
-  console.log(formImgInp);
+//-----------------------------------------------------------------------------------\\
+//-----------------------------------------------------------------------------------\\
 
 
   const [errors, setErrors] = useState({});
@@ -77,16 +241,19 @@ const Bregistration = () => {
     
         if (!formValues.businessName.match(/^[a-zA-Z ]+$/)) {
           tempErrors.businessName = "should contain only letters and spaces";
+          setIsLoading(false);
           isValid = false;
         }
     
         if (!formValues.contactNumber.match(/^\d{10}$/)) {
           tempErrors.contactNumber = "should be exactly 10 digits";
+          setIsLoading(false);
           isValid = false;
         }
     
         if (!formValues.emailid.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
           tempErrors.emailid = "Invalid email format";
+          setIsLoading(false);
           isValid = false;
         }
     
@@ -145,9 +312,16 @@ const Bregistration = () => {
   const handelSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    // if (!validate()) return;
+   if (!validate()) return;
 
-    let data = JSON.stringify(
+   if (!formValues.businessName || !formValues.emailid || !formValues.contactNumber || !formValues.whatsappNumber || !formValues.gstNumber || !formValues.cinNumber || !formValues.websiteName || !img1Values || !img2Values || !img3Values) {
+    
+    swal("Error", "Please Fill Details" ,"Error")
+    setIsLoading(false);
+    
+   }else{
+
+let data = JSON.stringify(
       {
         bsn_name: formValues.businessName.trim(),
         bsn_category: formValues.primaryCategory.trim(),
@@ -179,14 +353,13 @@ const Bregistration = () => {
         bsn_tm_sat_cl: formValues.saturdayClose.trim(),
         bsn_tm_sun_op: formValues.sundayOpen.trim(),
         bsn_tm_sun_cl: formValues.sundayClose.trim(),
-        bsn_img1:formImgInp.input_img1,
-        bsn_img2: formImgInp.input_img2,
-        bsn_img3: formImgInp.input_img3,
+        bsn_img1:formImg1Values,
+        bsn_img2: formImg2Values,
+        bsn_img3: formImg3Values,
         created_at: new Date(),
       }
     )
 
-   
     let config = {
       method: "POST",
       maxBodyLength: Infinity,
@@ -207,7 +380,7 @@ const Bregistration = () => {
       fetch(`${process.env.REACT_APP_BASE_URL}/business/register`, config)
       .then((response) => response.json())
       .then((result) => {
-        if (result.success === true) {
+        if (result.success) {
           //coustom  message Altert box 
           swal("successful Registred", result.message, "success");
           // alert(result.message)
@@ -222,15 +395,44 @@ const Bregistration = () => {
         setIsLoading(false);
       });
 
-    },4000);
+    },2000);
+
+   }
+
+    
   }
+
+  
+  const inputStyleTag = {
+    width: "380px",
+    background:"white",
+    border: "1px solid #FF6666",
+    color: "#995050",
+    fontWeight: "bold",
+  };
+
+  const divDoc = ""
+  const docInputClass = "p-2 my-auto"
+
+  const docBtnImgUpSty={
+    padding:"6px",
+    minWidth:"124px",
+    width: "124px",
+    height:"60px",
+    background: "#144273",
+    color: "#fff",
+    fontWeight: "600",
+    fontSize:"12px",
+    borderRadius:"8px"
+  }
+
   return (
     <>
 
       <div className='rg'>
         <div className='rg1 mt-4 brmain'>
           <h3 className='text-start ms-4 mt-4 brheader'>Enter Your Business Details</h3>
-          <form action="" id="myform" className='m-2 ms-4 me-4 mt-4' onSubmit={handelSubmit}>
+          <form action="" id="myform" className='m-2 ms-4 me-4 mt-4' >
             <div className='inputdiv1 mb-4'>
               <div className='inputdiv2 '>
                 <input  disabled={isLoading} type="text" name="businessName" placeholder='Business Name' className='input1' value={formValues.businessName} onChange={handleChange} />
@@ -624,33 +826,143 @@ const Bregistration = () => {
                 </div>
               </div>
             </div>
-            <div className='mt-4 img_main_div'>
-              <h3 className='text-start ms-3 imgHead'>Add Images:</h3>
-              <div className='img_div mt-3 mb-3 me-2 ms-3 inputdiv1'>
-                <span>Upload First Image&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;:</span>
-                <input  disabled={isLoading} type="file" onChange={handleImgInpChange} className='w-50 ms-2 coustomfile' id='input_img1' name='input_img1' />
+            </form>
+            <div className="mt-4 mx-4 img_main_div">
+              <div className="p-3 d-flex gap-2">
+
+              <div className={divDoc}>
+                {/* <ImgUploadForm nameprop="dr_ph" plhoprop="Driver Photo"  /> */}
+
+                <form className="d-flex flex-column justify-content-between align-item-center flex-lg-row gap-3 my-3 my-lg-1"  onSubmit={handleImg1Submit}>
+                    <span className="w-100 my-auto">
+                    Upload First Image :
+                    </span>
+                    <div style={{display:"flex",justifyContent:"end", alignItems:"center", gap:"20px"}} className="w-100  w-md-50">
+                    <input
+                      name="input_img1"
+                      disabled={isImg1Disable}
+                      placeholder="Driver Photo"
+                      type="file"
+                      style={inputStyleTag}
+                    className={docInputClass}
+                    onChange={handleImg1Change}
+                    required
+                    />
+                   
+                    <ModalImage
+                        className="w-50 h-60 my-auto"
+                        small={isImg1Disable&&'http://localhost:4000/uploads/'+img1Values}
+                        large={isImg1Disable&&'http://localhost:4000/uploads/'+img1Values}
+                        
+                      />
+                    </div>
+                    
+                      <button id="sub-btn" disabled={isImg1Disable} style={docBtnImgUpSty} 
+                          class="btn my-auto " type="submit" >
+                          {(isImg1Loading)?<><span style={{color:"white",margin:"auto"}} class="spinner-border spinner-border-sm mx-2" aria-hidden="true"></span>
+                          <span className="mx-2" style={{color:"white"}} role="status">Loading...</span></>:<> <img src={Upload} alt="upload" /><span  style={{color:"white"}} role="status">Upload Image</span></>}
+                        </button>
+                  </form>
               </div>
-              <div className='img_div mt-3 mb-3 ms-3 me-2 inputdiv1'>
-                <span>Upload Second Image&#160;&#160;:</span>
-                <input  disabled={isLoading} type="file" onChange={handleImgInpChange} className='w-50 ms-2 coustomfile' id='input_img2' name='input_img2'/>
-              </div>
-              <div className='img_div mt-3 mb-3 ms-3 me-2 inputdiv1'>
-                <span>Upload Third Image&#160;&#160;&#160;&#160;&#160;&#160;&#160;:</span>
-                <input  disabled={isLoading} type="file" onChange={handleImgInpChange} className='w-50 ms-2 coustomfile' id='input_img3' name='input_img3'/>
-              </div>
-            </div>
-            <div className='mt-4 brg_btn mb-4'>
-              <button  disabled={isLoading} type='reset' className='btnclear cursor-pointer' onClick={clearForm}>Clear</button>
-              <button id="sub-btn" disabled={isLoading} 
-                      className='btnsubmit' type="submit" >
-                      {(isLoading)?<><span style={{color:"white"}} class="spinner-border spinner-border-sm mx-2" aria-hidden="true"></span>
-                      <span className="mx-2" style={{color:"white"}} role="status">Loading...</span></>:<span  style={{color:"white"}} role="status">Submit</span>}
+              <div className={divDoc}>
+              <form className="d-flex flex-column justify-content-between align-item-center flex-lg-row gap-3 my-3 my-lg-1"  onSubmit={handleImg2Submit}>
+                <span className="w-100 my-auto">
+                Upload Second Image :
+                </span>
+                <div style={{display:"flex",justifyContent:"end", alignItems:"center", gap:"20px"}} className="w-100  w-md-50">
+                <input
+                name="input_img2"
+                disabled={isImg2Disable}
+                placeholder="Driver Photo"
+                type="file"
+                style={inputStyleTag}
+              className={docInputClass}
+              onChange={handleImg2Change}
+              required
+                />
+                <ModalImage
+                        className="w-50 h-60 my-auto"
+                        small={isImg2Disable&&'http://localhost:4000/uploads/'+img2Values}
+                        large={isImg2Disable&&'http://localhost:4000/uploads/'+img2Values}
+                        
+                      />
+                </div>
+                <button id="sub-btn" disabled={isImg2Disable} style={docBtnImgUpSty} 
+                      class="btn my-auto " type="submit" >
+                      {(isImg2Loading)?<><span style={{color:"white",margin:"auto"}} class="spinner-border spinner-border-sm mx-2" aria-hidden="true"></span>
+                      <span className="mx-2" style={{color:"white"}} role="status">Loading...</span></>:<> <img src={Upload} alt="upload" /><span  style={{color:"white"}} role="status">Upload Image</span></>}
                     </button>
-              {/* <button  disabled={isLoading} type="submit" className='btnsubmit' >Submit</button> */}
+                    </form>
+              </div>
+              <div className={divDoc}>
+              <form className="d-flex flex-column justify-content-between align-item-center flex-lg-row gap-3 my-3 my-lg-1"  onSubmit={handleImg3Submit}>
+                <span className="w-100 my-auto">
+                Upload Third Image:
+                </span>
+                <div style={{display:"flex",justifyContent:"end", alignItems:"center", gap:"20px"}} className="w-100  w-md-50">
+                <input
+                name="input_img3"
+                  type="file"
+                  disabled={isImg3Disable}
+                  style={inputStyleTag}
+                  className={docInputClass}
+                  onChange={handleImg3Change}
+                  required
+                />
+                <ModalImage
+                        className="w-50 h-60 my-auto"
+                        small={isImg3Disable&&'http://localhost:4000/uploads/'+img3Values}
+                        large={isImg3Disable&&'http://localhost:4000/uploads/'+img3Values}
+                        
+                      />
+                </div>
+                <button id="sub-btn" disabled={isImg3Disable} style={docBtnImgUpSty} 
+                     class="btn my-auto "  type="submit" >
+                      {(isImg3Loading)?<><span style={{color:"white",margin:"auto"}} class="spinner-border spinner-border-sm mx-2" aria-hidden="true"></span>
+                      <span className="mx-2" style={{color:"white"}} role="status">Loading...</span></>:<> <img src={Upload} alt="upload" /><span  style={{color:"white"}} role="status">Upload Image</span></>}
+                    </button>
+                    </form>
+              </div>
+              </div>
             </div>
-          </form>
+
+            <div className="px-4" style={{gap:"7px",display:"flex",justifyContent:"center",alignItems:"center"}}>
+
+            <button
+            onClick={clearForm}
+                    disabled={isLoading}
+                      className="form-control btn my-4 mx-auto"
+                      style={{
+                        padding:"10px 16px",
+                        width: "90%",
+                        background: "#144273",
+                        color: "#fff",
+                        fontWeight: "600",
+                        height: "44px",
+                      
+                      }}
+                      type="reset"
+                      
+                    >Clear
+                    </button>
+            <button id="sub-btn" disabled={isLoading} style={{
+                        padding:"10px 16px",
+                        width: "90%",
+                        background: "#C68643",
+                        color: "#fff",
+                        fontWeight: "600",
+                        height: "44px",  
+                      }} 
+                      class="btn " type="button" onClick={handelSubmit}  >
+                      {(isLoading)?<><span style={{color:"white"}} class="spinner-border spinner-border-sm mx-2" aria-hidden="true"></span>
+                      <span className="mx-2" style={{color:"white"}} role="status">Loading...</span></>:<span  style={{color:"white"}} role="status">Send Message</span>}
+                    </button>
+           
+            </div>
+          
         </div>
       </div>
+      
     </>
   );
 }
