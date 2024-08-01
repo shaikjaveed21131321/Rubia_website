@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "../BussinessListing/BussinessListing.css";
 import Locationicon from "./assets/locationicon.png";
@@ -12,8 +12,43 @@ import PrivateServices from "./PrivateServices/PrivateServices";
 import GovermentServices from "./GovermentServices/GovermentServices";
 import Categorie from "./Categories/categorie";
 import BussinessLIstingCard from "./BussinessListingCard/BussinessLIstingCard";
+import axios from 'axios'
 
 const BussinessListing = () => {
+
+
+  const [business, setBusiness] = useState({}); 
+
+  const fetchBusiness = async () => { 
+    try {
+      const config = {
+        method: 'get',
+        maxBodyLength: Infinity, 
+        url: `${process.env.REACT_APP_BASE_URL}/business/get`,
+        headers: {},
+      };
+
+      const response = await axios.request(config);
+
+      setBusiness(response.data);
+      
+    } catch (error) {
+      console.error(error); 
+    }
+  };
+
+  useEffect(() => {
+    fetchBusiness(); 
+  }, []);
+
+  console.log(business.data);
+
+  for (let index = 0; index < business.length; index++) {
+    const element = business.data[index];
+    console.log(element);
+  }
+  
+ 
   
   const [Allservice, setAllService] = useState("All Service ");
   const [CurrentPage, setCurrentPage]=useState('PrivateServices');
@@ -34,7 +69,6 @@ const BussinessListing = () => {
     <>
       <div className="BussinessListingText">
         <div className="BussinessListing1">
-
           <div className="searchbar">
             <img src={Locationicon} alt="" className="locationicon" />
             <input
@@ -131,7 +165,10 @@ const BussinessListing = () => {
             Best Gynaecologist Doctors{" "}
             <span style={{ color: "#C68643" }}>in Hyderabad :</span>{" "}
           </div>
-            <BussinessLIstingCard />
+                
+     
+                
+            <BussinessLIstingCard myArray={business.data}/>
           <div className="bussiness_banner">
             <img src={Bussinessbanner2} alt="" className="Bussinessbanner2" />
           </div>
