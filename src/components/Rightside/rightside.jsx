@@ -1,6 +1,6 @@
 import React from 'react'
-import Ad1 from "./assets/Instagram post - 11[1].png";
-import Ad2 from "./assets/Instagram post - 3[1].png";
+import Ad1 from "./assets/WhatsApp Image 2024-07-29 at 17.12.09_f4954411.jpg";
+import Ad2 from "./assets/Hire professional Driver squer.png";
 import Ad3 from "./assets/Instagram_post_-_2_(2)[1].png"
 const rightside = () => {
   return (
