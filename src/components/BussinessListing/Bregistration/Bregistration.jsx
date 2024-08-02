@@ -276,10 +276,11 @@ const handleImg3Change = (event) => {
 
   // form clear 
 
-  const clearForm = () => {
+  function clearForm(){
         setImg1Values(null);
         setImg2Values(null); 
         setImg3Values(null);
+
         setIsImg1Disable(false);
         setIsImg2Disable(false);
         setIsImg3Disable(false);
@@ -318,6 +319,10 @@ const handleImg3Change = (event) => {
         });
         setErrors({});
       };
+
+      console.log(typeof(clearForm));
+
+      
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -370,7 +375,7 @@ let data = JSON.stringify(
         created_at: new Date().toLocaleString(),
       }
     )
-    console.log(data);
+
 
     let config = {
       method: "POST",
@@ -393,6 +398,7 @@ let data = JSON.stringify(
         if (result.success) {
           //coustom  message Altert box 
           swal("successful Registred", result.message, "success");
+          clearForm();
           // alert(result.message)
         }
         else {
@@ -871,13 +877,13 @@ let data = JSON.stringify(
 
                 <form className="d-flex flex-column justify-content-between align-item-center flex-lg-row gap-3 my-3 my-lg-1"  onSubmit={handleImg1Submit}>
                     <span className="w-100 my-auto">
-                    Upload First Image :
+                    Upload Main Image :
                     </span>
                     <div style={{display:"flex",justifyContent:"end", alignItems:"center", gap:"20px"}} className="w-100  w-md-50">
                     <input
                       name="input_img1"
                       disabled={isImg1Disable}
-                      placeholder="Driver Photo"
+                      placeholder="Main Image"
                       type="file"
                       style={inputStyleTag}
                     className={docInputClass}
@@ -909,7 +915,7 @@ let data = JSON.stringify(
                 <input
                 name="input_img2"
                 disabled={isImg2Disable}
-                placeholder="Driver Photo"
+                placeholder="Second Image"
                 type="file"
                 style={inputStyleTag}
               className={docInputClass}
