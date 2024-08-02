@@ -21,6 +21,7 @@ import DriverRegister from '../DriverServices/DriverRegister'
 import PrivateServices from '../BussinessListing/PrivateServices/PrivateServices';
 import GovermentServices from '../BussinessListing/GovermentServices/GovermentServices';
 
+
 const routing = () => {
   return (
    <>
@@ -47,6 +48,7 @@ const routing = () => {
     <Route path='/driverregister/' element={<DriverRegister/>}/>
     <Route path='/privateservices/' element={<PrivateServices/> }/>
     <Route path='/govermentservices/' element={<GovermentServices/>}/>
+
    </Routes>
    </BrowserRouter>
    

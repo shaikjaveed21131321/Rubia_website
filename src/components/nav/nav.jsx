@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import {NavLink } from 'react-router-dom';
+import {Link, NavLink } from 'react-router-dom';
 import Logo from './logo.jpg';
+import Profile from "./Profile_icon.png"
 import "../leftside/leftside.css"
 
 const Nav = () => {
@@ -19,6 +20,11 @@ const Nav = () => {
     }
     setIsMenuClicked(!isMenuClicked);
   }
+  const profile=[
+    {
+      Profile:Profile,
+    }
+  ]
 
   return (
     <>
@@ -40,7 +46,9 @@ const Nav = () => {
         style={({isActive})=>{return {color:isActive?'orange':''}}}>about</NavLink>
           <NavLink className="navbar-link" id='Link3' to='/contact/' 
         style={({isActive})=>{return {color:isActive?'orange':''}}}>contact</NavLink>
+        
         </div>
+      
       </div>
     </>
   );

@@ -226,6 +226,12 @@
   background-color: #fff5eb;
   color: #650000;
 }
+.bsn_pvt_btn input{
+  cursor: pointer;
+}
+.bsn_govt_btn input{
+  cursor: pointer;
+}
 .bsn_btn_container {
   text-align: center;
   display: flex;
