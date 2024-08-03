@@ -14,22 +14,7 @@ import Wesite from "./assets/material-symbols_globe.png";
 import Details from "./assets/material-symbols_globe (1).png";
 
 const BussinessLIstingCard = ({myArray}) => {
-  const card = [
-    {
-      CardImg: DoctorImg,
-      CardHeader: "Svv Ayurvedic Piles Fissure Fistula Clinic",
-      CardFullAddress:
-        "flat no.107, Rams enclave, Vikaspuri colony, Erragada, Hyderabad - 500018 ",
-      CardTiming: "sunday : Holiday",
-    },
-    {
-      CardImg: DoctorImg,
-      CardHeader: "Svv Ayurvedic Piles Fissure Fistula Clinic",
-      CardFullAddress:
-        "flat no.107, Rams enclave, Vikaspuri colony, Erragada, Hyderabad - 500018 ",
-    },
-  ];
- 
+  
 
   return (
     <>
@@ -92,13 +77,13 @@ const BussinessLIstingCard = ({myArray}) => {
                     </div>
                     <div className="card_contact_text">Call</div>
                   </a>
-                  <a className="card_sub_contact" href={`https://wa.me/${item.bsn_whs_app_num}?text=Hii`}>
+                  <a className="card_sub_contact" target="_blank" href={`https://wa.me/${item.bsn_whs_app_num}?text=Hii`}>
                     <div>
                       <img src={Whatapp} alt="" className="card_contact_logo" />
                     </div>
                     <div className="card_contact_text">Chat</div>
                   </a>
-                  <a className="card_sub_contact" href={item.bsn_gmap_link}>
+                  <a className="card_sub_contact" target="_blank" href={item.bsn_gmap_link}>
                     <div>
                       <img src={Map} alt="" className="card_contact_logo" />
                     </div>
@@ -120,7 +105,7 @@ const BussinessLIstingCard = ({myArray}) => {
                     </div>
                     <div className="card_contact_text">Share</div>
                   </a>
-                  <a className="card_sub_contact" href={item.bsn_website_link}>
+                  <a className="card_sub_contact" target="_blank" href={item.bsn_website_link}>
                     <div>
                       <img src={Wesite} alt="" className="card_contact_logo" />
                     </div>

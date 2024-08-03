@@ -195,16 +195,16 @@ const BussinessListing = () => {
             {" "}
             Best Gynaecologist Doctors{" "}
             <span style={{ color: "#C68643" }}>in Hyderabad :</span>{" "}
-<<<<<<< HEAD
+
           </div>
                 
      
                 
             <BussinessLIstingCard myArray={business.data}/>
-=======
+
           </div> */}
-            <BussinessLIstingCard />
->>>>>>> f51ff43bf384535f0046ee7a623f2f42d6affb6c
+            <BussinessLIstingCard  myArray={business.data}/>
+
           <div className="bussiness_banner">
             <img src={Bussinessbanner2} alt="" className="Bussinessbanner2" />
           </div>
