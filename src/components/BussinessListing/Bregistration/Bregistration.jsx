@@ -996,7 +996,7 @@ let data = JSON.stringify(
                       }} 
                       class="btn " type="button" onClick={handleSubmit}  >
                       {(isLoading)?<><span style={{color:"white"}} class="spinner-border spinner-border-sm mx-2" aria-hidden="true"></span>
-                      <span className="mx-2" style={{color:"white"}} role="status">Loading...</span></>:<span  style={{color:"white"}} role="status">Send Message</span>}
+                      <span className="mx-2" style={{color:"white"}} role="status">Loading...</span></>:<span  style={{color:"white"}} role="status">Submit</span>}
                     </button>
            
             </div>
