@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import Cookies from 'universal-cookie'
 import swal from "sweetalert";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -88,29 +89,52 @@ const res=cookie.get('jwttoken')
 
   return (
     <>
-    <div style={{width:"100vw", height:"100vh",border:"1px solid black"}}>
-   <main style={{width:"50%" ,border:"1px solid black"}} className=' m-auto'>
+    <div id='register1' style={{width:"100vw", height:"70vh"}}>
+   <main  id='register-card'  className=' m-auto'>
         <header>
             <img src="" alt="" />
-            <h1>Login</h1>
+            <h1 className='p-2'>Login</h1>
         </header>
         <section className='d-flex gap-4'>
            <form action="" autoComplete='off'>
            <div className='d-flex flex-row'>
-                <label htmlFor="">Email</label>
-                <input name='usr_name' className='p-2' type="email" required  />
+                <label htmlFor="" className='p-2'>Email</label>
+                <input name='usr_name' className='p-2 m-1' type="email" required  />
             </div>
             <div className='d-flex flex-row'>
-                <label htmlFor="">Password</label>
-                <input name='usr_phnum' className='p-2' type="password" required  />
+                <label htmlFor="" className='p-2'>Password</label>
+                <input name='usr_phnum' className='p-2 m-1' type="password" required  />
             </div>
-            <div className='d-flex justify-content-between align-item-center flex-row'>
-                <button type='submit' className='px-2 py-1'>Login</button>
-                <button type='reset' className='px-2 py-1'>Clear</button>
+            <div className='d-flex justify-content-evenly align-item-center flex-row gap-2 m-2 p-2'>
+                <button type='submit' className='px-2 py-1' style={{
+            padding:"10px 16px",
+            width: "40%",
+            background: "#C68643",
+            color: "#fff",
+            fontWeight: "600",
+            height: "44px",  
+          }} >Login</button>
+                <button type='reset' className='px-2 py-1' style={{
+            padding:"10px 16px",
+            width: "40%",
+            background: "#144273",
+            color: "#fff",
+            fontWeight: "600",
+            height: "44px",
+          
+          }} >Clear</button>
             </div>
+            <div style={{textAlign:"center",width:"100%"}}>OR
+          <div className='Login-Link'>
+            <Link to='/Register/' className='Login-l' >
+           <label htmlFor="" className='Login'>Register</label>
+            </Link>
+          </div>
+        </div>
            </form>
         </section>
-        <footer>
+        <br />
+        <footer style={{textAlign:"center"}}>
             <span>{new Date().getFullYear()}&copy; Rubia Services</span>
         </footer>
     </main>

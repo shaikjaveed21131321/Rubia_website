@@ -1,8 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route,Routes} from 'react-router-dom';
 import Rightside from "./components/Rightside/rightside";
-import Applink from "./components/AppLinks/applink";
-import Footer from "./components/footer/footer";
+
 import Router from "./components/routing/routing";
 import Register from "./components/Authentication/Register";
 import Login from "./components/Authentication/Login";
@@ -28,7 +27,7 @@ import "./components/Job_portal/jobPortal.css"
 import "./components/realstate/realstate.css"
 import "./components/nav/nav.css"
 import "./components/BussinessListing/Bregistration/Bregistration.css"
-import Cookies from "universal-cookie";
+import { ReactGAImplementation } from "react-ga4";
 
 
 function App() {
@@ -57,8 +56,7 @@ function App() {
    <Router/>
    {/* </div>
    </div> */}
-   <Applink/>
-   <Footer/>
+   
   </>
   )
 }

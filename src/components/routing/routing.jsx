@@ -20,7 +20,11 @@ import Bregistration from '../BussinessListing/Bregistration/Bregistration';
 import DriverRegister from '../DriverServices/DriverRegister'
 import PrivateServices from '../BussinessListing/PrivateServices/PrivateServices';
 import GovermentServices from '../BussinessListing/GovermentServices/GovermentServices';
-import Profile  from '../Profile/Profile';
+import Applink from "../AppLinks/applink";
+import Footer from "../footer/footer";
+import Profile  from '../Authentication/Register';
+import Login from '../Authentication/Login';
+import Register from '../Authentication/Register';
 
 
 const routing = () => {
@@ -28,11 +32,12 @@ const routing = () => {
    <>
    <BrowserRouter>
    <Leftside/>
-  
+   
    <Nav/>
+   
    <ScrollToTop />
    <Routes>
-    <Route path='/home/' element={<Home/>}/>
+    <Route path='/' element={<Home/>}/>
     <Route path='/service/' element={<Service/>}  />
     <Route path='/about/' element={<About/>}/>
     <Route path='/contact/' element={<Contact/>}/>
@@ -50,10 +55,13 @@ const routing = () => {
     <Route path='/privateservices/' element={<PrivateServices/> }/>
     <Route path='/govermentservices/' element={<GovermentServices/>}/>
     <Route path='/profile/' element={<Profile/>}/>
+    <Route path='/Login'  element={<Login/>}/>
+    <Route path='/Register/' element={<Register/>}/>
   
    </Routes>
    </BrowserRouter>
-   
+   <Applink/>
+   <Footer/>
    </>
 
   )

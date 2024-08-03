@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
 import Cookies from 'universal-cookie'
 import swal from "sweetalert";
+import "./Register.css"
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const [isLoading,setIsLoading] = useState(false);
@@ -93,32 +95,32 @@ console.log(res);
    
   return (
     <>
-   <div style={{width:"100vw", height:"100vh",border:"1px solid black"}}>
-   <main style={{width:"50%" ,border:"1px solid black"}} className=' m-auto'>
+   <div id='register1' style={{width:"100vw", height:"70vh"}}>
+   <main id='register-card'  className=' m-auto'>
         <header>
             <img src="" alt="" />
-            <h1>Register</h1>
+            <h1 className='p-2'>Register</h1>
         </header>
         <section className='d-flex gap-4'>
         <form action="" autoComplete='off'>
 
-        <div className='d-flex flex-row'>
+        <div className='d-flex flex-row p-2'>
                 <label htmlFor="">Name</label>
                 <input name='usr_name' autoComplete='off' onChange={handleChange} className='p-2' type="text" required  value={formValues.usr_name}/>
             </div>
-            <div className='d-flex flex-row'>
+            <div className='d-flex flex-row p-2'>
                 <label htmlFor="">Email</label>
                 <input name='usr_email' autoComplete='off' onChange={handleChange} className='p-2' type="email" required  value={formValues.usr_email}/>
             </div>
-            <div className='d-flex flex-row'>
+            <div className='d-flex flex-row p-2'>
                 <label htmlFor="">Phone</label>
                 <input name='usr_phnum' autoComplete='off' onChange={handleChange} className='p-2' type="email" required  value={formValues.usr_phnum}/>
             </div>
-            <div className='d-flex flex-row'>
+            <div className='d-flex flex-row p-2'>
                 <label htmlFor="">Password</label>
                 <input autoComplete='off' name='usr_pwd' onChange={handleChange} className='p-2' type="password" required value={formValues.usr_pwd} />
             </div>
-            <div className='d-flex flex-row'>
+            <div className='d-flex flex-row p-2'>
                 <label htmlFor="">Password Confirm</label>
                 <input name='usr_pwd_confirm' autoComplete='off' onChange={handleChange} className='p-2' type="password" required value={formValues.usr_pwd_confirm} />
             </div>
@@ -152,10 +154,17 @@ console.log(res);
           <span className="mx-2" style={{color:"white"}} role="status">Loading...</span></>:<span  style={{color:"white"}} role="status">Register</span>}
         </button>
         </div>
+        <div style={{textAlign:"center",width:"100%"}}>OR
+          <div className='Login-Link'>
+            <Link to='/Login/' className='Login-l' >
+           <label htmlFor="" className='Login'>Login</label>
+            </Link>
+          </div>
+        </div>
         </form>
         </section>
-        <footer>
-            <span>{new Date().getFullYear()}&copy; Rubia Services</span>
+        <footer style={{textAlign:"center"}}>
+            <span >{new Date().getFullYear()}&copy; Rubia Services</span>
         </footer>
     </main>
    </div>
