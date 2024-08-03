@@ -11,6 +11,7 @@
     "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "jquery": "^3.7.1",
     "jwt-decoder": "^0.0.0",
     "location-search": "^3.1.0",
     "react": "^18.3.1",

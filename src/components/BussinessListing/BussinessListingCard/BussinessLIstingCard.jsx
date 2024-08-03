@@ -83,7 +83,7 @@ const BussinessLIstingCard = ({myArray}) => {
                     </div>
                     <div className="card_contact_text">Chat</div>
                   </a>
-                  <a className="card_sub_contact" target="_blank" href={item.bsn_gmap_link}>
+                  <a className="card_sub_contact" rel="noreferrer" target="_blank" href={"https://"+item.bsn_gmap_link}>
                     <div>
                       <img src={Map} alt="" className="card_contact_logo" />
                     </div>
@@ -105,7 +105,7 @@ const BussinessLIstingCard = ({myArray}) => {
                     </div>
                     <div className="card_contact_text">Share</div>
                   </a>
-                  <a className="card_sub_contact" target="_blank" href={item.bsn_website_link}>
+                  <a className="card_sub_contact" rel="noreferrer" target="_blank" href={"https://"+item.bsn_website_link}>
                     <div>
                       <img src={Wesite} alt="" className="card_contact_logo" />
                     </div>
