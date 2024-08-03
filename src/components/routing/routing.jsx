@@ -31,7 +31,7 @@ const routing = () => {
    <Nav/>
    <ScrollToTop />
    <Routes>
-    <Route path='/' element={<Home/>}/>
+    <Route path='/home/' element={<Home/>}/>
     <Route path='/service/' element={<Service/>}  />
     <Route path='/about/' element={<About/>}/>
     <Route path='/contact/' element={<Contact/>}/>
@@ -48,7 +48,7 @@ const routing = () => {
     <Route path='/driverregister/' element={<DriverRegister/>}/>
     <Route path='/privateservices/' element={<PrivateServices/> }/>
     <Route path='/govermentservices/' element={<GovermentServices/>}/>
-
+   
    </Routes>
    </BrowserRouter>
    

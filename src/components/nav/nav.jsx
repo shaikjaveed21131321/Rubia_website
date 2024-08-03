@@ -38,7 +38,7 @@ const Nav = () => {
           <div className={burgerClass}></div>
         </div>
         <div className={Text} id='text'>
-        <NavLink className="navbar-link" id='Link'  to='/'
+        <NavLink className="navbar-link" id='Link'  to='/home/'
         style={({isActive})=>{return {color:isActive?'orange':''}}} >HOME</NavLink>
           <NavLink className="navbar-link  " id='Link1'    to='/service/'
         style={({isActive})=>{return {color:isActive?'orange':''}}} >service</NavLink>
@@ -46,7 +46,9 @@ const Nav = () => {
         style={({isActive})=>{return {color:isActive?'orange':''}}}>about</NavLink>
           <NavLink className="navbar-link" id='Link3' to='/contact/' 
         style={({isActive})=>{return {color:isActive?'orange':''}}}>contact</NavLink>
-        
+        <div>
+          
+        </div>
         </div>
       
       </div>
