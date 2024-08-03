@@ -20,6 +20,7 @@ import Bregistration from '../BussinessListing/Bregistration/Bregistration';
 import DriverRegister from '../DriverServices/DriverRegister'
 import PrivateServices from '../BussinessListing/PrivateServices/PrivateServices';
 import GovermentServices from '../BussinessListing/GovermentServices/GovermentServices';
+import Profile  from '../Profile/Profile';
 
 
 const routing = () => {
@@ -48,7 +49,8 @@ const routing = () => {
     <Route path='/driverregister/' element={<DriverRegister/>}/>
     <Route path='/privateservices/' element={<PrivateServices/> }/>
     <Route path='/govermentservices/' element={<GovermentServices/>}/>
-   
+    <Route path='/profile/' element={<Profile/>}/>
+  
    </Routes>
    </BrowserRouter>
    

@@ -3,6 +3,10 @@ import {Link, NavLink } from 'react-router-dom';
 import Logo from './logo.jpg';
 import Profile from "./Profile_icon.png"
 import "../leftside/leftside.css"
+import profile from './img/profile.png'
+import profile1 from './img/profile1.png'
+import Cookies from 'universal-cookie';
+
 
 const Nav = () => {
   const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
@@ -26,6 +30,9 @@ const Nav = () => {
     }
   ]
 
+  const cookie = new Cookies();
+  const jwttoken = cookie.get('jwttoken')
+
   return (
     <>
       <div id="navbar1">
@@ -46,9 +53,13 @@ const Nav = () => {
         style={({isActive})=>{return {color:isActive?'orange':''}}}>about</NavLink>
           <NavLink className="navbar-link" id='Link3' to='/contact/' 
         style={({isActive})=>{return {color:isActive?'orange':''}}}>contact</NavLink>
+
         <div>
           
         </div>
+
+        {(jwttoken)?<button style={{border:"2px solid #dedede",color:"#144273" }} className='mx-3 py-2 px-3 rounded-5 fw-bold shadow-lg'>Logout</button>:<NavLink className="navbar-link" id='Link3' to='/profile/' 
+        style={({isActive})=>{return {color:isActive?'orange':''}}}><img src={profile1} alt=''></img></NavLink>}
         </div>
       
       </div>

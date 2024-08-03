@@ -320,7 +320,6 @@ const handleImg3Change = (event) => {
         setErrors({});
       };
 
-      console.log(typeof(clearForm));
 
       
 
