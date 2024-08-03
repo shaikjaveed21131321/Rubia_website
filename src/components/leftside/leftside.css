@@ -149,6 +149,9 @@ align-content: center;
 
 
 @media (max-width:768px) {
+  .main{
+    height: 120px;
+  }
   .services{
     display: flex;
     flex-direction:row;
@@ -159,6 +162,7 @@ align-content: center;
     position: fixed;
     margin-right: 0%;
     background-color: #EDBD30;
+   
   }
   .services::-webkit-scrollbar{
    display: none;
@@ -167,7 +171,7 @@ align-content: center;
     display: none;
   }
   .serves1{
-    height: 180px;
+    height: 100px;
     width: 100%;
     display: flex;
     
@@ -204,9 +208,7 @@ align-content: center;
     flex-direction: column;
     /* border: 2px solid; */
     padding: 15px;
-    padding-top: px;
-    
-    
+    /* padding-top: px; */
   }
   .leftlinks1{
     margin: 5%;

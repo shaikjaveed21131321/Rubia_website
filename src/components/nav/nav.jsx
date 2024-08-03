@@ -45,7 +45,7 @@ const Nav = () => {
           <div className={burgerClass}></div>
         </div>
         <div className={Text} id='text'>
-        <NavLink className="navbar-link" id='Link'  to='/'
+        <NavLink className="navbar-link" id='Link'  to='/home/'
         style={({isActive})=>{return {color:isActive?'orange':''}}} >HOME</NavLink>
           <NavLink className="navbar-link  " id='Link1'    to='/service/'
         style={({isActive})=>{return {color:isActive?'orange':''}}} >service</NavLink>
@@ -53,9 +53,13 @@ const Nav = () => {
         style={({isActive})=>{return {color:isActive?'orange':''}}}>about</NavLink>
           <NavLink className="navbar-link" id='Link3' to='/contact/' 
         style={({isActive})=>{return {color:isActive?'orange':''}}}>contact</NavLink>
+
+        <div>
+          
+        </div>
+
         {(jwttoken)?<button style={{border:"2px solid #dedede",color:"#144273" }} className='mx-3 py-2 px-3 rounded-5 fw-bold shadow-lg'>Logout</button>:<NavLink className="navbar-link" id='Link3' to='/profile/' 
         style={({isActive})=>{return {color:isActive?'orange':''}}}><img src={profile1} alt=''></img></NavLink>}
-
         </div>
       
       </div>
