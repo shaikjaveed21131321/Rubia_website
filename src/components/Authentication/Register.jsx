@@ -139,7 +139,7 @@ console.log(res);
             height: "44px",
           
           }}
-          type="reset">Clear
+          onClick={clearForm}>Clear
         </button>
         <button id="sub-btn" disabled={isLoading} style={{
             padding:"10px 16px",

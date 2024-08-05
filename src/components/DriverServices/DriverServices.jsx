@@ -60,7 +60,8 @@ const DriverServices = () => {
 
   const detailsObj = {
     name: "Kaza Veera Sudhakara rao",
-    pn: "8978345314 8978345314",
+    pn: "8978345314",
+    email:"example@gmail.com",
     dob: "23/07/1991",
     dln: "AP70720130001146",
     noye: "5 Years",
@@ -72,7 +73,7 @@ const DriverServices = () => {
     <>
       <div
         style={{
-          minWidth: width < 700 ? "360px" : "510px",
+          minWidth: width < 500 ? "430px" : "510px",
           width: "65%",
           margin: "auto",
           
@@ -315,9 +316,11 @@ const DriverServices = () => {
                 style={{ width: "100%", height: "100%" }}
                 className="  swiper mx-auto"
               >
+                {console.log(width)
+                }
                 <Swiper
                   slidesPerView={
-                    width < 900 ? 1 : width < 1300 ? 2 : width < 1800 ? 3 : 4
+                    width < 1400 ? 1 : width < 1700 ? 2 : width < 1800 ? 2 : 3
                   }
                   spaceBetween={5}
                   keyboard={{
@@ -657,7 +660,7 @@ const DriverServices = () => {
               >
                 <Swiper
                   slidesPerView={
-                    width < 900 ? 1 : width < 1300 ? 2 : width < 1800 ? 3 : 4
+                    width < 1400 ? 1 : width < 1700 ? 2 : width < 1800 ? 2 : 3
                   }
                   spaceBetween={5}
                   keyboard={{
@@ -790,7 +793,7 @@ const DriverServices = () => {
               >
                 <Swiper
                   slidesPerView={
-                    width < 900 ? 1 : width < 1300 ? 2 : width < 1800 ? 3 : 4
+                    width < 1400 ? 1 : width < 1700 ? 2 : width < 1800 ? 2 : 3
                   }
                   spaceBetween={5}
                   keyboard={{
@@ -923,7 +926,7 @@ const DriverServices = () => {
               >
                 <Swiper
                   slidesPerView={
-                    width < 900 ? 1 : width < 1300 ? 2 : width < 1800 ? 3 : 4
+                    width < 1400 ? 1 : width < 1700 ? 2 : width < 1800 ? 2 : 3
                   }
                   spaceBetween={5}
                   keyboard={{
@@ -1056,7 +1059,7 @@ const DriverServices = () => {
               >
                 <Swiper
                   slidesPerView={
-                    width < 900 ? 1 : width < 1300 ? 2 : width < 1800 ? 3 : 4
+                    width < 1400 ? 1 : width < 1700 ? 2 : width < 1800 ? 2 : 3
                   }
                   spaceBetween={5}
                   keyboard={{
@@ -1188,7 +1191,7 @@ const DriverServices = () => {
               >
                 <Swiper
                   slidesPerView={
-                    width < 900 ? 1 : width < 1300 ? 2 : width < 1800 ? 3 : 4
+                    width < 1400 ? 1 : width < 1700 ? 2 : width < 1800 ? 2 : 3
                   }
                   spaceBetween={5}
                   keyboard={{
@@ -1321,7 +1324,7 @@ const DriverServices = () => {
               >
                 <Swiper
                   slidesPerView={
-                    width < 900 ? 1 : width < 1300 ? 2 : width < 1800 ? 3 : 4
+                    width < 1400 ? 1 : width < 1700 ? 2 : width < 1800 ? 2 : 3
                   }
                   spaceBetween={5}
                   keyboard={{
@@ -1453,7 +1456,7 @@ const DriverServices = () => {
               >
                 <Swiper
                   slidesPerView={
-                    width < 900 ? 1 : width < 1300 ? 2 : width < 1800 ? 3 : 4
+                    width < 1400 ? 1 : width < 1700 ? 2 : width < 1800 ? 2 : 3
                   }
                   spaceBetween={5}
                   keyboard={{
@@ -1585,7 +1588,7 @@ const DriverServices = () => {
               >
                 <Swiper
                   slidesPerView={
-                    width < 900 ? 1 : width < 1300 ? 2 : width < 1800 ? 3 : 4
+                    width < 1400 ? 1 : width < 1700 ? 2 : width < 1800 ? 2 : 3
                   }
                   spaceBetween={5}
                   keyboard={{
