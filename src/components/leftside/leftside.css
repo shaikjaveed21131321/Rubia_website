@@ -10,7 +10,7 @@
 .services{
     /* border: 2px solid salmon; */
     width: 16%;
-    height:100%;
+    height:auto;
     position: fixed;
     text-transform: uppercase;
     background-color:#E0EFFF    ;
@@ -21,7 +21,7 @@
     /* padding-top: 5px;  */
     padding: 5px 10px;
     overflow-y:auto ;
-    padding-bottom: 10%;
+    padding-bottom: 150px;
    padding-top:10px;
     
     
@@ -162,11 +162,12 @@ align-content: center;
     width: 100%; 
     overflow-x: auto;
     padding-top: 6%;
-   
+   height: auto;
    overflow-y: hidden;
     position: fixed;
     margin-right: 0%;
     background-color: #EDBD30;
+    padding-bottom: 5%;
    
   }
   .services::-webkit-scrollbar{

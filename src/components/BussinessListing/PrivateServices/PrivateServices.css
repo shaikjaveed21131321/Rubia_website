@@ -6,6 +6,7 @@
 .view{
     background-color: #650000;
     border-radius: 0px 0px 14px 14px;
+    height: 40px;
 }
 
 #pvt_container{
@@ -54,11 +55,19 @@
     text-align: center;
     color: #650000;
 }
+.header_b1{
+    font-weight: 700;
+    color: #650000;
+}
+subtitle{
+    text-transform: capitalize;
+}
 
 @media (max-width:786px) {
   
      .header_b1{
-        font-size: 18px;   
+        font-size: 18px;
+
      }
      .pvt_labels{
         border: 1px solid #AFAAA5;
