@@ -13,13 +13,14 @@
    }
 .ads1{
     align-content: center;
-    width: 240PX;
-    height: 240px;
+    width: auto;
+    height: auto;
     margin: 5px;
     background-color: aliceblue;
     padding-top: 4%;
     overflow-x: auto;
-    /* padding-right: 0%; */
+    /* margin-right: 0%;
+    padding-right: 0%; */
 
 }
 

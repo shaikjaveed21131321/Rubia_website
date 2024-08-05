@@ -23,7 +23,7 @@
     overflow-y:auto ;
     padding-bottom: 150px;
    padding-top:10px;
-    
+   
     
     /* border: 2px solid; */
 }
@@ -161,7 +161,7 @@ align-content: center;
     justify-content: space-between;
     width: 100%; 
     overflow-x: auto;
-    padding-top: 4.8%;
+    padding-top: 3.5%;
    height: auto;
    overflow-y: hidden;
     position: fixed;

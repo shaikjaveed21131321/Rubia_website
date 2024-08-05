@@ -61,7 +61,7 @@ const About = () => {
         <button type='button' className='btn_documents' onClick={toggle} >{title}</button>
         </div>
     </div>
-    
+    <div style={{display:"none"}}>shaik Javeed,Akash,p.sheshu</div>
     <div className={show}>
 
        <div className='imgs'>
