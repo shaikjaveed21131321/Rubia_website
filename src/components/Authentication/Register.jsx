@@ -2,11 +2,14 @@ import React,{useState} from 'react'
 import Cookies from 'universal-cookie'
 import swal from "sweetalert";
 import "./Register.css"
-import { Link } from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
 
 const Register = () => {
-    const [isLoading,setIsLoading] = useState(false);
+  const cookie = new Cookies(null, { path: '/' });
+  const res=cookie.get('jwttoken')
 
+    const [isLoading,setIsLoading] = useState(false);
+    const navigate = useNavigate();
 
     const [formValues, setFormValues] = useState({
         usr_name: '',
@@ -76,6 +79,7 @@ const handleSubmit = (event)=>
             swal("successful Registred", result.message, "success");
             cookie.set("jwttoken",result.token)
             clearForm();
+            navigate("/");
           }
           else {
             swal("error", result.message, "error")
@@ -88,10 +92,6 @@ const handleSubmit = (event)=>
      } 
 }
   
-const cookie = new Cookies();
-const res=cookie.get('jwttoken')
-
-console.log(res);
    
   return (
     <>
