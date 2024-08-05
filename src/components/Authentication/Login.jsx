@@ -1,12 +1,16 @@
 import React,{useState} from 'react'
 import Cookies from 'universal-cookie'
 import swal from "sweetalert";
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
-    const [isLoading,setIsLoading] = useState(false);
+  const cookie = new Cookies(null, { path: '/' });
+  const res=cookie.get('jwttoken')
+  
 
+    const [isLoading,setIsLoading] = useState(false);
+    const navigate = useNavigate();
 
     const [formValues, setFormValues] = useState({
         usr_name: '',
@@ -70,7 +74,8 @@ const handleSubmit = (event)=>
           if (result.success) {
             //custom Alert Message
             swal("successful Registred", result.message, "success");
-            cookie.set("jwttoken",result.token)
+            cookie.set("jwttoken",result.token);
+            navigate("/")
             clearForm();
           }
           else {
@@ -83,8 +88,6 @@ const handleSubmit = (event)=>
       },2000);
      } 
 }
-const cookie = new Cookies();
-const res=cookie.get('jwttoken')
 
 
   return (
