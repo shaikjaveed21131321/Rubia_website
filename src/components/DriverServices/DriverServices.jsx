@@ -87,7 +87,7 @@ const DriverServices = () => {
               className="p-3 d-flex flex-row align-items-center justify-content-center gap-3 shadow rounded-3"
               style={{ width: "430px", font: "19px", background: "#D7C3A4" }}
             >
-              <span style={{ color: "#650000" }}>Driver Registration Form</span>
+              <span style={{ color: "#650000"}}>Driver Registration Form</span>
               <Link
                 to="/driverregister/"
                 style={{
@@ -98,7 +98,7 @@ const DriverServices = () => {
                   color: "#FFFFFF",
                   padding: "12px",
                 }}
-                className="p-2 rounded text-center fw-bold rounded-3"
+                className="p-1 my-auto rounded text-center fw-bold rounded-3"
               >
                 Click Here
               </Link>

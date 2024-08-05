@@ -114,7 +114,7 @@ const handleSubmit = (event)=>
             </div>
             <div className='d-flex flex-row p-2'>
                 <label htmlFor="">Phone</label>
-                <input name='usr_phnum' autoComplete='off' onChange={handleChange} className='p-2' type="email" required  value={formValues.usr_phnum}/>
+                <input name='usr_phnum' autoComplete='off' onChange={handleChange} className='p-2' type="tel" min="10" minLength="10" max="10" maxLength="10" required  value={formValues.usr_phnum}/>
             </div>
             <div className='d-flex flex-row p-2'>
                 <label htmlFor="">Password</label>
