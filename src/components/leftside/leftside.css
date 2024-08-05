@@ -161,7 +161,7 @@ align-content: center;
     justify-content: space-between;
     width: 100%; 
     overflow-x: auto;
-    padding-top: 6%;
+    padding-top: 4.8%;
    height: auto;
    overflow-y: hidden;
     position: fixed;
@@ -185,11 +185,10 @@ align-content: center;
     height: 0%;
    
   }
+  
   .services-links{
-    width: 250px;
     height: 80px;
-    background-color: #EDBD30;
-    
+    background-color: #EDBD30;   
   }
   .services .services-links{
     margin: auto;
