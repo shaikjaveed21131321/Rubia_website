@@ -13,6 +13,7 @@ import GovermentServices from "./GovermentServices/GovermentServices";
 import Categorie from "./Categories/categorie";
 import BussinessLIstingCard from "./BussinessListingCard/BussinessLIstingCard";
 import axios from 'axios'
+import Cookies from 'universal-cookie';
 
 const BussinessListing = () => {
 
@@ -69,6 +70,9 @@ const BussinessListing = () => {
   const handleRadioChange = (event) => {
     setSelected(event.target.value);
   };
+
+  const cookie = new Cookies();
+  const jwttoken = cookie.get('jwttoken')
   return (
     <>
       <div className="BussinessListingText">
@@ -121,7 +125,7 @@ const BussinessListing = () => {
             </div>
 
             <div className="searchbar_mobile2">
-              <Link to="/Bregistration/"><button>Make Your Bussiness List</button></Link>
+              {(!jwttoken || jwttoken===undefined)?<Link to="/profile/"><button>Make Your Bussiness List</button></Link>:<Link to="/Bregistration/"><button>Make Your Bussiness List</button></Link>}
             </div>
           </div>
 {/* searchbtn_mobile */}
