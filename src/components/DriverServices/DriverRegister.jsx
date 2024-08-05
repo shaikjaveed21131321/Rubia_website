@@ -555,10 +555,11 @@ const [errors, setErrors] = useState({});
           width: "65%",
           margin: "auto",
           overflowX: "hidden",
+         
         }}
         className="container h-auto px-1"
       >
-        <div style={{border: "1px solid #CC0000", borderRadius:"16px", padding:"10px"}} className=" my-4  ">
+        <div style={{border: "1px solid #CC0000", borderRadius:"16px", padding:"10px", backgroundColor:"#FFE5E5",}} className=" my-4  ">
           <h3 style={{ color: "#650000" }} className="text-start mx-4 my-4">
             B2B&#x7b;Business to Business&#x7d;{" "}
             <span style={{ color: "#C68643" }}>Driver Registration Form</span>

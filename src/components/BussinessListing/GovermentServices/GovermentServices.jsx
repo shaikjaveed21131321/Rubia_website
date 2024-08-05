@@ -12,6 +12,12 @@ import "./GovermentServices.css"
 // import Stadium from "./assets/stadium.png";
 // import Registration from "./assets/registration.png";
 // import Panchayati from "./assets/panchayati.png";
+import Advocate from "./assets/Advocate.png"
+import AgricultureColleges from"./assets/AgricultureColleges.png"
+import AnimalHusbandry from "./assets/AnimalHusbandry.png"
+import BCWelfareDepartment from"./assets/BC Welfare Department.png"
+import BHEL from "./assets/BHEL.png"
+import BSNl from "./assets/BSNl.png"
 
 const GovermentServices = () => {
   const [title1, setTitle1] = useState("Uploading More Services Soon");  
@@ -54,7 +60,8 @@ const GovermentServices = () => {
     Government  <span style={{color:"#C68643",fontWeight:"700"}}>Organizations :</span>
     </div>
       <div className='govt_container'>
-          <div className='govt_sub_container'>
+          <div className='govt_sub_container' style={{textAlign:"center"}}>
+            <span>COMING SOON</span>
             {govtLabels.map((e,index)=>(
               <form action="">
               <div className='govt_lables'

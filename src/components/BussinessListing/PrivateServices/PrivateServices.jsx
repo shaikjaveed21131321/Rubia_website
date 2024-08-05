@@ -109,6 +109,7 @@ import "../PrivateServices/PrivateServices.css";
 const PrivateServices = ({ handleClick }) => {
   const [title, setTitle] = useState("view more  \u2193");  
   const [activeButton, setActiveButton] = useState(null);
+  const [activeSubtitle,setActiveSubtitle]=useState("Services")
   const [noOfElements, setElements] = useState(12);
 
   const toggle = () => {
@@ -122,124 +123,128 @@ const PrivateServices = ({ handleClick }) => {
       }
     }
   };
-  const handleButtonClick = (index) => {
+  const handleButtonClick = (index, subtitle) => {
     setActiveButton(index);
+    setActiveSubtitle(subtitle);
   };
   const pvtlabels = [
-    { image: AdvertiseAgency, name: "Advertise Agency" },
-    { image: Ambulance, name: "Ambulance" },
-    { image: AutoShowrooms, name: "Auto Showrooms" },
-    { image: Banks, name: "Banks" },
-    { image: BicycleShwrooms, name: "Bicycle Shwrooms" },
-    { image: BrickSand, name: "BrickSand" },
-    { image: CCCameraDealers, name: "CC Camera Dealers" },
-    { image: Cafe, name: "Cafe" },
-    { image: CarService, name: "CarService" },
-    { image: CarShowroom, name: "Car Showroom" },
-    { image: Carpenters, name: "Carpenters" },
-    { image: Cement, name: "Cement" },
-    { image: ChartedAccount, name: "Charted Account" },
-    { image: ChildCareCentres, name: "Child Care Centres" },
-    { image: CoachingCenter, name: "Coaching Center" },
-    { image: Coldstorages, name: "Coldstorages" },
-    { image: CranesShowrooms, name: "Cranes Showrooms" },
-    { image: CurriesPoint, name: "Curries Point" },
-    { image: DiagnosticCentres, name: "Diagnostic Centres" },
-    { image: DigitalMarket, name: "Digital Market" },
-    { image: DrivingSchools, name: "Driving Schools" },
-    { image: ElectricShowroom, name: "Electric Showroom" },
-    { image: ElectricalShop, name: "Electrical Shop" },
-    { image: ElectronicShowroom, name: "Electronic Showroom" },
-    { image: Ellipse, name: "Ellipse" },
-    { image: EventOrganizers, name: "Event Organizers" },
-    { image: FancyShop, name: "Fancy Shop" },
-    { image: FastFoodCentres, name: "Fast Food Centres" },
-    { image: Fertilizers, name: "Fertilizers" },
-    { image: FitnessEquipment, name: "Fitness Equipment" },
-    { image: FlourMills, name: "Flour Mills" },
-    { image: FlowerShop, name: "Flower Shop" },
-    { image: FootWareShops, name: "FootWare Shops" },
-    { image: ForeginCurrencyExchange, name: "Foregin Currency Exchange" },
-    { image: ForeginLanguageTrainers, name: "Foregin Language Trainers" },
-    { image: FruitShops, name: "Fruit Shops" },
-    { image: FunctionHalls, name: "Function Halls" },
-    { image: Furniture, name: "Furniture" },
-    { image: GoldShop, name: "Gold Shop" },
-    { image: Gym, name: "Gym" },
-    { image: Hardware, name: "Hardware" },
-    { image: Hospital, name: "Hospital" },
-    { image: Hostels, name: "Hostels" },
-    { image: HotelsRestaurants, name: "Hotels & Restaurants" },
-    { image: InsuranceCompany, name: "Insurance Company" },
-    { image: Intermediates, name: "Intermediates" },
-    { image: JCBShowroom, name: "JCB Showroom" },
-    { image: Kitchenware, name: "Kitchenware" },
-    { image: LaptopServices, name: "Laptop Services" },
-    { image: LaundryDryCleaning, name: "Laundry & Dry Cleaning" },
-    { image: LiquorShops, name: "Liquor Shops" },
-    { image: Loans, name: "Loans" },
-    { image: MarriageHalls, name: "Marriage Halls" },
-    { image: Matrimony, name: "Matrimony" },
-    { image: MedicalShops, name: "Medical Shops" },
-    { image: MobileService, name: "Mobile Service" },
-    { image: Nursery, name: "Nursery" },
-    { image: Nutritionist, name: "Nutritionist" },
-    { image: Oilmils, name: "Oil mils" },
-    { image: PaintShops, name: "Paint Shops" },
-    { image: PestControl, name: "Pest Control" },
-    { image: PetShop, name: "Pet Shop" },
-    { image: Petrol, name: "Petrol" },
-    { image: PlaySchools, name: "Play Schools" },
-    { image: PlayWoodShops, name: "PlayWood Shops" },
-    { image: Plumper, name: "Plumper" },
-    { image: PoojaItems, name: "Pooja Items" },
-    { image: PoojaryPandit, name: "Poojary(Pandit)" },
-    { image: Printer, name: "Printer" },
-    { image: Psychologist, name: "Psychologist" },
-    { image: RentedHouses, name: "Rented Houses" },
-    { image: Sanitray, name: "Sanitray" },
-    { image: SepticTankCleaners, name: "Septic Tank Cleaners" },
-    { image: ShoppingMall, name: "Shopping Mall" },
-    { image: SilverShops, name: "Silver Shops" },
-    { image: Spas, name: "Spas" },
-    { image: Sportscoach, name: "Sportscoach" },
-    { image: StadiumGrounds, name: "Stadium & Grounds" },
-    { image: StationaryShop, name: "Stationary Shop" },
-    { image: SurgicalEquipment, name: "Surgical Equipment" },
-    { image: Sweetsshop, name: "Sweetsshop" },
-    { image: Temples, name: "Temples" },
-    { image: ThemeParks, name: "Theme Parks" },
-    { image: TiffinCentres, name: "Tiffin Centres" },
-    { image: TilesMarbles, name: "Tiles & Marbles" },
-    { image: TimberDepot, name: "Timber Depot" },
-    { image: TourismGuides, name: "Tourism Guides" },
-    { image: TouristPlaces, name: "Tourist Places" },
-    { image: TravelBags, name: "Travel Bags" },
-    { image: University, name: "University" },
-    { image: VeternaryClinics, name: "Veternary Clinics" },
-    { image: WaterSuppliers, name: "Water Suppliers" },
-    { image: Welders, name: "Welders" },
-    { image: YogaCanters, name: "Yoga Canters" },
-    { image: Interior, name: "interior" },
-    { image: Ironsteel, name: "iron & steel" },
-    { image: JuiceShops, name: "juice Shops" },
-    { image: LodgeHotels, name: "lodge & Hotels" },
-    { image: Painters, name: "painters" },
-    { image: PrivateLibraries, name: "private Libraries" },
-    { image: Pubs, name: "pubs" },
-    { image: Schools, name: "schools" },
-    { image: TuitionCentres, name: "tuition Centres" },
-    { image: Vegetablemarket, name: "vegetable market" },
+    { image: AdvertiseAgency, name: "Advertise Agency", subtitle: "Advertise Agency" },
+    { image: Ambulance, name: "Ambulance", subtitle: "Emergency Services" },
+    { image: AutoShowrooms, name: "Auto Showrooms", subtitle: "Auto Showrooms" },
+    { image: Banks, name: "Banks", subtitle: "Finance" },
+    { image: BicycleShwrooms, name: "Bicycle Showrooms", subtitle: "cycles" },
+    { image: BrickSand, name: "Brick & Sand", subtitle: "construction" },
+    { image: CCCameraDealers, name: "CC Camera Dealers", subtitle: "security" },
+    { image: Cafe, name: "Cafe", subtitle: "coffee" },
+    { image: CarService, name: "Car Service", subtitle: "maintenance" },
+    { image: CarShowroom, name: "Car Showroom", subtitle: "cars" },
+    { image: Carpenters, name: "Carpenters", subtitle: "woodwork" },
+    { image: Cement, name: "Cement", subtitle: "construction" },
+    { image: ChartedAccount, name: "Charted Account", subtitle: "finance" },
+    { image: ChildCareCentres, name: "Child Care Centres", subtitle: "kids" },
+    { image: CoachingCenter, name: "Coaching Center", subtitle: "education" },
+    { image: Coldstorages, name: "Cold Storages", subtitle: "storage" },
+    { image: CranesShowrooms, name: "Cranes Showrooms", subtitle: "machinery" },
+    { image: CurriesPoint, name: "Curries Point", subtitle: "food" },
+    { image: DiagnosticCentres, name: "Diagnostic Centres", subtitle: "health" },
+    { image: DigitalMarket, name: "Digital Market", subtitle: "online" },
+    { image: DrivingSchools, name: "Driving Schools", subtitle: "education" },
+    { image: ElectricShowroom, name: "Electric Showroom", subtitle: "electronics" },
+    { image: ElectricalShop, name: "Electrical Shop", subtitle: "supplies" },
+    { image: ElectronicShowroom, name: "Electronic Showroom", subtitle: "electronics" },
+    { image: Ellipse, name: "Ellipse", subtitle: "shapes" },
+    { image: EventOrganizers, name: "Event Organizers", subtitle: "events" },
+    { image: FancyShop, name: "Fancy Shop", subtitle: "accessories" },
+    { image: FastFoodCentres, name: "Fast Food Centres", subtitle: "food" },
+    { image: Fertilizers, name: "Fertilizers", subtitle: "agriculture" },
+    { image: FitnessEquipment, name: "Fitness Equipment", subtitle: "health" },
+    { image: FlourMills, name: "Flour Mills", subtitle: "food" },
+    { image: FlowerShop, name: "Flower Shop", subtitle: "florist" },
+    { image: FootWareShops, name: "FootWare Shops", subtitle: "shoes" },
+    { image: ForeginCurrencyExchange, name: "Foreign Currency Exchange", subtitle: "finance" },
+    { image: ForeginLanguageTrainers, name: "Foreign Language Trainers", subtitle: "education" },
+    { image: FruitShops, name: "Fruit Shops", subtitle: "groceries" },
+    { image: FunctionHalls, name: "Function Halls", subtitle: "events" },
+    { image: Furniture, name: "Furniture", subtitle: "home" },
+    { image: GoldShop, name: "Gold Shop", subtitle: "jewelry" },
+    { image: Gym, name: "Gym", subtitle: "fitness" },
+    { image: Hardware, name: "Hardware", subtitle: "supplies" },
+    { image: Hospital, name: "Hospital", subtitle: "health" },
+    { image: Hostels, name: "Hostels", subtitle: "accommodation" },
+    { image: HotelsRestaurants, name: "Hotels & Restaurants", subtitle: "food" },
+    { image: InsuranceCompany, name: "Insurance Company", subtitle: "finance" },
+    { image: Intermediates, name: "Intermediates", subtitle: "education" },
+    { image: JCBShowroom, name: "JCB Showroom", subtitle: "machinery" },
+    { image: Kitchenware, name: "Kitchenware", subtitle: "home" },
+    { image: LaptopServices, name: "Laptop Services", subtitle: "technology" },
+    { image: LaundryDryCleaning, name: "Laundry & Dry Cleaning", subtitle: "services" },
+    { image: LiquorShops, name: "Liquor Shops", subtitle: "beverages" },
+    { image: Loans, name: "Loans", subtitle: "finance" },
+    { image: MarriageHalls, name: "Marriage Halls", subtitle: "events" },
+    { image: Matrimony, name: "Matrimony", subtitle: "relationships" },
+    { image: MedicalShops, name: "Medical Shops", subtitle: "health" },
+    { image: MobileService, name: "Mobile Service", subtitle: "technology" },
+    { image: Nursery, name: "Nursery", subtitle: "plants" },
+    { image: Nutritionist, name: "Nutritionist", subtitle: "health" },
+    { image: Oilmils, name: "Oil Mills", subtitle: "food" },
+    { image: PaintShops, name: "Paint Shops", subtitle: "home" },
+    { image: PestControl, name: "Pest Control", subtitle: "services" },
+    { image: PetShop, name: "Pet Shop", subtitle: "pets" },
+    { image: Petrol, name: "Petrol", subtitle: "fuel" },
+    { image: PlaySchools, name: "Play Schools", subtitle: "education" },
+    { image: PlayWoodShops, name: "Plywood Shops", subtitle: "home" },
+    { image: Plumper, name: "Plumber", subtitle: "services" },
+    { image: PoojaItems, name: "Pooja Items", subtitle: "spiritual" },
+    { image: PoojaryPandit, name: "Poojary (Pandit)", subtitle: "spiritual" },
+    { image: Printer, name: "Printer", subtitle: "technology" },
+    { image: Psychologist, name: "Psychologist", subtitle: "health" },
+    { image: RentedHouses, name: "Rented Houses", subtitle: "accommodation" },
+    { image: Sanitray, name: "Sanitary", subtitle: "supplies" },
+    { image: SepticTankCleaners, name: "Septic Tank Cleaners", subtitle: "services" },
+    { image: ShoppingMall, name: "Shopping Mall", subtitle: "shopping" },
+    { image: SilverShops, name: "Silver Shops", subtitle: "jewelry" },
+    { image: Spas, name: "Spas", subtitle: "wellness" },
+    { image: Sportscoach, name: "Sports Coach", subtitle: "education" },
+    { image: StadiumGrounds, name: "Stadium & Grounds", subtitle: "sports" },
+    { image: StationaryShop, name: "Stationery Shop", subtitle: "supplies" },
+    { image: SurgicalEquipment, name: "Surgical Equipment", subtitle: "health" },
+    { image: Sweetsshop, name: "Sweets Shop", subtitle: "food" },
+    { image: Temples, name: "Temples", subtitle: "spiritual" },
+    { image: ThemeParks, name: "Theme Parks", subtitle: "entertainment" },
+    { image: TiffinCentres, name: "Tiffin Centres", subtitle: "food" },
+    { image: TilesMarbles, name: "Tiles & Marbles", subtitle: "home" },
+    { image: TimberDepot, name: "Timber Depot", subtitle: "construction" },
+    { image: TourismGuides, name: "Tourism Guides", subtitle: "travel" },
+    { image: TouristPlaces, name: "Tourist Places", subtitle: "travel" },
+    { image: TravelBags, name: "Travel Bags", subtitle: "shopping" },
+    { image: University, name: "University", subtitle: "education" },
+    { image: VeternaryClinics, name: "Veterinary Clinics", subtitle: "health" },
+    { image: WaterSuppliers, name: "Water Suppliers", subtitle: "supplies" },
+    { image: Welders, name: "Welders", subtitle: "services" },
+    { image: YogaCanters, name: "Yoga Centers", subtitle: "wellness" },
+    { image: Interior, name: "Interior", subtitle: "home" },
+    { image: Ironsteel, name: "Iron & Steel", subtitle: "construction" },
+    { image: JuiceShops, name: "Juice Shops", subtitle: "beverages" },
+    { image: LodgeHotels, name: "Lodge & Hotels", subtitle: "accommodation" },
+    { image: Painters, name: "Painters", subtitle: "services" },
+    { image: PrivateLibraries, name: "Private Libraries", subtitle: "education" },
+    { image: Pubs, name: "Pubs", subtitle: "entertainment" },
+    { image: Schools, name: "Schools", subtitle: "education" },
+    { image: TuitionCentres, name: "Tuition Centres", subtitle: "education" },
+    { image: Vegetablemarket, name: "Vegetable Market", subtitle: "groceries" },
   ];
   const slice = pvtlabels.slice(0, noOfElements);
   return (
     <>
+    <div>
+
+    
     <div className="header_pvt">
     Private <span style={{color:"#C68643",fontWeight:"700"}}>Organizations :</span>
     </div>
       <div id="pvt_container">
         <div className="pvt_sub_container">
-          {slice.map((e, index) => (
+        {slice.map((e, index) => (
             <form action="" key={index}>
               <div
                 className="pvt_labels"
@@ -272,12 +277,16 @@ const PrivateServices = ({ handleClick }) => {
       </div>
      
       <br />
+      
+     
       <div className="header_b1">
             {" "}
-            Best Gynaecologist Doctors{" "}
+            {activeSubtitle}{" "}
             <span style={{ color: "#C68643" }}>in Hyderabad :</span>{" "}
           </div>
-      
+     
+      </div>
+    
     </>
   );
 };

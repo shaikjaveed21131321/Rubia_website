@@ -1,5 +1,5 @@
 .rg {
-  border: 6px blue;
+ 
   height: auto;
   width: auto;
   margin-left: 18%;
@@ -9,6 +9,7 @@
 .rg1 {
   text-align: center;
   height: auto;
+  background-color:#FFE5E5 ;
 }
 .brheader {
   font-size: 27px;
@@ -16,14 +17,14 @@
   color: #144273;
 }
 .brmain {
-  border: 1px solid black;
+  border: 1px solid #FF9B9B;
   height: auto;
   border-radius: 15px;
   margin: 15px;
 }
 input {
   outline: none;
-  border: 1px solid #c0c0c0;
+  border: 1px solid #FF9B9B;
   border-radius: 5px;
 }
 .input1 {
@@ -41,7 +42,7 @@ input {
   padding-left: 10px;
 }
 .timing_main_table {
-  border: 1px solid black;
+  border: 1px solid #FF9B9B;
   height: auto;
   border-radius: 5px;
 }
@@ -62,7 +63,7 @@ input {
 }
 .div_tm_input {
   margin-left: 2px;
-  border: 1px solid #c0c0c0;
+  border: 1px solid #FF9B9B;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,7 +80,7 @@ input {
   flex-direction: column;
 }
 .img_main_div {
-  border: 1px solid black;
+  border: 1px solid #FF9B9B;
   border-radius: 5px;
 }
 .img_div {
@@ -149,7 +150,7 @@ input[type="file"] {
     border-radius: 5px;
 } */
 .coustomfile {
-  border: 1px solid #144273;
+  border: 1px solid #FF9B9B;
   border-radius: 10px;
   padding: 2px;
   font-size: 14px;
@@ -171,7 +172,7 @@ select {
 }
 #bg_textarea {
   padding: 1%;
-  border: 1px solid #c0c0c0;
+  border: 1px solid #FF9B9B;
   height: 60px;
   border-radius: 5px;
   /* -webkit-line-clamp: 2;

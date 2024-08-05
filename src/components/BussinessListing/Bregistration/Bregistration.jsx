@@ -421,7 +421,7 @@ let data = JSON.stringify(
   const inputStyleTag = {
     width: "380px",
     background:"white",
-    border: "1px solid black", // #FF6666
+    border: "1px solid #FF9B9B", // #FF6666
     color: "#995050",
     fontWeight: "bold",
   };
@@ -454,7 +454,7 @@ let data = JSON.stringify(
                 {errors.businessName && <p className="error text-danger">{errors.businessName}</p>}
               </div>
               <div className='inputdiv2 '>
-                <select  disabled={isLoading} style={{color:"#8F8F8F"}} id="" className='input1 w-100 h-100 p-1' name="primaryCategory" value={formValues.primaryCategory} onChange={handleChange} >
+                <select  disabled={isLoading} style={{color:"#8F8F8F",border:"1px solid #FF9B9B"}} id="" className='input1 w-100 h-100 p-1' name="primaryCategory" value={formValues.primaryCategory} onChange={handleChange} >
                   <option className='option'>Primary Category</option>
                   <option value="Hospital">Hospital</option>
                   <option value="Lawyers">Lawyers </option>

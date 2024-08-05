@@ -22,9 +22,10 @@ import PrivateServices from '../BussinessListing/PrivateServices/PrivateServices
 import GovermentServices from '../BussinessListing/GovermentServices/GovermentServices';
 import Applink from "../AppLinks/applink";
 import Footer from "../footer/footer";
-import Profile  from '../Authentication/Register';
+import Profile  from '../Authentication/Login';
 import Login from '../Authentication/Login';
 import Register from '../Authentication/Register';
+import Rightside from "../Rightside/rightside";
 
 
 const routing = () => {
@@ -32,7 +33,7 @@ const routing = () => {
    <>
    <BrowserRouter>
    <Leftside/>
-   
+   <Rightside/>
    <Nav/>
    
    <ScrollToTop />

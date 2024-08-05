@@ -1,17 +1,11 @@
 import React from "react";
-import { BrowserRouter, Route,Routes} from 'react-router-dom';
-import Rightside from "./components/Rightside/rightside";
-
 import Router from "./components/routing/routing";
-import Register from "./components/Authentication/Register";
-import Login from "./components/Authentication/Login";
 import "./components/graphicdesiging/graphic.css";
 import "./components/leftside/leftside.css";
 import "./components/Rightside/rightside.css";
 import "./components/Home/home.css"
 import "./components/footer/footer.css";
 import "./components/mediaQuerys/media.css";
-
 import "./components/AppLinks/applink.css";
 import "./components/Contact/contact.css";
 import "./components/Home/Home_slider/Home_slider.css";
@@ -27,36 +21,15 @@ import "./components/Job_portal/jobPortal.css"
 import "./components/realstate/realstate.css"
 import "./components/nav/nav.css"
 import "./components/BussinessListing/Bregistration/Bregistration.css"
-import { ReactGAImplementation } from "react-ga4";
+import ReactGA from "react-ga4";
 
+const TRACKING_ID = "G-SGVB46V3TC";
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
-
-// const cookie = new Cookies();
-// const res=cookie.get('jwttoken')
-
-
-
   return (
-
-//   (!res || res === undefined)?
-//   <>
-//   <BrowserRouter>
-// <Routes>
-//  <Route path="/" element={<Login/>} />
-//  <Route path="/register" element={<Register/>} />
-// </Routes>
-// </BrowserRouter>
-//  </>:
    <>
-  <Rightside/>
-  {/* <div className='about_text  '>
-  <div className='about1 '> */}
- 
    <Router/>
-   {/* </div>
-   </div> */}
-   
   </>
   )
 }

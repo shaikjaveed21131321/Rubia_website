@@ -89,8 +89,8 @@ const res=cookie.get('jwttoken')
 
   return (
     <>
-    <div id='register1' style={{width:"100vw", height:"70vh"}}>
-   <main  id='register-card'  className=' m-auto'>
+    <div  id='register1' style={{width:"100vw", height:"70vh"}}>
+   <main  id='register-card'  className=' m-auto px-5'>
         <header>
             <img src="" alt="" />
             <h1 className='p-2'>Login</h1>

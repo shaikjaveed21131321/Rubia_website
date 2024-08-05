@@ -1,16 +1,15 @@
 .ads{
     text-align: center;
     width: 16%;
-    height: 100vh;
     position: fixed;
     right: 0%;
     z-index: -1;
-    overflow-y: auto;
+    overflow-x: auto;
     /* background-color: #C68643; */
     
 }
 .ads::-webkit-scrollbar{
-    display: none;
+    display:none;
    }
 .ads1{
     align-content: center;
@@ -19,6 +18,7 @@
     margin: 5px;
     background-color: aliceblue;
     padding-top: 4%;
+    overflow-x: auto;
     /* padding-right: 0%; */
 
 }
