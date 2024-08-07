@@ -36,6 +36,99 @@
   }
   .software_banners1{
     width: 95%;
+  }  .software_banner_content{
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    box-shadow:  3px 3px 3px #ECECEC;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+  }
+  .software_banner_content_text{
+    text-align: start;
+    width: 100%;
+    /* border: 2px solid; */
+    margin-left: 4%;
+  
+  }
+  .software_banner_header1{
+    font-size: 21px;
+    line-height: 31.5px;
+    font-weight: 600;
+    color: #C68643;
+  }
+  .software_banner_header2{
+    font-size: 27px;
+    line-height: 40.5px;
+    font-weight: 700;
+    color: #650000;
+  }
+  .software_banner_content_img{
+    align-content: center;
+  }
+  .software_banner_simpleText{
+    color: #995050;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+  }
+  .software_banner_main_content{
+    box-shadow:  3px 3px 3px #ECECEC;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    width: 95%;
+    margin-left: 1.5%;
+    
+  }
+  .software_banner_main_content_header{
+    font-size: 21px;
+    line-height: 31.5px;
+    font-weight: 600;
+    color: #C68643;
+  }
+  .software_banner_main_content_header1{
+  
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 800;
+    color: #650000;
+  }
+  
+  .software_details_container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    /* border: 2px solid; */
+    text-align: center;
+  }
+  .software_details_content{
+    display: flex;
+    flex-direction: column;
+    box-shadow:  3px 3px 3px #ECECEC;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    width: 45%;
+    height: auto;
+    margin: 2%;
+    background-color: #FAFAFA;
+    padding: 2%;
+    align-items: center;
+    text-align: center;
+  }
+  .software_details_header{
+    font-size: 21px;
+    line-height: 31.5px;
+    font-weight: 600;
+    color: #C68643;
+  }
+  .software_details_simpletext{
+    color: #995050;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 21.1px;
+    font-weight: 400;
   }
   @media (max-width:786px) {
     .software-text{
@@ -53,5 +146,71 @@
       margin-top: 30%;
       margin-left: 60%;
      
+    }
+    .software_banner_content{
+      display: flex;
+      flex-direction: column
+    }
+    .software_banner_content_text{
+      margin-left: 0%;
+    }
+    .software_banner_img2{
+      width: 160px;
+      height: 185.51px;
+    }
+    .software_banner_header1{
+      font-size: 14px;
+      line-height: 21px;
+    }
+    .software_banner_header2{
+      font-size: 21px;
+      line-height: 21px;
+    }
+    .software_banner_simpleText{
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .software_banner_main_content_header{
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      color: #C68643;
+    }
+    .software_banner_main_content_header1{
+    
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 800;
+      color: #650000;
+    }
+    .software_details_container{
+      display: flex;
+      flex-direction: column;
+      padding: 2%;
+    }
+    .software_details_content{
+      width: 100%;
+      height: 318px;
+      margin: 0%;
+      margin-top: 5%;
+      padding: 2%;
+    
+    }
+    .software_details_img2{
+      height: 210px;
+      width: 350px;
+    }
+    .software_details_header{
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 600;
+      color: #C68643;
+    }
+    .software_details_simpletext{
+      color: #995050;
+      text-align: justify;
+      font-size: 12px;
+      line-height: 15.83px;
+      font-weight: 400;
     }
   }

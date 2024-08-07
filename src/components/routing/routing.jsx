@@ -35,7 +35,6 @@ const routing = () => {
    <Leftside/>
    <Rightside/>
    <Nav/>
-   
    <ScrollToTop />
    <Routes>
     <Route path='/' element={<Home/>}/>
@@ -58,7 +57,6 @@ const routing = () => {
     <Route path='/profile/' element={<Profile/>}/>
     <Route path='/Login'  element={<Login/>}/>
     <Route path='/Register/' element={<Register/>}/>
-  
    </Routes>
    </BrowserRouter>
    <Applink/>

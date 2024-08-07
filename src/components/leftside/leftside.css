@@ -2,7 +2,7 @@
     /* border: 2px solid yellow; */
     width: 100%;
     height: auto;
-    margin-top: 80px;
+    margin-top: 60px;
     display: flex;
     justify-content: space-between;
     /* margin-left: 100px; */
@@ -173,7 +173,8 @@ align-content: center;
   .services::-webkit-scrollbar{
    display: none;
   }
-  .label{
+  
+  .services label{
     display: none;
   }
   .serves1{

@@ -210,8 +210,20 @@ const BussinessListing = () => {
           </div> */}
             <BussinessLIstingCard  myArray={business.data}/>
 
-          <div className="bussiness_banner">
-            <img src={Bussinessbanner2} alt="" className="Bussinessbanner2" />
+          <div className="bussiness_banner1">
+           <div className="bussiness_banner_img">
+            <img src={Bussinessbanner2} alt="" />
+           </div>
+           <div className="bussiness_banner_text">
+            <p className="bussiness_banner_text_header">Welcome to Rubia Listings: Your Gateway to Business Success</p>
+            <p className="bussiness_banner_text_content">Are you looking to boost your business's visibility and attract more customers? Look no further! Rubia Listings offers a comprehensive platform for posting and searching business listings, tailored to meet your unique needs.</p>
+           <p className="bussiness_banner_text_header">Why Choose Rubia Listings?</p>
+           <p className="bussiness_banner_text_content"><span style={{fontSize:"12px",fontWeight:"600"}}>Easy Posting:</span> Effortlessly post your business information with our user-friendly interface. Add details like your business name, description, location, contact information, and more.</p>
+           <p className="bussiness_banner_text_content"><span style={{fontSize:"12px",fontWeight:"600"}}>Enhanced Visibility:</span> Our platform ensures your business is seen by a wide audience, increasing your chances of attracting new customers and growing your client base.</p>
+           <p className="bussiness_banner_text_content"><span style={{fontSize:"12px",fontWeight:"600"}}>Advanced Search:</span> Easily search for businesses by category, location, or keywords. Find the services you need quickly and efficiently.</p>
+           <p className="bussiness_banner_text_content"><span style={{fontSize:"12px",fontWeight:"600"}}>SEO Optimization:</span> Our expert team uses the latest SEO techniques to ensure your business listing ranks high on search engines, driving more traffic to your profile.</p>
+           <p className="bussiness_banner_text_content"><span style={{fontSize:"12px",fontWeight:"600"}}>Regular Updates:</span> Keep your business information up-to-date with our easy-to-use management tools. Make changes anytime to ensure your customers have the most accurate information.</p>
+           </div>
           </div>
         </div>
       </div>

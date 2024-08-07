@@ -255,6 +255,35 @@
   background-color:  #650000;
   color:#fff5eb ;
 }
+.bussiness_banner1{
+  display: flex;
+  box-shadow:  3px 3px 3px #ECECEC;
+  background-color:#FAFAFA ;
+    border-radius: 8px;
+    margin-top: 5%;
+}
+.bussiness_banner_text{
+  margin-left: 2%;
+}
+
+.bussiness_banner_img{
+  padding-top: 8px;
+  padding-left: 5px;
+  height: 100%;
+}
+.bussiness_banner_text_header{
+  padding-top: 5px;
+  color:#C68643 ;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px ;
+}
+.bussiness_banner_text_content{
+  color: #995050;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
 
 @media (max-width:768px) {
     .searchbar_mobile{
@@ -315,6 +344,18 @@
  }
  .bussiness_banner{
   margin-top: 0%;
+  display: flex;
+flex-direction: column;
+  
+}
+.bussiness_banner1{
+  display: flex;
+  flex-direction: column;
+}
+.bussiness_banner_img{
+  align-items: center;
+  align-content: center;
+  text-align: center;
   
 }
 .navagition_1{

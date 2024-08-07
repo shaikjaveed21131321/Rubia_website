@@ -1,4 +1,6 @@
 import React from "react";
+import Leftside from "./components/leftside/leftside";
+import Rightside from "./components/Rightside/rightside";
 import Router from "./components/routing/routing";
 import "./components/graphicdesiging/graphic.css";
 import "./components/leftside/leftside.css";
@@ -29,7 +31,10 @@ ReactGA.initialize(TRACKING_ID);
 function App() {
   return (
    <>
+   
+   
    <Router/>
+   
   </>
   )
 }

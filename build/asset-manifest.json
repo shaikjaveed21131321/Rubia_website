@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.cc5cae28.css",
-    "main.js": "/static/js/main.020bb6ea.js",
-    "static/media/Instagram post - 11[1].png": "/static/media/Instagram post - 11[1].74e973a859e8c2624675.png",
+    "main.css": "/static/css/main.26534264.css",
+    "main.js": "/static/js/main.e07f2bda.js",
     "static/media/Instagram_post_-_2_(2)[1].png": "/static/media/Instagram_post_-_2_(2)[1].bb40c6875216c02fa12e.png",
     "static/media/Frame 249.png": "/static/media/Frame 249.f3113fe98d3c1a691404.png",
     "static/media/Frame 15.png": "/static/media/Frame 15.28a9eb32e137de1ef3c4.png",
     "static/media/Frame 1431.png": "/static/media/Frame 1431.a6b7af6c988101b0d3a3.png",
     "static/media/Frame 159.png": "/static/media/Frame 159.cca2488a85bdf5c7ff44.png",
     "static/media/Frame 160.png": "/static/media/Frame 160.ac218efbb699d81fd221.png",
+    "static/media/Hire professional Driver squer.png": "/static/media/Hire professional Driver squer.24ad7139bc0a38f7e0cc.png",
     "static/media/Card143.png": "/static/media/Card143.515ff6817be11aca26ef.png",
     "static/media/Frame 1432.png": "/static/media/Frame 1432.c569ee3d58398d57dd5b.png",
-    "static/media/Instagram post - 3[1].png": "/static/media/Instagram post - 3[1].666deb5c7eeb79d37126.png",
     "static/media/Frame 248 (1).png": "/static/media/Frame 248 (1).eb22a722e0f4de023d79.png",
     "static/media/Frame 158.png": "/static/media/Frame 158.dd0d5f2f9edcb6567529.png",
     "static/media/img1.png": "/static/media/img1.3f556e917f6067a54046.png",
@@ -39,7 +38,7 @@
     "static/media/bussiness_banner1.png": "/static/media/bussiness_banner1.b5e2efddf3a4935d4651.png",
     "static/media/Frame 236 (2).png": "/static/media/Frame 236 (2).53a81ce19f90f11dd49e.png",
     "static/media/img5.png": "/static/media/img5.ad0c14f5584c092d155d.png",
-    "static/media/Business List_5.png": "/static/media/Business List_5.5d2369647ada50703138.png",
+    "static/media/WhatsApp Image 2024-07-29 at 17.12.09_f4954411.jpg": "/static/media/WhatsApp Image 2024-07-29 at 17.12.09_f4954411.93b8189296b8ef781f35.jpg",
     "static/media/img3.png": "/static/media/img3.642b7cba88ae0318aecd.png",
     "static/media/img8.png": "/static/media/img8.da9634ea49bb1c9c2a7a.png",
     "static/media/bussiness_banner.png": "/static/media/bussiness_banner.285549368a20653b9ff6.png",
@@ -50,26 +49,27 @@
     "static/media/gst3.jpg": "/static/media/gst3.249f15764ca8ac718f51.jpg",
     "static/media/img6.png": "/static/media/img6.1929b5c139634d6ef80c.png",
     "static/media/gst2.jpg": "/static/media/gst2.4583af54081bb6b50166.jpg",
+    "static/media/Rectangle 130.png": "/static/media/Rectangle 130.e8c43c87f6cddfc668e8.png",
     "static/media/Frame 234.png": "/static/media/Frame 234.66c35015bf4d53dd34e9.png",
     "static/media/WhatsApp_icon (1).png": "/static/media/WhatsApp_icon (1).31d4b1d27126bcc1f665.png",
-    "static/media/Mask group.png": "/static/media/Mask group.1ac04f198a012fa907a6.png",
     "static/media/Frame 32.png": "/static/media/Frame 32.e38314d05bd3de14d2f9.png",
     "static/media/pan.jpg": "/static/media/pan.5627cef011c946cdd68b.jpg",
     "static/media/bussineslisting.svg": "/static/media/bussineslisting.600708406e8264b6625fe5d0041b54a5.svg",
     "static/media/logo.jpg": "/static/media/logo.a265c8dbf650f799a6fa.jpg",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "/index.html",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "static/media/mail.svg": "/static/media/mail.50ae892228dda61e43bd9370d00803b0.svg",
     "static/media/location.svg": "/static/media/location.ef7a6c19893a511778b7f678be556ada.svg",
     "static/media/phone.svg": "/static/media/phone.7dd26964b9805d4e03adcb0e03c03af5.svg",
-    "main.cc5cae28.css.map": "/static/css/main.cc5cae28.css.map",
-    "main.020bb6ea.js.map": "/static/js/main.020bb6ea.js.map"
+    "static/media/upload.svg": "/static/media/upload.87e2b8c985461acb313bdbe809dff125.svg",
+    "main.26534264.css.map": "/static/css/main.26534264.css.map",
+    "main.e07f2bda.js.map": "/static/js/main.e07f2bda.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc5cae28.css",
-    "static/js/main.020bb6ea.js"
+    "static/css/main.26534264.css",
+    "static/js/main.e07f2bda.js"
   ]
 }
